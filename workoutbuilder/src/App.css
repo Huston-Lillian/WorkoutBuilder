@@ -40,3 +40,8 @@
 .seeThrough {
   opacity: 0.9;
 }
+
+.socialMedia-icon {
+  width: 80%;
+  height: auto;
+}
