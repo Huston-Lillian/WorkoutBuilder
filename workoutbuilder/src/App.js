@@ -48,14 +48,6 @@ function App() {
                 uFit Workouts
               </h1>
             </div>
-            {/* <div class="row center">
-              <h5 class="header col s4 light">
-                I've compiled a list of the best most enjoyable free workouts.
-                Developed a one of a kind custom workout builder. Documented my
-                expertise on achieving a sustainable fit and healthy lifestyle
-                just for you!
-              </h5>
-            </div> */}
             <div class="row center">
               <div class="header col l4 light">
                 <a
@@ -92,7 +84,7 @@ function App() {
                   here at uFit.
                 </p>
               </div>
-              <div class="row center">
+              <div class="s12 m4 center">
                 <div class="light">
                   <a
                     href="http://materializecss.com/getting-started.html"
@@ -113,12 +105,13 @@ function App() {
                 <h5 class="center">Workout Builder</h5>
 
                 <p class="light">
-                  I development a tool that allows you to create your own custom
+                  I developed a tool that allows you to create your own custom
                   circuit workouts. I've also provided several workouts for you
-                  to try.
+                  to try. The tool you need to find a workout that actually
+                  works for you!
                 </p>
               </div>
-              <div class="row center">
+              <div class="s12 m4 center">
                 <div class="light">
                   <a
                     href="http://materializecss.com/getting-started.html"
@@ -146,7 +139,7 @@ function App() {
                 </p>
               </div>
 
-              <div class="row center">
+              <div class="s12 m4 center">
                 <div class="light">
                   <a
                     href="http://materializecss.com/getting-started.html"
@@ -186,7 +179,7 @@ function App() {
               <h3>
                 <i class="mdi-content-send brown-text"></i>
               </h3>
-              <h4>Welcome to uFit Workouts!</h4>
+              <h4>uFit Nutrition</h4>
               <p class="left-align light">
                 Congratulations! You have what it takes to be a fitness
                 champion! My goal is to help guide you on your fitness journey!
@@ -209,15 +202,69 @@ function App() {
       </div>
 
       <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-          <div class="container">
+        {/* <div class="section no-pad-bot"> */}
+        {/* <div class="container">
             <div class="row center grey seeThrough darken-4">
               <h5 class="text-white header col s12">
                 Healthy is an outfit that looks different on everybody!
               </h5>
             </div>
+          </div> */}
+        <div class="container ">
+          {/* <div class="section"> */}
+          <div class="row center">
+            <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
+              <div class="icon-block">
+                <h2 class="center brown-text">
+                  <i class="material-icons large">adjust</i>
+                </h2>
+                <h5 class="center">Calorie Deficits</h5>
+
+                <p class="light">
+                  I've compiled the best, most effective and enjoyable free
+                  workouts to help you on your fitness journey. You'll be able
+                  to easily access a great catalog of free workouts on YouTube
+                  here at uFit.
+                </p>
+              </div>
+            </div>
+            <div class="col m1" />
+            <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
+              <div class="icon-block">
+                <h2 class="center brown-text">
+                  <i class="material-icons">battery_charging_full</i>
+                </h2>
+                <h5 class="center">Protein</h5>
+
+                <p class="light">
+                  I developed a tool that allows you to create your own custom
+                  circuit workouts. I've also provided several workouts for you
+                  to try. The tool you need to find a workout that actually
+                  works for you!
+                </p>
+              </div>
+            </div>
+            <div class="col m1" />
+
+            <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
+              <div class="icon-block">
+                <h2 class="center brown-text">
+                  <i class="material-icons">sentiment_very_satisfied</i>
+                </h2>
+                <h5 class="center">Healthy Menu</h5>
+
+                <p class="light">
+                  Here you can find information on your TDEE, the importance of
+                  protein, calorie deficits, the effects of alcohol, menstrual
+                  cycle and menopause, the importance of rest and asleep, and
+                  more.
+                </p>
+              </div>
+            </div>
           </div>
+          {/* </div> */}
         </div>
+        {/* </div> */}
         <div class="parallax">
           <img src={background6} alt="Unsplashed background img 3" />
         </div>

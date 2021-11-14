@@ -45,3 +45,12 @@
   width: 80%;
   height: auto;
 }
+
+.paddingBottom {
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.fitting {
+  overflow-y: auto;
+}
