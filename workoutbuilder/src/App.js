@@ -4,59 +4,69 @@ import WorkoutComponent from "./components/WorkoutComponent";
 import background1 from "./pics/background1.jpg";
 import background2 from "./pics/background2.jpg";
 import background3 from "./pics/background3.jpg";
+import background4 from "./pics/background4.jpeg";
+import background5 from "./pics/background5.jpeg";
+import background6 from "./pics/background6.jpeg";
 
 function App() {
   return (
     <div>
       {/* <header className="App-header"> */}
-      {/* <nav class="white" role="navigation">
+      <nav class="white" role="navigation">
         <div class="nav-wrapper container">
           <a id="logo-container" href="#" class="brand-logo">
-            Logo
+            uFit
           </a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="#">Navbar Link</a>
+              <a href="#">Menu</a>
             </li>
           </ul>
 
           <ul id="nav-mobile" class="sidenav">
             <li>
-              <a href="#">Navbar Link</a>
+              <a href="#">Menu</a>
             </li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger">
             <i class="material-icons">menu</i>
           </a>
         </div>
-      </nav> */}
+      </nav>
 
       <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
           <div class="container">
             <br></br>
-            <h1 class="header center teal-text text-lighten-2">
-              Parallax Template
-            </h1>
             <div class="row center">
-              <h5 class="header col s12 light">
-                A modern responsive front-end framework based on Material Design
-              </h5>
+              <h1 class="header col s4 teal-text text-lighten-2">
+                uFit Workouts
+              </h1>
             </div>
+            {/* <div class="row center">
+              <h5 class="header col s4 light">
+                I've compiled a list of the best most enjoyable free workouts.
+                Developed a one of a kind custom workout builder. Documented my
+                expertise on achieving a sustainable fit and healthy lifestyle
+                just for you!
+              </h5>
+            </div> */}
             <div class="row center">
-              <a
-                href="http://materializecss.com/getting-started.html"
-                id="download-button"
-                class="btn-large waves-effect waves-light teal lighten-1"
-              >
-                Get Started
-              </a>
+              <div class="header col l4 light">
+                <a
+                  href="http://materializecss.com/getting-started.html"
+                  id="download-button"
+                  class="btn btn-large waves-effect waves-light teal lighten-1"
+                >
+                  Free Workouts
+                </a>
+              </div>
             </div>
             <br></br>
           </div>
         </div>
         <div class="parallax">
-          <img src={background1} alt="Unsplashed background img 1" />
+          <img src={background4} alt="Unsplashed background img 1" />
         </div>
       </div>
 
@@ -66,49 +76,81 @@ function App() {
             <div class="col s12 m4">
               <div class="icon-block">
                 <h2 class="center brown-text">
-                  <i class="material-icons">flash_on</i>
+                  <i class="material-icons large">money_off</i>
                 </h2>
-                <h5 class="center">Speeds up development</h5>
+                <h5 class="center">Free Online Workouts</h5>
 
                 <p class="light">
-                  We did most of the heavy lifting for you to provide a default
-                  stylings that incorporate our custom components. Additionally,
-                  we refined animations and transitions to provide a smoother
-                  experience for developers.
+                  I've compiled the best, most effective and enjoyable free
+                  workouts to help you on your fitness journey. You'll be able
+                  to easily access a great catalog of free workouts on YouTube
+                  here at uFit.
                 </p>
+              </div>
+              <div class="row center">
+                <div class="light">
+                  <a
+                    href="http://materializecss.com/getting-started.html"
+                    id="download-button"
+                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                  >
+                    Free Workouts
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="col s12 m4">
               <div class="icon-block">
                 <h2 class="center brown-text">
-                  <i class="material-icons">group</i>
+                  <i class="material-icons">build</i>
                 </h2>
-                <h5 class="center">User Experience Focused</h5>
+                <h5 class="center">Workout Builder</h5>
 
                 <p class="light">
-                  By utilizing elements and principles of Material Design, we
-                  were able to create a framework that incorporates components
-                  and animations that provide more feedback to users.
-                  Additionally, a single underlying responsive system across all
-                  platforms allow for a more unified user experience.
+                  I development a tool that allows you to create your own custom
+                  circuit workouts. I've also provided several workouts for you
+                  to try.
                 </p>
+              </div>
+              <div class="row center">
+                <div class="light">
+                  <a
+                    href="http://materializecss.com/getting-started.html"
+                    id="download-button"
+                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                  >
+                    Workout Builder
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="col s12 m4">
               <div class="icon-block">
                 <h2 class="center brown-text">
-                  <i class="material-icons">settings</i>
+                  <i class="material-icons">directions</i>
                 </h2>
-                <h5 class="center">Easy to work with</h5>
+                <h5 class="center">Need Fitness Advice?</h5>
 
                 <p class="light">
-                  We have provided detailed documentation as well as specific
-                  code examples to help new users get started. We are also
-                  always open to feedback and can answer any questions a user
-                  may have about Materialize.
+                  Here you can find information on your TDEE, the importance of
+                  protein, calorie deficits, the effects of alcohol, menstrual
+                  cycle and menopause, the importance of rest and asleep, and
+                  more.
                 </p>
+              </div>
+
+              <div class="row center">
+                <div class="light">
+                  <a
+                    href="http://materializecss.com/getting-started.html"
+                    id="download-button"
+                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                  >
+                    Fitness Tips
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -119,14 +161,16 @@ function App() {
         <div class="section no-pad-bot">
           <div class="container">
             <div class="row center">
-              <h5 class="header col s12 light">
-                A modern responsive front-end framework based on Material Design
+              <div className="col l6" />
+              <h5 class="header col s12 l4 light">
+                "My goal is to help you live a sustainable healthy active
+                lifestyle without sacrificing your happiness". - Danny G.
               </h5>
             </div>
           </div>
         </div>
         <div class="parallax">
-          <img src={background2} alt="Unsplashed background img 2" />
+          <img src={background5} alt="Unsplashed background img 2" />
         </div>
       </div>
 
@@ -137,19 +181,22 @@ function App() {
               <h3>
                 <i class="mdi-content-send brown-text"></i>
               </h3>
-              <h4>Contact Us</h4>
+              <h4>Welcome to uFit Workouts!</h4>
               <p class="left-align light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                scelerisque id nunc nec volutpat. Etiam pellentesque tristique
-                arcu, non consequat magna fermentum ac. Cras ut ultricies eros.
-                Maecenas eros justo, ullamcorper a sapien id, viverra ultrices
-                eros. Morbi sem neque, posuere et pretium eget, bibendum
-                sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu
-                mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi
-                massa odio, condimentum sed ipsum ac, gravida ultrices erat.
-                Nullam eget dignissim mauris, non tristique erat. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia Curae;
+                Congratulations! You have what it takes to be a fitness
+                champion! My goal is to help guide you on your fitness journey!
+                uFit Workouts is a fitness hub where you can easily access a
+                broad range of free workout videos, my custom workouts, and the
+                most accurate fitness tips on the internet!
+                {/* <ul>
+                  <ol>Set a goal</ol>
+                  <ol>Calculate your TDEE</ol>
+                  <ol>Calculate your daily protein intake</ol>
+                  <ol>Count/estimate your daily caloric intake</ol>
+                  <ol>Train for strenght</ol>
+                  <ol>Avoid processed foods</ol>
+                  <ol>Get enough rest and sleep</ol>
+                </ul> */}
               </p>
             </div>
           </div>
@@ -159,15 +206,15 @@ function App() {
       <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
           <div class="container">
-            <div class="row center">
-              <h5 class="header col s12 light">
-                A modern responsive front-end framework based on Material Design
+            <div class="row center grey seeThrough darken-4">
+              <h5 class="text-white header col s12">
+                Healthy is an outfit that looks different on everybody!
               </h5>
             </div>
           </div>
         </div>
         <div class="parallax">
-          <img src={background3} alt="Unsplashed background img 3" />
+          <img src={background6} alt="Unsplashed background img 3" />
         </div>
       </div>
 
@@ -175,14 +222,13 @@ function App() {
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Company Bio</h5>
+              <h5 class="white-text">About Me</h5>
               <p class="grey-text text-lighten-4">
-                We are a team of college students working on this project like
-                it's our full time job. Any amount would help support and
-                continue development on this project and is greatly appreciated.
+                My name is Daniel Garza and I'm a software engineer with a
+                passion for fitness.
               </p>
             </div>
-            <div class="col l3 s12">
+            {/* <div class="col l3 s12">
               <h5 class="white-text">Settings</h5>
               <ul>
                 <li>
@@ -206,28 +252,28 @@ function App() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div class="col l3 s12">
               <h5 class="white-text">Connect</h5>
               <ul>
                 <li>
                   <a class="white-text" href="#!">
-                    Link 1
+                    <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li>
                   <a class="white-text" href="#!">
-                    Link 2
+                    <i class="fa fa-instagram"></i>{" "}
                   </a>
                 </li>
                 <li>
                   <a class="white-text" href="#!">
-                    Link 3
+                    <i class="fa fa-github"></i>{" "}
                   </a>
                 </li>
                 <li>
                   <a class="white-text" href="#!">
-                    Link 4
+                    <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
@@ -241,7 +287,7 @@ function App() {
               class="brown-text text-lighten-3"
               href="http://materializecss.com"
             >
-              Materialize
+              Daniel G.
             </a>
           </div>
         </div>
