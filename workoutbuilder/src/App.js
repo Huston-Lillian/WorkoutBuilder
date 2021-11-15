@@ -12,32 +12,12 @@ import instaIcon from "./pics/insta_icon.png";
 import linkedinIcon from "./pics/linkedin_icon.png";
 import snapIcon from "./pics/snap_icon.png";
 import githubIcon from "./pics/github_icon.png";
+import NavbarComponent from "./components/navbar";
 
 function App() {
   return (
     <div>
-      {/* <header className="App-header"> */}
-      <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo">
-            uFit
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#">Menu</a>
-            </li>
-          </ul>
-
-          <ul id="nav-mobile" class="sidenav">
-            <li>
-              <a href="#">Menu</a>
-            </li>
-          </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-        </div>
-      </nav>
+      <NavbarComponent />
 
       <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
