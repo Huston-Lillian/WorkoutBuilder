@@ -154,9 +154,17 @@ function HomepageComponent() {
               <p class="left-align light">
                 Congratulations! You have what it takes to be a fitness
                 champion! My goal is to help guide you on your fitness journey!
-                uFit Workouts is a fitness hub where you can easily access a
+                uFit Nutrition gives you the information needed to find a
+                sustainable menu that is both delicious and nutriotious. No fad
+                diets or no meal plans, you decide what best fits your
+                lifestyle. The key is to become aware of the macronutrients and
+                caloric content of the foods we consume. I've developed a tool
+                to help you calculate total calories of a meal based on a common
+                list of ingredients. Explore topics such as Calorie Deficits,
+                Alcohol and Training, Calorie Cycling, Cheat Days, and more.
+                {/* uFit Workouts is a fitness hub where you can easily access a
                 broad range of free workout videos, my custom workouts, and the
-                most accurate fitness tips on the internet!
+                most accurate fitness tips on the internet!  */}
               </p>
             </div>
           </div>
@@ -174,10 +182,9 @@ function HomepageComponent() {
                 <h5 class="center">Calorie Deficits</h5>
 
                 <p class="light">
-                  I've compiled the best, most effective and enjoyable free
-                  workouts to help you on your fitness journey. You'll be able
-                  to easily access a great catalog of free workouts on YouTube
-                  here at uFit.
+                  The key to weight loss is understanding the energy balance
+                  equation, that is, calories in vs. calories out. In order to
+                  be in a caloric deficit, calories burnt ...Learn more.
                 </p>
               </div>
             </div>
@@ -190,10 +197,10 @@ function HomepageComponent() {
                 <h5 class="center">Protein</h5>
 
                 <p class="light">
-                  I developed a tool that allows you to create your own custom
-                  circuit workouts. I've also provided several workouts for you
-                  to try. The tool you need to find a workout that actually
-                  works for you!
+                  Eating a protein-rich diet can help people lose weight because
+                  it can help them avoid overeating. A high protein diet can
+                  help build lean muscle when combined with exercise ...Learn
+                  more
                 </p>
               </div>
             </div>
@@ -207,10 +214,9 @@ function HomepageComponent() {
                 <h5 class="center">Healthy Menu</h5>
 
                 <p class="light">
-                  Here you can find information on your TDEE, the importance of
-                  protein, calorie deficits, the effects of alcohol, menstrual
-                  cycle and menopause, the importance of rest and asleep, and
-                  more.
+                  Emphasizes vegetables, fruits, whole grains, and fat-free or
+                  low-fat dairy products. Includes lean meats, poultry, fish,
+                  beans, eggs, and nuts...Learn more
                 </p>
               </div>
             </div>
