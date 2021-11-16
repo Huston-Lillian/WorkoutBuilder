@@ -36,6 +36,7 @@ function HomepageComponent() {
           <img src={background4} alt="Unsplashed background img 1" />
         </div>
       </div>
+
       <div class="container">
         <div class="section">
           <div class="row">
@@ -56,7 +57,7 @@ function HomepageComponent() {
               <div class="s12 m4 center">
                 <div class="light">
                   <a
-                    href="http://materializecss.com/getting-started.html"
+                    href="/workouts"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >

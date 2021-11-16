@@ -41,9 +41,17 @@
   opacity: 0.9;
 }
 
+.seeThroughWorkouts {
+  opacity: 0.7;
+}
+
 .socialMedia-icon {
   width: 80%;
   height: auto;
+}
+
+.greyHighlight {
+  background-color: grey;
 }
 
 .paddingBottom {
@@ -53,4 +61,9 @@
 
 .fitting {
   overflow-y: auto;
+}
+
+.bodyProjectImg {
+  width: 70%;
+  height: auto;
 }
