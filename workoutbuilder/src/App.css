@@ -80,6 +80,8 @@
   .bodyProjectImg {
     width: 70%;
     height: auto;
+    margin-top: 55px;
+    margin-bottom: 15px;
   }
 
   .carousel {

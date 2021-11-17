@@ -1,10 +1,11 @@
 import React from "react";
 import WorkoutComponent from "./WorkoutComponent";
-import abs from "../pics/abs.jpeg";
+import abs2 from "../pics/abs2.jpeg";
 import lowerBody from "../pics/lowerBody.jpeg";
 import stretching from "../pics/stretching.jpeg";
 import upperBody from "../pics/upperBody.jpeg";
 import background8 from "../pics/background8.jpeg";
+import legs from "../pics/legs.jpeg";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
@@ -38,33 +39,178 @@ function CustomWorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row">
-            {/* <div class="col s12 m4">
+            <div class="col s5 m4">
               <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons large">money_off</i>
-                </h2>
-                <h5 class="center">Free Online Workouts</h5>
-
-                <p class="light">
-                  I've compiled the best, most effective and enjoyable free
-                  workouts to help you on your fitness journey. You'll be able
-                  to easily access a great catalog of free workouts on YouTube
-                  here at uFit.
-                </p>
+                <h5 class="center"></h5>
               </div>
-              <div class="s12 m4 center">
+              <div class="s4 m5 center">
+                <div class="light">
+                  <img
+                    class="bodyProjectImg circlePic paddingBottom"
+                    src={abs2}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col s7 m6">
+              <div class="row center">
+                <h3 class="black-text">Extreme Ab Workout</h3>
+                <h5 class="black-text">15 minutes. Try it!</h5>
                 <div class="light">
                   <a
-                    href="/workouts"
+                    href="/customWorkouts"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    Free Workouts
+                    Workout Builder
                   </a>
                 </div>
               </div>
-            </div> */}
+              {/* <div class="col s4 m8">
+                <i class="material-icons large ">navigate_before</i>
+              </div>
+              <div class="col s4 m1"></div>
+              <div class="col s4 m3">
+                <i class="material-icons large ">navigate_next</i>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s5 m4 paddingBottom">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m5 center">
+                <div class="light">
+                  <img
+                    class="bodyProjectImg circlePic"
+                    src={legs}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col s7 m6">
+              <div class="row center">
+                <h3 class="black-text">Lower Body Workout</h3>
+                <h5 class="black-text">15 minutes. Try it!</h5>
+                <div class="light">
+                  <a
+                    href="/customWorkouts"
+                    id="download-button"
+                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                  >
+                    Workout Builder
+                  </a>
+                </div>
+              </div>
+              {/* <div class="col s4 m8">
+                <i class="material-icons large ">navigate_before</i>
+              </div>
+              <div class="col s4 m1"></div>
+              <div class="col s4 m3">
+                <i class="material-icons large ">navigate_next</i>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s5 m4 paddingBottom">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m5 center">
+                <div class="light">
+                  <img
+                    class="bodyProjectImg circlePic"
+                    src={stretching}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col s7 m6">
+              <div class="row center">
+                <h3 class="black-text">Stretching</h3>
+                <h5 class="black-text">15 minutes. Try it!</h5>
+                <div class="light">
+                  <a
+                    href="/customWorkouts"
+                    id="download-button"
+                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                  >
+                    Workout Builder
+                  </a>
+                </div>
+              </div>
+              {/* <div class="col s4 m8">
+                <i class="material-icons large ">navigate_before</i>
+              </div>
+              <div class="col s4 m1"></div>
+              <div class="col s4 m3">
+                <i class="material-icons large ">navigate_next</i>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s5 m4 paddingBottom">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m5 center">
+                <div class="light">
+                  <img
+                    class="bodyProjectImg circlePic"
+                    src={upperBody}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col s7 m6">
+              <div class="row center">
+                <h3 class="black-text">Upper Body Workout</h3>
+                <h5 class="black-text">15 minutes. Try it!</h5>
+                <div class="light">
+                  <a
+                    href="/customWorkouts"
+                    id="download-button"
+                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                  >
+                    Workout Builder
+                  </a>
+                </div>
+              </div>
+              {/* <div class="col s4 m8">
+                <i class="material-icons large ">navigate_before</i>
+              </div>
+              <div class="col s4 m1"></div>
+              <div class="col s4 m3">
+                <i class="material-icons large ">navigate_next</i>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div class="container">
+        <div class="section">
+          <div class="row">
             <div class="col s12 m3">
               <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -165,7 +311,7 @@ function CustomWorkoutsComponent() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 }

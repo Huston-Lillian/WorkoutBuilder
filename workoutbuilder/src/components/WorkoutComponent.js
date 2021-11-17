@@ -19,6 +19,9 @@ class WorkoutComponent extends Component {
   }
 
   exerciseLoop() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = "Let's go!";
+    window.speechSynthesis.speak(msg);
     clearInterval(this.intervalID);
 
     this.setState({
@@ -32,6 +35,11 @@ class WorkoutComponent extends Component {
     let hours = 0;
     let minutes = 0;
     let seconds = -1;
+
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = exerciseObj[i].exerciseName;
+    window.speechSynthesis.speak(msg);
+
     this.intervalID = setInterval(() => {
       let { done, paused } = this.state;
       //Your code
@@ -52,11 +60,19 @@ class WorkoutComponent extends Component {
           y = exerciseObj[i].timeInSeconds;
           yMin = Math.floor(y / 60);
           ySec = y % 60;
+
+          var msg = new SpeechSynthesisUtterance();
+          msg.text = exerciseObj[i].exerciseName;
+          window.speechSynthesis.speak(msg);
         } else if (i === exerciseObj.length - 1 && y === 0) {
           i = 0;
           y = exerciseObj[i].timeInSeconds;
           yMin = Math.floor(y / 60);
           ySec = y % 60;
+
+          var msg = new SpeechSynthesisUtterance();
+          msg.text = exerciseObj[i].exerciseName;
+          window.speechSynthesis.speak(msg);
         }
         this.setState({
           nextExercise: exerciseObj[i + 1]
@@ -65,6 +81,11 @@ class WorkoutComponent extends Component {
           exerciseName: exerciseObj[i].exerciseName,
           timeRemaining: yMin + ":  " + ySec + " remaining"
         });
+        if (ySec <= 3 && ySec > 0) {
+          var msg = new SpeechSynthesisUtterance();
+          msg.text = ySec;
+          window.speechSynthesis.speak(msg);
+        }
         y--;
         yMin = Math.floor(y / 60);
         ySec = y % 60;
@@ -89,6 +110,9 @@ class WorkoutComponent extends Component {
   }
 
   finish() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = "Excellent job, you're a true fitness champion!";
+    window.speechSynthesis.speak(msg);
     this.setState({
       done: true,
       exerciseName: "REST IT OUT!",
