@@ -19,13 +19,15 @@ function HomepageComponent() {
             <div class="row center">
               <div class="header col l4 light">
                 <a
+                  href="/workouts"
                   id="download-button"
                   class="btn btn-large waves-effect waves-light teal lighten-1"
                 >
-                  <Link class="white-text" to="/workouts" replace>
+                  Free Workouts
+                  {/* <Link class="white-text" to="/workouts" replace>
                     {" "}
                     Free Workouts
-                  </Link>
+                  </Link> */}
                 </a>
               </div>
             </div>
@@ -84,7 +86,7 @@ function HomepageComponent() {
               <div class="s12 m4 center">
                 <div class="light">
                   <a
-                    href="http://materializecss.com/getting-started.html"
+                    href="/customWorkouts"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
