@@ -6,6 +6,8 @@ import NavbarComponent from "./components/navbar";
 import FooterComponent from "./components/footer";
 import HomepageComponent from "./components/homepage/homepage";
 import WorkoutsComponent from "./components/workouts";
+import CustomWorkoutsComponent from "./components/customWorkout";
+import WorkoutScreenComponent from "./components/workoutScreen";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomepageComponent />} />
           <Route path="/workouts" element={<WorkoutsComponent />} />
+          <Route path="/customWorkouts" element={<CustomWorkoutsComponent />} />
+          <Route path="/workoutScreen" element={<WorkoutScreenComponent />} />
         </Routes>
       </BrowserRouter>
       <FooterComponent />

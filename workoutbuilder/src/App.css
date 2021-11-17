@@ -72,6 +72,10 @@
   border-radius: 50%;
 }
 
+.workoutScreen {
+  min-height: 100vh;
+}
+
 @media only screen and (max-width: 600px) {
   .bodyProjectImg {
     width: 70%;
@@ -86,5 +90,9 @@
   .paddingBottom {
     margin-top: 35px;
     margin-bottom: 15px;
+  }
+
+  .fitText {
+    font-size: 0.4em;
   }
 }

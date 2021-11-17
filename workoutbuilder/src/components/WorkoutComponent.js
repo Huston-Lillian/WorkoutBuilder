@@ -78,7 +78,7 @@ class WorkoutComponent extends Component {
           hours++;
         }
         this.setState({
-          totalTime: hours + ": " + minutes + " : " + seconds
+          totalTime: hours + ": " + minutes + ": " + seconds
         });
       }
     }, 1000);
@@ -91,8 +91,8 @@ class WorkoutComponent extends Component {
   finish() {
     this.setState({
       done: true,
-      exerciseName: "REST IT OUT YALL",
-      timeRemaining: "That shit was bananas ya'll",
+      exerciseName: "REST IT OUT!",
+      timeRemaining: "Amazing Job!",
       nextExercise: ""
     });
   }
@@ -111,21 +111,99 @@ class WorkoutComponent extends Component {
   }
 
   render() {
-    let { totalTime, exerciseName, timeRemaining, nextExercise } = this.state;
+    let {
+      totalTime,
+      exerciseName,
+      timeRemaining,
+      nextExercise,
+      paused
+    } = this.state;
     return (
       <div noValidate>
-        <button onClick={this.exerciseLoop}>Start Workout</button>
-        <h1 style={{ color: "#8B0000" }}>{exerciseName}</h1>
-        <h1 style={{ color: "red" }}>{timeRemaining}</h1>
-        <button onClick={this.finish}>Finish Workout</button>
-        <button onClick={this.pause}>Continue Workout</button>
-        <h1>{totalTime}</h1>
-        {nextExercise && (
-          <React.Fragment>
-            <h1>Next exercise:</h1>
-            <h1 style={{ color: "#87CEEB" }}>{nextExercise}</h1>
-          </React.Fragment>
-        )}
+        <div class="row">
+          <div class="col s4 m4">
+            {totalTime ? (
+              <a
+                onClick={this.exerciseLoop}
+                class="fitText yellow darken-4 waves-effect waves-light btn-large"
+              >
+                <i class="material-icons right">refresh</i>Restart
+              </a>
+            ) : (
+              <a
+                onClick={this.exerciseLoop}
+                class="fitText green darken-4 waves-effect waves-light btn-large"
+              >
+                <i class="material-icons right">play_arrow</i>Start
+              </a>
+            )}
+            {/* /* <button onClick={this.exerciseLoop}>Start Workout</button> */}
+          </div>
+          <div class=" center col s4 m4">
+            {paused ? (
+              <a
+                onClick={this.pause}
+                class="fitText green darken-4 waves-effect waves-light btn-large"
+              >
+                <i class="material-icons right">play_arrow</i>Play
+              </a>
+            ) : (
+              <a
+                onClick={this.pause}
+                class="fitText grey waves-effect waves-light btn-large"
+              >
+                <i class="material-icons right">pause</i>Pause
+              </a>
+            )}
+
+            {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
+          </div>
+          <div class=" right-align  col s4 m4">
+            <a
+              onClick={this.finish}
+              class="fitText red waves-effect waves-light btn-large"
+            >
+              <i class="material-icons right">stop</i>Finish
+            </a>
+
+            {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
+          </div>
+          <div class="col s12 m12">
+            <h3 class="center" style={{ color: "#8B0000" }}>
+              {exerciseName}
+            </h3>
+            <br></br>
+            <h3 class="center" style={{ color: "red" }}>
+              {timeRemaining}
+            </h3>
+            <br></br>
+            {nextExercise && (
+              <React.Fragment>
+                <h3 class="center">Next exercise:</h3>
+                <h3 class="center" style={{ color: "#87CEEB" }}>
+                  {nextExercise}
+                </h3>
+              </React.Fragment>
+            )}
+          </div>
+        </div>
+        <div class="row">
+          {/* <div class="col s2 m4">
+            <a onClick={this.finish} class="waves-effect waves-light btn-large">
+              <i class="material-icons right">cloud</i>Finish
+            </a>
+          </div> */}
+          <div class="center col s12 m12">
+            <h3>{totalTime}</h3>
+          </div>
+          {/* <div class="col s2 m3">
+            <a onClick={this.pause} class="waves-effect waves-light btn-large">
+              <i class="material-icons right">cloud</i>Pause
+            </a>
+          </div> */}
+          {/* <button onClick={this.finish}>Finish Workout</button>
+        <button onClick={this.pause}>Continue Workout</button> */}
+        </div>
       </div>
     );
   }
