@@ -1,10 +1,16 @@
 import React, { Component } from "react";
-import { exerciseObj } from "../constants/Workouts";
+import { exerciseObject } from "../constants/Workouts";
 
-class WorkoutComponent extends Component {
+type Props = {
+  id: number
+};
+
+class WorkoutComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
+      workoutName: exerciseObject[this.props.id].name,
+      exerciseObj: exerciseObject[this.props.id].exerciseList,
       value: "",
       done: false,
       paused: false,
@@ -19,8 +25,11 @@ class WorkoutComponent extends Component {
   }
 
   exerciseLoop() {
+    var elmnt = document.getElementById("activeWorkout");
+    elmnt.scrollIntoView();
+    let { exerciseObj } = this.state;
     var msg = new SpeechSynthesisUtterance();
-    msg.text = "Let's go!";
+    msg.text = "Let's get moving";
     window.speechSynthesis.speak(msg);
     clearInterval(this.intervalID);
 
@@ -65,14 +74,32 @@ class WorkoutComponent extends Component {
           msg.text = exerciseObj[i].exerciseName;
           window.speechSynthesis.speak(msg);
         } else if (i === exerciseObj.length - 1 && y === 0) {
-          i = 0;
-          y = exerciseObj[i].timeInSeconds;
-          yMin = Math.floor(y / 60);
-          ySec = y % 60;
+          // i = 0;
+          // y = exerciseObj[i].timeInSeconds;
+          // yMin = Math.floor(y / 60);
+          // ySec = y % 60;
 
+          // var msg = new SpeechSynthesisUtterance();
+          // msg.text = exerciseObj[i].exerciseName;
+          // window.speechSynthesis.speak(msg);
           var msg = new SpeechSynthesisUtterance();
-          msg.text = exerciseObj[i].exerciseName;
+          msg.text = "Excellent job, you're a true fitness champion!";
           window.speechSynthesis.speak(msg);
+          this.setState({
+            done: true,
+            exerciseName: "REST IT OUT!",
+            timeRemaining: "Amazing Job!",
+            nextExercise: ""
+          });
+          clearInterval(this.intervalID);
+          this.setState({
+            totalTime: hours + ": " + minutes + " : " + (seconds + 1),
+            done: false,
+            paused: false,
+            timeLoop: () => {}
+          });
+          this.intervalID = 0;
+          return;
         }
         this.setState({
           nextExercise: exerciseObj[i + 1]
@@ -140,10 +167,16 @@ class WorkoutComponent extends Component {
       exerciseName,
       timeRemaining,
       nextExercise,
-      paused
+      paused,
+      workoutName
     } = this.state;
     return (
       <div noValidate>
+        <div class="row">
+          <div class="icon-block">
+            <h3 class="left-align">{workoutName}</h3>
+          </div>
+        </div>
         <div class="row">
           <div class="col s4 m4">
             {totalTime ? (
@@ -163,7 +196,7 @@ class WorkoutComponent extends Component {
             )}
             {/* /* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div class=" center col s4 m4">
+          <div id="activeWorkout" class=" center col s4 m4">
             {paused ? (
               <a
                 onClick={this.pause}
@@ -192,7 +225,7 @@ class WorkoutComponent extends Component {
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div class="col s12 m12">
+          <div class="col s12 m12 paddingBottom">
             <h3 class="center" style={{ color: "#8B0000" }}>
               {exerciseName}
             </h3>

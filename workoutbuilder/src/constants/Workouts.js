@@ -1,57 +1,300 @@
-export const exerciseObj = [
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Squats"
+// export const exerciseObj = [
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Squats"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Push Ups"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Lunges"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Standing Power Jacks"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Squat Kicks"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Tricep Dips"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Leg Raises"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Oblique Push Ups"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Bicycle Abs"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Plank"
+//   },
+//   {
+//     timeInSeconds: 5,
+//     displayText: "30 seconds",
+//     exerciseName: "Rest"
+//   }
+// ];
+
+export const exerciseObject = {
+  0: {
+    name: "Extreme Abs",
+    exerciseList: [
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Squats"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Push Ups"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Lunges"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Standing Power Jacks"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Squat Kicks"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Tricep Dips"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Leg Raises"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Oblique Push Ups"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Bicycle Abs"
+      // },
+      // {
+      //   timeInSeconds: 5,
+      //   displayText: "30 seconds",
+      //   exerciseName: "Plank"
+      // },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      }
+    ]
   },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Push Ups"
+  1: {
+    name: "Lower Body Workout",
+    exerciseList: [
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Push Ups"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Lunges"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Standing Power Jacks"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Tricep Dips"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Leg Raises"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Oblique Push Ups"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      }
+    ]
   },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Lunges"
+  2: {
+    name: "Stretching",
+    exerciseList: [
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Push Ups"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Lunges"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Standing Power Jacks"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Tricep Dips"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Leg Raises"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Oblique Push Ups"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      }
+    ]
   },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Standing Power Jacks"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Squat Kicks"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Tricep Dips"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Leg Raises"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Oblique Push Ups"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Bicycle Abs"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Plank"
-  },
-  {
-    timeInSeconds: 5,
-    displayText: "30 seconds",
-    exerciseName: "Rest"
+  3: {
+    name: "Upper Body Workout",
+    exerciseList: [
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Push Ups"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Lunges"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Standing Power Jacks"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Tricep Dips"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Leg Raises"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Oblique Push Ups"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 5,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      }
+    ]
   }
-];
+};
