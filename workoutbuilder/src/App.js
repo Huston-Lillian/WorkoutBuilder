@@ -18,7 +18,10 @@ function App() {
           <Route path="/" element={<HomepageComponent />} />
           <Route path="/workouts" element={<WorkoutsComponent />} />
           <Route path="/customWorkouts" element={<CustomWorkoutsComponent />} />
-          <Route path="/workoutScreen" element={<WorkoutScreenComponent />} />
+          <Route
+            path="/workoutScreen/:id"
+            element={<WorkoutScreenComponent />}
+          />
         </Routes>
       </BrowserRouter>
       <FooterComponent />

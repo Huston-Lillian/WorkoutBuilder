@@ -1,12 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import WorkoutComponent from "./WorkoutComponent";
 
 function WorkoutScreenComponent() {
+  window.scrollTo(0, 0);
+  let { id } = useParams();
   return (
     <React.Fragment>
       <div class="container workoutScreen">
         <div class="section">
-          <WorkoutComponent />
+          <WorkoutComponent id={id} />
         </div>
       </div>
     </React.Fragment>

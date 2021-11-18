@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import WorkoutComponent from "./WorkoutComponent";
 import abs2 from "../pics/abs2.jpeg";
 import lowerBody from "../pics/lowerBody.jpeg";
@@ -39,14 +40,14 @@ function CustomWorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row">
-            <div class="col s5 m4">
+            <div class="col s5 m4 customWorkoutImg">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="bodyProjectImg circlePic paddingBottom"
+                    class="bodyProjectImg circlePic"
                     src={abs2}
                     alt="Unsplashed background img 1"
                   />
@@ -59,11 +60,14 @@ function CustomWorkoutsComponent() {
                 <h5 class="black-text">15 minutes. Try it!</h5>
                 <div class="light">
                   <a
-                    href="/customWorkouts"
+                    //href="/workoutScreen/0"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    Workout Builder
+                    <Link class="white-text" to="/workoutScreen/0">
+                      {" "}
+                      Start Workout
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -82,7 +86,7 @@ function CustomWorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row">
-            <div class="col s5 m4 paddingBottom">
+            <div class="col s5 m4 customWorkoutImg">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
@@ -102,11 +106,14 @@ function CustomWorkoutsComponent() {
                 <h5 class="black-text">15 minutes. Try it!</h5>
                 <div class="light">
                   <a
-                    href="/customWorkouts"
+                    //href="/workoutScreen/1"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    Workout Builder
+                    <Link class="white-text" to="/workoutScreen/1">
+                      {" "}
+                      Start Workout
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -125,7 +132,7 @@ function CustomWorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row">
-            <div class="col s5 m4 paddingBottom">
+            <div class="col s5 m4 customWorkoutImg">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
@@ -145,11 +152,14 @@ function CustomWorkoutsComponent() {
                 <h5 class="black-text">15 minutes. Try it!</h5>
                 <div class="light">
                   <a
-                    href="/customWorkouts"
+                    //href="/workoutScreen/2"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    Workout Builder
+                    <Link class="white-text" to="/workoutScreen/2">
+                      {" "}
+                      Start Workout
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -168,7 +178,7 @@ function CustomWorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row">
-            <div class="col s5 m4 paddingBottom">
+            <div class="col s5 m4 customWorkoutImg">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
@@ -188,11 +198,14 @@ function CustomWorkoutsComponent() {
                 <h5 class="black-text">15 minutes. Try it!</h5>
                 <div class="light">
                   <a
-                    href="/customWorkouts"
+                    // href="/workoutScreen/3"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    Workout Builder
+                    <Link class="white-text" to="/workoutScreen/3">
+                      {" "}
+                      Start Workout
+                    </Link>
                   </a>
                 </div>
               </div>
