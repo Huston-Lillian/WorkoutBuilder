@@ -21,8 +21,8 @@ function CustomWorkoutsComponent() {
           <div class="container">
             <br></br>
             <div class="row center">
-              <h3 class=" blue-grey lighten-5 seeThroughWorkouts  col s6 black-text">
-                THIS IS YOUR GYM!
+              <h3 class="header col s4 m3 blue-grey lighten-5 seeThroughWorkouts black-text">
+                THIS IS YOUR GYM
               </h3>
             </div>
             <br></br>

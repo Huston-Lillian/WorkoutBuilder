@@ -11,7 +11,7 @@ function NavbarComponent() {
           <a href="/customWorkouts">Custom Workouts</a>
         </li>
         <li>
-          <a href="#!">Fitness Adive</a>
+          <a href="/myadvice">My Fitness Advice</a>
         </li>
         <li class="divider"></li>
         <li>
@@ -43,7 +43,7 @@ function NavbarComponent() {
                 <a href="/customWorkouts">Custom Workouts</a>
               </li>
               <li>
-                <a href="#!">Fitness Adive</a>
+                <a href="/myadvice">My Fitness Advice</a>
               </li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger">

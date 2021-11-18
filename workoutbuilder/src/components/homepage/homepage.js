@@ -114,7 +114,7 @@ function HomepageComponent() {
               <div class="s12 m4 center">
                 <div class="light">
                   <a
-                    href="http://materializecss.com/getting-started.html"
+                    href="/myadvice"
                     id="download-button"
                     class="btn btn-large waves-effect waves-light teal lighten-1"
                   >
