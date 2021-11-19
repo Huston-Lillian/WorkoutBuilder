@@ -50,7 +50,7 @@ function MyAdviceComponent() {
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="adviceImg circlePic"
+                    class="meAdviceImg circlePic"
                     src={me}
                     alt="Unsplashed background img 1"
                   />
