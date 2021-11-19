@@ -81,9 +81,30 @@
   margin-bottom: 10px;
 }
 
+.proteinImg {
+  width: 90%;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.activeImg {
+  width: 80%;
+  height: auto;
+}
+
+.alcoholImg {
+  width: 70%;
+  height: auto;
+}
+
+.foodImg {
+  width: 90%;
+  height: auto;
+}
 @media only screen and (max-width: 600px) {
   .bodyProjectImg {
-    width: 70%;
+    width: 50%;
     height: auto;
     margin-top: 55px;
     margin-bottom: 15px;
@@ -101,5 +122,27 @@
 
   .fitText {
     font-size: 0.4em;
+  }
+
+  .proteinImg {
+    width: 60%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .activeImg {
+    width: 60%;
+    height: auto;
+  }
+
+  .alcoholImg {
+    width: 50%;
+    height: auto;
+  }
+
+  .foodImg {
+    width: 65%;
+    height: auto;
   }
 }
