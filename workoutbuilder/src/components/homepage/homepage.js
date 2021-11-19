@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import background4 from "../../pics/background4.jpeg";
 import background5 from "../../pics/background5.jpeg";
 import background6 from "../../pics/background6.jpeg";
+import free from "../../pics/free.png";
+import custom from "../../pics/custom.png";
+import advice from "../../pics/advice.png";
 
 function HomepageComponent() {
   return (
@@ -12,7 +15,7 @@ function HomepageComponent() {
           <div class="container">
             <br></br>
             <div class="row center">
-              <h1 class="header col s4 teal-text text-lighten-2">
+              <h1 class="center header col s6 l4 teal-text text-lighten-2">
                 uFit Workouts
               </h1>
             </div>
@@ -40,6 +43,156 @@ function HomepageComponent() {
       </div>
 
       <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 m4 customWorkoutImg">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m3 center">
+                <div class="light">
+                  <a href="/workouts">
+                    <img
+                      class="cheatMeal circlePic"
+                      src={free}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="row center">
+                <h3 class="black-text">
+                  {" "}
+                  <a class="teal-text text-lighten-2" href="/workouts">
+                    FREE Workouts
+                  </a>
+                </h3>{" "}
+                <h5 class="black-text">
+                  I've compiled the best, most effective and enjoyable free
+                  workouts to help you on your fitness journey. You'll be able
+                  to easily access a great catalog of free workouts on YouTube
+                  here at uFit.
+                </h5>
+                <div class="s12 m4 center">
+                  <div class="light">
+                    <a
+                      href="/workouts"
+                      id="download-button"
+                      class="btn btn-large waves-effect waves-light teal lighten-1"
+                    >
+                      Free Workouts
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 m4 customWorkoutImg">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m3 center">
+                <div class="light">
+                  <a href="/customWorkouts">
+                    <img
+                      class="cheatMeal circlePic"
+                      src={custom}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="row center">
+                <h3 class="black-text">
+                  {" "}
+                  <a class="teal-text text-lighten-2" href="/customWorkouts">
+                    Custom Workouts
+                  </a>
+                </h3>
+                <h5 class="black-text">
+                  <p>
+                    I am developing a tool that will allow you to create your
+                    own custom circuit workouts. For now I've provided several
+                    workouts for you to try.
+                  </p>
+                </h5>
+                <div class="s12 m4 center">
+                  <div class="light">
+                    <a
+                      href="/customWorkouts"
+                      id="download-button"
+                      class="btn btn-large waves-effect waves-light teal lighten-1"
+                    >
+                      Custom Workouts
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 m4 customWorkoutImg">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m3 center">
+                <div class="light">
+                  <a href="/myadvice">
+                    <img
+                      class="cheatMeal circlePic"
+                      src={advice}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="row center">
+                <h3 class="black-text">
+                  <a class="teal-text text-lighten-2" href="/myadvice">
+                    Fitness Advice
+                  </a>
+                </h3>
+                <h5 class="black-text">
+                  Here you can find information on your TDEE, the importance of
+                  protein, calorie deficits, the effects of alcohol, menstrual
+                  cycle and menopause, the importance of rest and asleep, and
+                  more.
+                </h5>
+                <div class="s12 m4 center">
+                  <div class="light">
+                    <a
+                      href="/myadvice"
+                      id="download-button"
+                      class="btn btn-large waves-effect waves-light teal lighten-1"
+                    >
+                      Fitness Advice
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div class="container">
         <div class="section">
           <div class="row">
             <div class="col s12 m4">
@@ -125,7 +278,7 @@ function HomepageComponent() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
@@ -146,7 +299,7 @@ function HomepageComponent() {
         </div>
       </div>
 
-      <div class="container">
+      {/* <div class="container">
         <div class="section">
           <div class="row">
             <div class="col s12 center">
@@ -165,16 +318,16 @@ function HomepageComponent() {
                 to help you calculate total calories of a meal based on a common
                 list of ingredients. Explore topics such as Calorie Deficits,
                 Alcohol and Training, Calorie Cycling, Cheat Days, and more.
-                {/* uFit Workouts is a fitness hub where you can easily access a
+                uFit Workouts is a fitness hub where you can easily access a
                 broad range of free workout videos, my custom workouts, and the
-                most accurate fitness tips on the internet!  */}
+                most accurate fitness tips on the internet! 
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div class="parallax-container valign-wrapper">
+      {/* <div class="parallax-container valign-wrapper">
         <div class="container ">
           <div class="row center">
             <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
@@ -228,7 +381,7 @@ function HomepageComponent() {
         <div class="parallax">
           <img src={background6} alt="Unsplashed background img 3" />
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 }

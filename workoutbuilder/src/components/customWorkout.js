@@ -20,11 +20,11 @@ function CustomWorkoutsComponent() {
         <div class="section no-pad-bot">
           <div class="container">
             <br></br>
-            <div class="row center">
+            {/* <div class="row center">
               <h3 class="header col s4 m3 blue-grey lighten-5 seeThroughWorkouts black-text">
                 THIS IS YOUR GYM
               </h3>
-            </div>
+            </div> */}
             <br></br>
           </div>
         </div>

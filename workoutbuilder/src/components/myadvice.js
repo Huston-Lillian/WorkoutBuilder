@@ -23,11 +23,11 @@ function MyAdviceComponent() {
         <div class="section no-pad-bot">
           <div class="container">
             <br></br>
-            <div class="row center">
+            {/* <div class="row center">
               <h3 class="header col s5 m3 blue-grey lighten-5 seeThroughWorkouts black-text">
                 MY ADVICE TO YOU
               </h3>
-            </div>
+            </div> */}
             <br></br>
           </div>
         </div>
@@ -431,7 +431,9 @@ function MyAdviceComponent() {
                 <h5 class="black-text">
                   Water may suppress your appetite, boost your metabolism, and
                   make exercise easier and more efficient, all of which could
-                  contribute to results on the scale.
+                  contribute to results on the scale. Women should drink 11.5
+                  cups (2.7 liters) per day. Men should drink 15.5 cups (3.7
+                  liters) a day.
                 </h5>
               </div>
             </div>

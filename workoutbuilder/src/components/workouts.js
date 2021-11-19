@@ -16,13 +16,13 @@ function WorkoutsComponent() {
     <React.Fragment>
       <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
-          <div class="container">
+          <div class="container ">
             <br></br>
-            <div class="row center">
+            {/* <div class="row center">
               <h3 class=" blue-grey lighten-5 seeThroughWorkouts  col s6 m3 black-text">
                 IT DOESN'T GET EASIER, YOU GET BETTER!
               </h3>
-            </div>
+            </div> */}
             <br></br>
           </div>
         </div>
@@ -37,8 +37,11 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
+          <div class="row s12 l12 text-align-left">
+            <h3 class="coachName">Team Body Project</h3>
+          </div>
           <div class="row">
-            <div class="col s5 m4 paddingBottom">
+            <div class="col s5 m4 marginUp">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
@@ -52,7 +55,7 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
+            <div class="col s7 m6 youtubeVid">
               <div class="carousel">
                 <iframe
                   class="carousel-item"
@@ -109,6 +112,9 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
+          <div class="row s12 l12 text-align-left">
+            <h3 class="coachName">Fitness Blender</h3>
+          </div>
           <div class="row">
             <div class="col s5 m4 paddingBottom">
               <div class="icon-block">
@@ -117,14 +123,14 @@ function WorkoutsComponent() {
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    class="workoutImgs circlePic workoutMarginUpImgs"
                     src={fitnessBlender}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
+            <div class="col s7 m6 youtubeVid">
               <div class="carousel">
                 <iframe
                   class="carousel-item"
@@ -181,6 +187,9 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
+          <div class="row s12 l12 text-align-left">
+            <h3 class="coachName">MadFit</h3>
+          </div>
           <div class="row">
             <div class="col s5 m4 paddingBottom">
               <div class="icon-block">
@@ -189,14 +198,14 @@ function WorkoutsComponent() {
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    class="workoutImgs circlePic workoutMarginUpImgs"
                     src={madFit}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
+            <div class="col s7 m6 youtubeVid">
               <div class="carousel">
                 <iframe
                   class="carousel-item"
@@ -253,6 +262,9 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
+          <div class="row s12 l12 text-align-left">
+            <h3 class="coachName">Pernilla Stryker</h3>
+          </div>
           <div class="row">
             <div class="col s5 m4 paddingBottom">
               <div class="icon-block">
@@ -261,14 +273,14 @@ function WorkoutsComponent() {
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    class="workoutImgs circlePic workoutMarginUpImgs"
                     src={pernilla}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
+            <div class="col s7 m6 youtubeVid">
               <div class="carousel">
                 <iframe
                   class="carousel-item"
