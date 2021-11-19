@@ -286,10 +286,10 @@ function HomepageComponent() {
             <div class="row center">
               <div className="col l6" />
               <h5 class="header col s12 l4 light">
-                "My goal is to help you live a sustainable healthy active
+                "My goal is to help you live a sustainable healthy and active
                 lifestyle without sacrificing your happiness."
                 <br></br>
-                Danny G.
+                Dan "The Realest" Man
               </h5>
             </div>
           </div>

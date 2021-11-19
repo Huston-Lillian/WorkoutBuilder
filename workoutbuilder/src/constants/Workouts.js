@@ -58,21 +58,22 @@
 
 export const exerciseObject = {
   0: {
+    totalTime: 80,
     name: "Extreme Abs",
     exerciseList: [
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Squats"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
+        timeInSeconds: 15,
+        displayText: "15 seconds",
         exerciseName: "Push Ups"
       },
       {
         timeInSeconds: 5,
-        displayText: "30 seconds",
+        displayText: "5 seconds",
         exerciseName: "Lunges"
       },
       {
