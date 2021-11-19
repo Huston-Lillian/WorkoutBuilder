@@ -50,7 +50,7 @@ function MyAdviceComponent() {
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    class="adviceImg circlePic"
                     src={me}
                     alt="Unsplashed background img 1"
                   />
@@ -228,7 +228,7 @@ function MyAdviceComponent() {
               <div class="s4 m5 center">
                 <div class="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    class="adviceImg circlePic"
                     src={calories}
                     alt="Unsplashed background img 1"
                   />
@@ -449,7 +449,7 @@ function MyAdviceComponent() {
               <div class="s4 m3 center">
                 <div class="light">
                   <img
-                    class="activeImg circlePic"
+                    class="sleepImg circlePic"
                     src={sleep}
                     alt="Unsplashed background img 1"
                   />
@@ -524,7 +524,7 @@ function MyAdviceComponent() {
               <div class="s4 m3 center">
                 <div class="light">
                   <img
-                    class="alcoholImg circlePic"
+                    class="cheatMeal circlePic"
                     src={cheatMeal}
                     alt="Unsplashed background img 1"
                   />

@@ -19,7 +19,7 @@ function WorkoutsComponent() {
           <div class="container">
             <br></br>
             <div class="row center">
-              <h3 class=" blue-grey lighten-5 seeThroughWorkouts  col s4 m3 black-text">
+              <h3 class=" blue-grey lighten-5 seeThroughWorkouts  col s6 m3 black-text">
                 IT DOESN'T GET EASIER, YOU GET BETTER!
               </h3>
             </div>
