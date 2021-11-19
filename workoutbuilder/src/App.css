@@ -68,6 +68,11 @@
   height: auto;
 }
 
+.workoutImgs {
+  width: 70%;
+  height: auto;
+}
+
 .circlePic {
   border-radius: 50%;
 }
@@ -117,6 +122,24 @@
   width: 85%;
   height: auto;
 }
+
+.coachName {
+  text-decoration: underline;
+}
+
+.youtubeVid {
+  margin-top: -65px;
+}
+
+.bannerHeight {
+  max-height: 200px !important;
+  height: 100%;
+}
+
+.workoutMarginUpImgs {
+  margin-top: -45px;
+}
+
 @media only screen and (max-width: 600px) {
   .bodyProjectImg {
     width: 70%;
@@ -176,5 +199,27 @@
   .sleepImg {
     width: 60%;
     height: auto;
+  }
+
+  .paddingBottom {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .marginUp {
+    margin-top: -25px;
+  }
+
+  .workoutImgs {
+    width: 70%;
+    height: auto;
+  }
+
+  .workoutMarginUpImgs {
+    margin-top: 0px;
+  }
+
+  .parallax-container {
+    max-height: 280px;
   }
 }
