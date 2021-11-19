@@ -89,7 +89,7 @@
 }
 
 .activeImg {
-  width: 80%;
+  width: 75%;
   height: auto;
 }
 
@@ -102,8 +102,30 @@
   width: 90%;
   height: auto;
 }
+
+.adviceImg {
+  width: 70%;
+  height: auto;
+}
+
+.cheatMeal {
+  width: 75%;
+  height: auto;
+}
+
+.sleepImg {
+  width: 85%;
+  height: auto;
+}
 @media only screen and (max-width: 600px) {
   .bodyProjectImg {
+    width: 70%;
+    height: auto;
+    margin-top: 55px;
+    margin-bottom: 15px;
+  }
+
+  .adviceImg {
     width: 50%;
     height: auto;
     margin-top: 55px;
@@ -143,6 +165,16 @@
 
   .foodImg {
     width: 65%;
+    height: auto;
+  }
+
+  .cheatMeal {
+    width: 60%;
+    height: auto;
+  }
+
+  .sleepImg {
+    width: 60%;
     height: auto;
   }
 }
