@@ -180,9 +180,8 @@ function HomepageComponent() {
                 </h3>
                 <h5 class="black-text">
                   Here you can find information on your TDEE, the importance of
-                  protein, calorie deficits, the effects of alcohol, menstrual
-                  cycle and menopause, the importance of rest and asleep, and
-                  more.
+                  protein, calorie deficits, the effects of alcohol, the
+                  importance of rest and asleep, and more.
                 </h5>
                 <div class="s12 m4 center">
                   <div class="light">

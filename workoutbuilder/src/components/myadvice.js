@@ -344,8 +344,8 @@ function MyAdviceComponent() {
                 </h5>
                 <h5 class="light">
                   {" "}
-                  A high protein diet can increase muscle mass and strenght when
-                  combined with strenght training.{" "}
+                  A high protein diet can increase muscle mass when combined
+                  with strength training.{" "}
                 </h5>{" "}
                 <h5 class="light">
                   {" "}
@@ -463,10 +463,11 @@ function MyAdviceComponent() {
               <div class="row center">
                 <h3 class="black-text">Rest and Sleep</h3>
                 <h5 class="black-text">
-                  Rest allows your muscles to rebuild and grow. Muscle burns
-                  more energy than fat. I recommend walking and streching on
-                  these days to stay active. Your body generally needs less
-                  calories on rest days.
+                  Rest days allow your muscles to rebuild and grow. I recommend
+                  walking and streching on rest days to stay active. Your body
+                  generally needs less calories on such days. Sleep is crucial
+                  to recharge from our daily lives and helps us maintain our
+                  habits. Sleep is one of my top priorities.
                 </h5>
               </div>
             </div>
