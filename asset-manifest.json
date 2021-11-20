@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/WorkoutBuilder/static/css/main.7607b5e1.chunk.css",
-    "main.js": "/WorkoutBuilder/static/js/main.215cd519.chunk.js",
-    "main.js.map": "/WorkoutBuilder/static/js/main.215cd519.chunk.js.map",
-    "runtime-main.js": "/WorkoutBuilder/static/js/runtime-main.3d539eda.js",
-    "runtime-main.js.map": "/WorkoutBuilder/static/js/runtime-main.3d539eda.js.map",
-    "static/js/2.3f4a8987.chunk.js": "/WorkoutBuilder/static/js/2.3f4a8987.chunk.js",
-    "static/js/2.3f4a8987.chunk.js.map": "/WorkoutBuilder/static/js/2.3f4a8987.chunk.js.map",
-    "static/js/3.3a177399.chunk.js": "/WorkoutBuilder/static/js/3.3a177399.chunk.js",
-    "static/js/3.3a177399.chunk.js.map": "/WorkoutBuilder/static/js/3.3a177399.chunk.js.map",
+    "main.js": "/WorkoutBuilder/static/js/main.9ddef687.chunk.js",
+    "main.js.map": "/WorkoutBuilder/static/js/main.9ddef687.chunk.js.map",
+    "runtime-main.js": "/WorkoutBuilder/static/js/runtime-main.a1971d60.js",
+    "runtime-main.js.map": "/WorkoutBuilder/static/js/runtime-main.a1971d60.js.map",
+    "static/js/2.f0f45ee1.chunk.js": "/WorkoutBuilder/static/js/2.f0f45ee1.chunk.js",
+    "static/js/2.f0f45ee1.chunk.js.map": "/WorkoutBuilder/static/js/2.f0f45ee1.chunk.js.map",
+    "static/js/3.1130bdb3.chunk.js": "/WorkoutBuilder/static/js/3.1130bdb3.chunk.js",
+    "static/js/3.1130bdb3.chunk.js.map": "/WorkoutBuilder/static/js/3.1130bdb3.chunk.js.map",
     "index.html": "/WorkoutBuilder/index.html",
     "static/css/main.7607b5e1.chunk.css.map": "/WorkoutBuilder/static/css/main.7607b5e1.chunk.css.map",
-    "static/js/2.3f4a8987.chunk.js.LICENSE.txt": "/WorkoutBuilder/static/js/2.3f4a8987.chunk.js.LICENSE.txt",
+    "static/js/2.f0f45ee1.chunk.js.LICENSE.txt": "/WorkoutBuilder/static/js/2.f0f45ee1.chunk.js.LICENSE.txt",
     "static/media/active.044323f0.jpeg": "/WorkoutBuilder/static/media/active.044323f0.jpeg",
     "static/media/background4.50611c26.jpeg": "/WorkoutBuilder/static/media/background4.50611c26.jpeg",
     "static/media/background5.72739d2c.jpeg": "/WorkoutBuilder/static/media/background5.72739d2c.jpeg",
@@ -32,9 +32,9 @@
     "static/media/snap_icon.9a2204c8.png": "/WorkoutBuilder/static/media/snap_icon.9a2204c8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3d539eda.js",
-    "static/js/2.3f4a8987.chunk.js",
+    "static/js/runtime-main.a1971d60.js",
+    "static/js/2.f0f45ee1.chunk.js",
     "static/css/main.7607b5e1.chunk.css",
-    "static/js/main.215cd519.chunk.js"
+    "static/js/main.9ddef687.chunk.js"
   ]
 }
