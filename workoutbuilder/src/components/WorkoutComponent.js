@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { exerciseObject } from "../constants/Workouts";
-import natureVid from "../pics/nature6.mp4";
 
 type Props = {
   id: number
