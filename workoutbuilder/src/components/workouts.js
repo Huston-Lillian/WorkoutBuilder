@@ -38,7 +38,11 @@ function WorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row s12 l12 text-align-left">
-            <h3 class="coachName">Team Body Project</h3>
+            <h3 class="coachName">
+              <a class="black-text" href="https://teambodyproject.com/">
+                Team Body Project
+              </a>
+            </h3>
           </div>
           <div class="row">
             <div class="col s5 m4 marginUp">
@@ -47,11 +51,13 @@ function WorkoutsComponent() {
               </div>
               <div class="s4 m5 center">
                 <div class="light">
-                  <img
-                    class="bodyProjectImg circlePic"
-                    src={bodyProject}
-                    alt="Unsplashed background img 1"
-                  />
+                  <a class="black-text" href="https://teambodyproject.com/">
+                    <img
+                      class="bodyProjectImg circlePic"
+                      src={bodyProject}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -71,7 +77,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/x3aogIZfVUI"
+                  src="https://www.youtube.com/embed/xsqh63FaYz4"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -81,7 +87,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/x3aogIZfVUI"
+                  src="https://www.youtube.com/embed/8oQ-WNJoYtM"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -91,7 +97,67 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/x3aogIZfVUI"
+                  src="https://www.youtube.com/embed/3SpPraOLJl4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/WjoBQsoekgk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/TYMGYumHKtw"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>{" "}
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/tYyNM9pmOlA"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>{" "}
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/QNAOIXhNRJs"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>{" "}
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/Ba3qZjzPonI"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>{" "}
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/-irx3_FA2nU"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -113,7 +179,9 @@ function WorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row s12 l12 text-align-left">
-            <h3 class="coachName">Fitness Blender</h3>
+            <a class="black-text" href="https://www.fitnessblender.com/">
+              <h3 class="coachName">Fitness Blender</h3>
+            </a>
           </div>
           <div class="row">
             <div class="col s5 m4 paddingBottom">
@@ -122,11 +190,13 @@ function WorkoutsComponent() {
               </div>
               <div class="s4 m5 center">
                 <div class="light">
-                  <img
-                    class="workoutImgs circlePic workoutMarginUpImgs"
-                    src={fitnessBlender}
-                    alt="Unsplashed background img 1"
-                  />
+                  <a class="black-text" href="https://www.fitnessblender.com/">
+                    <img
+                      class="workoutImgs circlePic workoutMarginUpImgs"
+                      src={fitnessBlender}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -146,7 +216,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/fKMGZW8cA1U"
+                  src="https://www.youtube.com/embed/E4tiWhsQhQg"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -156,7 +226,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/fKMGZW8cA1U"
+                  src="https://www.youtube.com/embed/DbjMVBeBBdQ"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -166,7 +236,67 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/fKMGZW8cA1U"
+                  src="https://www.youtube.com/embed/BS7XkoGmhXQ"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/VUG7m-IyoZ8"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/EJK4RuUz0yI"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/_Xm3GEDVmbM"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/nNe1p2uPt_g"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/6dhO7S7_DW0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/CSXksjKzR2w"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -188,7 +318,12 @@ function WorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row s12 l12 text-align-left">
-            <h3 class="coachName">MadFit</h3>
+            <a
+              class="black-text"
+              href="https://www.youtube.com/channel/UCpQ34afVgk8cRQBjSJ1xuJQ"
+            >
+              <h3 class="coachName">MadFit</h3>
+            </a>
           </div>
           <div class="row">
             <div class="col s5 m4 paddingBottom">
@@ -197,11 +332,16 @@ function WorkoutsComponent() {
               </div>
               <div class="s4 m5 center">
                 <div class="light">
-                  <img
-                    class="workoutImgs circlePic workoutMarginUpImgs"
-                    src={madFit}
-                    alt="Unsplashed background img 1"
-                  />
+                  <a
+                    class="black-text"
+                    href="https://www.youtube.com/channel/UCpQ34afVgk8cRQBjSJ1xuJQ"
+                  >
+                    <img
+                      class="workoutImgs circlePic workoutMarginUpImgs"
+                      src={madFit}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -221,7 +361,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/u3h_Yr40rhg"
+                  src="https://www.youtube.com/embed/fgveacDs6_c"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -231,7 +371,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/u3h_Yr40rhg"
+                  src="https://www.youtube.com/embed/8DGcqYVxJLQ"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -241,7 +381,67 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/u3h_Yr40rhg"
+                  src="https://www.youtube.com/embed/qg39x20q790"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/4iy4yEKa7W8"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/f7Msw169kr4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/qULTwquOuT4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/cdsJB1gHTiA"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/ESkI_WR1qqc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/v5cO0Bs-Tlg"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -263,7 +463,12 @@ function WorkoutsComponent() {
       <div class="container">
         <div class="section">
           <div class="row s12 l12 text-align-left">
-            <h3 class="coachName">Pernilla Stryker</h3>
+            <a
+              class="black-text"
+              href="https://www.youtube.com/c/Pernillaschannel/videos"
+            >
+              <h3 class="coachName">Pernilla Stryker</h3>
+            </a>
           </div>
           <div class="row">
             <div class="col s5 m4 paddingBottom">
@@ -272,11 +477,16 @@ function WorkoutsComponent() {
               </div>
               <div class="s4 m5 center">
                 <div class="light">
-                  <img
-                    class="workoutImgs circlePic workoutMarginUpImgs"
-                    src={pernilla}
-                    alt="Unsplashed background img 1"
-                  />
+                  <a
+                    class="black-text"
+                    href="https://www.youtube.com/c/Pernillaschannel/videos"
+                  >
+                    <img
+                      class="workoutImgs circlePic workoutMarginUpImgs"
+                      src={pernilla}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -286,7 +496,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/KpKP_9l1ut0"
+                  src="https://www.youtube.com/embed/TFW8Orq7rX8"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -296,7 +506,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/KpKP_9l1ut0"
+                  src="https://www.youtube.com/embed/6I7aSEZGJPM"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -306,7 +516,7 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/KpKP_9l1ut0"
+                  src="https://www.youtube.com/embed/GtLHr4dilUE"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -316,7 +526,67 @@ function WorkoutsComponent() {
                   class="carousel-item"
                   width="630"
                   height="445"
-                  src="https://www.youtube.com/embed/KpKP_9l1ut0"
+                  src="https://www.youtube.com/embed/LcrhDiRHOLI"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/f-2YscGQsMw"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/Ki33wY5ZwI4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/Uij_PWAXncc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/x9r_j7Lgy48"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/Zj82gmAR3bc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen="true"
+                ></iframe>
+                <iframe
+                  class="carousel-item"
+                  width="630"
+                  height="445"
+                  src="https://www.youtube.com/embed/jD-qEd2MUXw"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

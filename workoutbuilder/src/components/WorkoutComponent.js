@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { exerciseObject } from "../constants/Workouts";
+import natureVid from "../pics/nature6.mp4";
 
 type Props = {
   id: number
@@ -30,10 +31,17 @@ class WorkoutComponent extends Component<Props> {
       value: "",
       done: false,
       paused: false,
-      exerciseName: "",
-      nextExercise: "",
+      exerciseName: exerciseObject[this.props.id].exerciseList[0]
+        ? exerciseObject[this.props.id].exerciseList[0].exerciseName
+        : " ",
+      nextExercise: exerciseObject[this.props.id].exerciseList[1]
+        ? exerciseObject[this.props.id].exerciseList[1].exerciseName
+        : " ",
       progress: 0.0,
       totalProgress: 0.0,
+      timeRemaining: exerciseObject[this.props.id].exerciseList[0]
+        ? exerciseObject[this.props.id].exerciseList[0].displayText
+        : " ",
       timeLoop: () => {}
     };
     this.intervalID = 0;
@@ -43,6 +51,8 @@ class WorkoutComponent extends Component<Props> {
   }
 
   exerciseLoop() {
+    // var video = document.getElementById("myVideo");
+    // video.play();
     var elmnt = document.getElementById("activeWorkout");
     elmnt.scrollIntoView();
     let { exerciseObj, totalWorkoutTime } = this.state;
@@ -80,7 +90,7 @@ class WorkoutComponent extends Component<Props> {
         clearInterval(this.intervalID);
         this.setState({
           totalTime: hours + ": " + minutes + " : " + seconds,
-          done: false,
+          done: true,
           paused: false,
           timeLoop: () => {}
         });
@@ -121,7 +131,7 @@ class WorkoutComponent extends Component<Props> {
           clearInterval(this.intervalID);
           this.setState({
             totalTime: hours + ": " + minutes + " : " + (seconds + 1),
-            done: false,
+            done: true,
             paused: false,
             timeLoop: () => {}
           });
@@ -203,6 +213,13 @@ class WorkoutComponent extends Component<Props> {
     } = this.state;
     return (
       <div noValidate>
+        {/* <video autoplay muted loop id="myVideo">
+          <source
+            src={natureVid}
+            // src="https://video-previews.elements.envatousercontent.com/files/2054584a-ecf8-4865-bedc-c2d92f3b815f/video_preview_h264.mp4"
+            type="video/mp4"
+          />
+        </video> */}
         <div class="row">
           <div class="icon-block">
             <h3 class="left-align">{workoutName}</h3>
@@ -227,7 +244,7 @@ class WorkoutComponent extends Component<Props> {
             )}
             {/* /* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div id="activeWorkout" class=" center col s4 m4">
+          <div class=" center col s4 m4">
             {paused ? (
               <a
                 onClick={this.pause}
@@ -257,14 +274,14 @@ class WorkoutComponent extends Component<Props> {
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
           <div class="col s12 m12 paddingBottom">
-            <h3 class="center" style={{ color: "#8B0000" }}>
+            <h2 id="activeWorkout" class="center" style={{ color: "#8B0000" }}>
               {exerciseName}
-            </h3>
+            </h2>
             <br></br>
             <h3 class="center" style={{ color: "red" }}>
               {timeRemaining}
             </h3>
-            {nextExercise && (
+            {!done && (
               <React.Fragment>
                 <div class="col l4"></div>
                 <div class="col s12 l4 progress" style={styles2}>
@@ -287,6 +304,7 @@ class WorkoutComponent extends Component<Props> {
                   {nextExercise}
                 </h3>
               </React.Fragment>
+              color "#87CEEB"
             )} */}
           </div>
         </div>
@@ -295,9 +313,9 @@ class WorkoutComponent extends Component<Props> {
           {nextExercise && (
             <React.Fragment>
               <h6 class="col s12 l12 center">Next exercise: </h6>
-              <h3 class="col s12 l12 center" style={{ color: "#87CEEB" }}>
+              <h4 class="col s12 l12 center" style={{ color: "darkgreen" }}>
                 {nextExercise}
-              </h3>
+              </h4>
             </React.Fragment>
           )}
         </div>
@@ -307,12 +325,20 @@ class WorkoutComponent extends Component<Props> {
             <a onClick={this.finish} class="waves-effect waves-light btn-large">
               <i class="material-icons right">cloud</i>Finish
             </a>
-          </div> */}
-          {totalTime && (
-            <div class="center col s12 m12 marginUp">
-              <h6>Total time: </h6> <h3>{totalTime}</h3>
-            </div>
-          )}
+          </div> center col s12 m12 */}
+          {
+            <React.Fragment>
+              <div class="center col s1 l4"></div>
+              <div class="center col s4 l2 totalTimeMargin">
+                <h5>Total time: </h5>{" "}
+                {/* <h3 class="center col s3 l4">{totalTime}</h3> */}
+              </div>
+              <div class="left-align col s6 l3">
+                <h3>{totalTime ? totalTime : "0: 0: 0"}</h3>
+              </div>
+              <div class="center col s1 l3"></div>
+            </React.Fragment>
+          }
           {/* <div class="col s2 m3">
             <a onClick={this.pause} class="waves-effect waves-light btn-large">
               <i class="material-icons right">cloud</i>Pause
@@ -321,7 +347,7 @@ class WorkoutComponent extends Component<Props> {
           {/* <button onClick={this.finish}>Finish Workout</button>
         <button onClick={this.pause}>Continue Workout</button> */}
         </div>
-        {totalTime && (
+        {
           <React.Fragment>
             <div class="row">
               <div class="col l3"></div>
@@ -337,7 +363,7 @@ class WorkoutComponent extends Component<Props> {
               {/* <div class="col l2"></div> */}
             </div>
           </React.Fragment>
-        )}
+        }
       </div>
     );
   }

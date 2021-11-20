@@ -1,298 +1,703 @@
-// export const exerciseObj = [
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Squats"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Push Ups"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Lunges"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Standing Power Jacks"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Squat Kicks"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Tricep Dips"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Leg Raises"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Oblique Push Ups"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Bicycle Abs"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Plank"
-//   },
-//   {
-//     timeInSeconds: 5,
-//     displayText: "30 seconds",
-//     exerciseName: "Rest"
-//   }
-// ];
-
 export const exerciseObject = {
   0: {
-    totalTime: 80,
-    name: "Extreme Abs",
+    totalTime: 910,
+    name: "AMRAP Ab Workout",
     exerciseList: [
       {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "Squats"
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "3 Way V Ups"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Push Ups"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
       },
       {
-        timeInSeconds: 5,
-        displayText: "5 seconds",
-        exerciseName: "Lunges"
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Floor Thrusters"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Standing Power Jacks"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Squat Kicks"
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Lying Side Hip Raises, Left side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Tricep Dips"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Leg Raises"
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Lying Side Hip Raises, Left side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Oblique Push Ups"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Bicycle Abs"
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Reverse Crunches"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Plank"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "3 Way V Ups"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Floor Thrusters"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Side Hip Raises, Left side"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Side Hip Raises, Right side"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Reverse Crunches"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Flutter Kicks"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Russian Twists"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Frog Pushups"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
         exerciseName: "Rest"
       }
     ]
   },
   1: {
     name: "Lower Body Workout",
+    totalTime: 990,
     exerciseList: [
       {
-        timeInSeconds: 5,
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Knee to Opposite Hand"
+      },
+      {
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Heel Kicks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Forward Lunges same leg"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Forward Lunges other leg"
+      },
+      {
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Squat Hold"
+      },
+      {
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "2 High Knees and a forward lunge, same side"
+      },
+      {
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Squats"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
-        exerciseName: "Push Ups"
+        exerciseName: "2 High Knees and a forward lunge, other side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Lunges"
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Squat Holds"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Standing Power Jacks"
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Heel Kicks"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
-        exerciseName: "Squat Kicks"
+        exerciseName: "Skaters"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Tricep Dips"
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Jump Rope"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Leg Raises"
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Rest"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Oblique Push Ups"
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Knee to Opposite Hand"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Bicycle Abs"
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Heel Kicks"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
-        exerciseName: "Plank"
+        exerciseName: "Backward Lunges same leg"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
+        exerciseName: "Backward Lunges other leg"
+      },
+      {
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Fire Hydrant left side"
+      },
+      {
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Fire Hydrant right side"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Glute Bridges"
+      },
+      {
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Jump Rope"
+      },
+      {
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Squat Holds"
+      },
+      {
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Fire Hydrant left side"
+      },
+      {
+        timeInSeconds: 45,
+        displayText: "45 seconds",
+        exerciseName: "Fire Hydrant right side"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Glute Bridges"
+      },
+      {
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Rest"
       }
     ]
   },
   2: {
     name: "Stretching",
+    totalTime: 247,
     exerciseList: [
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Squats"
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Push Ups"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Standing Hamstring strectch left side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Lunges"
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Standing Hamstring strectch left side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Standing Power Jacks"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Hip flexor stretch left side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Squat Kicks"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Turn into a deep side lunge"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Tricep Dips"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Hip flexor stretch right side"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Leg Raises"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Turn into a deep side lunge"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Oblique Push Ups"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Standing Hamstring stretch middle"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Bicycle Abs"
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Plank"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Squat, elbows to knee stretch"
       },
       {
-        timeInSeconds: 5,
-        displayText: "30 seconds",
-        exerciseName: "Rest"
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Quad Strech Left Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Quad Strech Right Side"
+      },
+      {
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Tricep Stretch Left Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Tricep Stretch Right Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Shoulder Stretch Left Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Shoulder Stretch Right Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Neck circles"
+      },
+      {
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Standing Hamstring strectch left side"
+      },
+      {
+        timeInSeconds: 10,
+        displayText: "10 seconds",
+        exerciseName: "Standing Hamstring strectch left side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Hip flexor stretch left side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Turn into a deep side lunge"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Hip flexor stretch right side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Turn into a deep side lunge"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Standing Hamstring stretch middle"
+      },
+      {
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Squat, elbows to knee stretch"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Quad Strech Left Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Quad Strech Right Side"
+      },
+      {
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Tricep Stretch Left Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Tricep Stretch Right Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Shoulder Stretch Left Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Shoulder Stretch Right Side"
+      },
+      {
+        timeInSeconds: 15,
+        displayText: "15 seconds",
+        exerciseName: "Neck circles"
+      },
+      {
+        timeInSeconds: 8,
+        displayText: "8 seconds",
+        exerciseName: "3 Deep Breaths"
       }
     ]
   },
   3: {
-    name: "Upper Body Workout",
+    name: "Full Body Workout",
+    totalTime: 1320,
     exerciseList: [
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Squats"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Push Ups"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Lunges"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Standing Power Jacks"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Squat Kicks"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Tricep Dips"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Leg Raises"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Oblique Push Ups"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Bicycle Abs"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Plank"
       },
       {
-        timeInSeconds: 5,
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Push Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Lunges"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Standing Power Jacks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Tricep Dips"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Leg Raises"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Oblique Push Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Push Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Lunges"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Standing Power Jacks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Tricep Dips"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Leg Raises"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Oblique Push Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Rest"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Push Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Lunges"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Standing Power Jacks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat Kicks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Tricep Dips"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Leg Raises"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Oblique Push Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Rest"
       }

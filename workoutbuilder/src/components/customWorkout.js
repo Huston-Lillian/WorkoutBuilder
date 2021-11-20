@@ -56,7 +56,7 @@ function CustomWorkoutsComponent() {
             </div>
             <div class="col s7 m6">
               <div class="row center">
-                <h3 class="black-text">Extreme Ab Workout</h3>
+                <h3 class="black-text">Amrap Ab Workout</h3>
                 <h5 class="black-text">15 minutes. Try it!</h5>
                 <div class="light">
                   <a
@@ -103,7 +103,7 @@ function CustomWorkoutsComponent() {
             <div class="col s7 m6">
               <div class="row center">
                 <h3 class="black-text">Lower Body Workout</h3>
-                <h5 class="black-text">15 minutes. Try it!</h5>
+                <h5 class="black-text">16 minutes. Try it!</h5>
                 <div class="light">
                   <a
                     //href="/workoutScreen/1"
@@ -149,7 +149,7 @@ function CustomWorkoutsComponent() {
             <div class="col s7 m6">
               <div class="row center">
                 <h3 class="black-text">Stretching</h3>
-                <h5 class="black-text">15 minutes. Try it!</h5>
+                <h5 class="black-text">8 minutes. Try it!</h5>
                 <div class="light">
                   <a
                     //href="/workoutScreen/2"
@@ -194,8 +194,8 @@ function CustomWorkoutsComponent() {
             </div>
             <div class="col s7 m6">
               <div class="row center">
-                <h3 class="black-text">Upper Body Workout</h3>
-                <h5 class="black-text">15 minutes. Try it!</h5>
+                <h3 class="black-text">Full Body Workout</h3>
+                <h5 class="black-text">22 minutes. Try it!</h5>
                 <div class="light">
                   <a
                     // href="/workoutScreen/3"
