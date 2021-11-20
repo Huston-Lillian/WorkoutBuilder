@@ -134,6 +134,7 @@
 
 .youtubeVid {
   margin-top: -65px;
+  max-height: 450px !important;
 }
 
 .bannerHeight {
@@ -174,13 +175,17 @@
     margin-bottom: 15px;
   }
 
-  .carousel {
+  /* .carousel {
     margin-top: -50px !important;
     padding: 0px !important;
+  } */
+
+  .youtubeVid {
+    margin-top: -65px;
   }
 
   .paddingBottom {
-    margin-top: 35px;
+    margin-top: 75px !important;
     margin-bottom: 15px;
   }
 
