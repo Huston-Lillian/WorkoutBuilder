@@ -17,6 +17,7 @@ const styles = {
 };
 
 function MyAdviceComponent() {
+  window.scrollTo(0, 0);
   return (
     <React.Fragment>
       <div id="index-banner" class="parallax-container">
@@ -245,11 +246,11 @@ function MyAdviceComponent() {
 
                 <h5 class="light">
                   To lose weight, you must burn more calories than you consume.
-                  This is referred to a calorie deficit.
+                  This is referred to as a calorie deficit.
                 </h5>
                 <h5 class="light">
                   To gain weight, you must consume more calories than you burn.
-                  This is referred to a calorie surplus.
+                  This is referred to as a calorie surplus.
                 </h5>
 
                 <h5> Free TDEE Calculators:</h5>

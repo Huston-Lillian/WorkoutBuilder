@@ -2,6 +2,7 @@
   "name": "workoutbuilder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dag2733.github.io/WorkoutBuilder",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -17,7 +18,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "deploy": "npm run build&&gh-pages -b main -d build",
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,5 +1,13 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+  HashRouter,
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  Switch
+} from "react-router-dom";
+
 import "./App.css";
 import WorkoutComponent from "./components/WorkoutComponent";
 import NavbarComponent from "./components/navbar";
@@ -14,18 +22,24 @@ function App() {
   return (
     <div>
       <NavbarComponent />
-      <BrowserRouter>
+      <HashRouter basename="/">
         <Routes>
-          <Route path="/" element={<HomepageComponent />} />
-          <Route path="/workouts" element={<WorkoutsComponent />} />
-          <Route path="/customWorkouts" element={<CustomWorkoutsComponent />} />
+          <Route exact path="/" element={<HomepageComponent />} />
+          <Route exact path="/workouts" exact element={<WorkoutsComponent />} />
           <Route
+            exact
+            path="/customWorkouts"
+            element={<CustomWorkoutsComponent />}
+          />
+          <Route
+            exact
             path="/workoutScreen/:id"
             element={<WorkoutScreenComponent />}
           />
-          <Route path="/myadvice" element={<MyAdviceComponent />} />
+          <Route exact path="/myadvice" element={<MyAdviceComponent />} />
+          <Route path="/*" element={<HomepageComponent />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <FooterComponent />
     </div>
   );

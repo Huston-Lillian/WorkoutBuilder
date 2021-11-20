@@ -5,23 +5,23 @@ function NavbarComponent() {
     <React.Fragment>
       <ul id="dropdown1" class="dropdown-content">
         <li>
-          <a href="/workouts">Workouts</a>
+          <a href="#/workouts">Workouts</a>
         </li>
         <li>
-          <a href="/customWorkouts">Custom Workouts</a>
+          <a href="#/customWorkouts">Custom Workouts</a>
         </li>
         <li>
-          <a href="/myadvice">My Fitness Advice</a>
+          <a href="#/myadvice">My Fitness Advice</a>
         </li>
         <li class="divider"></li>
         <li>
-          <a href="/">Home</a>
+          <a href="/WorkoutBuilder">Home</a>
         </li>
       </ul>
       <nav>
         <div class=" white nav-wrapper" role="navigation">
           <div class="nav-wrapper container">
-            <a id="logo-container" href="/" class="brand-logo">
+            <a id="logo-container" href="/WorkoutBuilder" class="brand-logo">
               uFit
             </a>
             <ul class="right hide-on-med-and-down">
@@ -34,19 +34,23 @@ function NavbarComponent() {
 
             <ul id="nav-mobile" class="sidenav">
               <li>
-                <a href="/">Home</a>
+                <a href="/WorkoutBuilder">Home</a>
               </li>
               <li>
-                <a href="/workouts">Workouts</a>
+                <a href="#/workouts">Workouts</a>
               </li>
               <li>
-                <a href="/customWorkouts">Custom Workouts</a>
+                <a href="#/customWorkouts">Custom Workouts</a>
               </li>
               <li>
-                <a href="/myadvice">My Fitness Advice</a>
+                <a href="#/myadvice">My Fitness Advice</a>
               </li>
             </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <a
+              href="/WorkoutBuilder"
+              data-target="nav-mobile"
+              class="sidenav-trigger"
+            >
               <i class="material-icons">menu</i>
             </a>
           </div>

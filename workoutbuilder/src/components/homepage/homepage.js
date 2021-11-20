@@ -7,6 +7,11 @@ import free from "../../pics/free.png";
 import custom from "../../pics/custom.png";
 import advice from "../../pics/advice.png";
 
+const styles = {
+  transform: `translate3d(-50%, 309.727px, 0px)`,
+  opacity: 1
+};
+
 function HomepageComponent() {
   return (
     <React.Fragment>
@@ -22,7 +27,7 @@ function HomepageComponent() {
             <div class="row center">
               <div class="header col l4 light">
                 <a
-                  href="/workouts"
+                  href="#/workouts"
                   id="download-button"
                   class="btn btn-large waves-effect waves-light teal lighten-1"
                 >
@@ -38,7 +43,11 @@ function HomepageComponent() {
           </div>
         </div>
         <div class="parallax">
-          <img src={background4} alt="Unsplashed background img 1" />
+          <img
+            src={background4}
+            alt="Unsplashed background img 1"
+            style={styles}
+          />
         </div>
       </div>
 
@@ -51,7 +60,7 @@ function HomepageComponent() {
               </div>
               <div class="s4 m3 center">
                 <div class="light">
-                  <a href="/workouts">
+                  <a href="#/workouts">
                     <img
                       class="cheatMeal circlePic"
                       src={free}
@@ -65,7 +74,7 @@ function HomepageComponent() {
               <div class="row center">
                 <h3 class="black-text">
                   {" "}
-                  <a class="teal-text text-lighten-2" href="/workouts">
+                  <a class="teal-text text-lighten-2" href="#/workouts">
                     FREE Workouts
                   </a>
                 </h3>{" "}
@@ -78,7 +87,7 @@ function HomepageComponent() {
                 <div class="s12 m4 center">
                   <div class="light">
                     <a
-                      href="/workouts"
+                      href="#/workouts"
                       id="download-button"
                       class="btn btn-large waves-effect waves-light teal lighten-1"
                     >
@@ -101,7 +110,7 @@ function HomepageComponent() {
               </div>
               <div class="s4 m3 center">
                 <div class="light">
-                  <a href="/customWorkouts">
+                  <a href="#/customWorkouts">
                     <img
                       class="cheatMeal circlePic"
                       src={custom}
@@ -115,7 +124,7 @@ function HomepageComponent() {
               <div class="row center">
                 <h3 class="black-text">
                   {" "}
-                  <a class="teal-text text-lighten-2" href="/customWorkouts">
+                  <a class="teal-text text-lighten-2" href="#/customWorkouts">
                     Custom Workouts
                   </a>
                 </h3>
@@ -129,7 +138,7 @@ function HomepageComponent() {
                 <div class="s12 m4 center">
                   <div class="light">
                     <a
-                      href="/customWorkouts"
+                      href="#/customWorkouts"
                       id="download-button"
                       class="btn btn-large waves-effect waves-light teal lighten-1"
                     >
@@ -152,7 +161,7 @@ function HomepageComponent() {
               </div>
               <div class="s4 m3 center">
                 <div class="light">
-                  <a href="/myadvice">
+                  <a href="#/myadvice">
                     <img
                       class="cheatMeal circlePic"
                       src={advice}
@@ -165,7 +174,7 @@ function HomepageComponent() {
             <div class="col s12 m6">
               <div class="row center">
                 <h3 class="black-text">
-                  <a class="teal-text text-lighten-2" href="/myadvice">
+                  <a class="teal-text text-lighten-2" href="#/myadvice">
                     Fitness Advice
                   </a>
                 </h3>
@@ -178,7 +187,7 @@ function HomepageComponent() {
                 <div class="s12 m4 center">
                   <div class="light">
                     <a
-                      href="/myadvice"
+                      href="#/myadvice"
                       id="download-button"
                       class="btn btn-large waves-effect waves-light teal lighten-1"
                     >
@@ -295,7 +304,11 @@ function HomepageComponent() {
           </div>
         </div>
         <div class="parallax">
-          <img src={background5} alt="Unsplashed background img 2" />
+          <img
+            src={background5}
+            alt="Unsplashed background img 2"
+            style={styles}
+          />
         </div>
       </div>
 
