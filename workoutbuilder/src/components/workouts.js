@@ -20,11 +20,6 @@ function WorkoutsComponent() {
         <div class="section no-pad-bot">
           <div class="container ">
             <br></br>
-            {/* <div class="row center">
-              <h3 class=" blue-grey lighten-5 seeThroughWorkouts  col s6 m3 black-text">
-                IT DOESN'T GET EASIER, YOU GET BETTER!
-              </h3>
-            </div> */}
             <br></br>
           </div>
         </div>
@@ -39,21 +34,24 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
-          <div class="row s12 l12 text-align-left">
-            <h3 class="coachName">
+          <div class="row s12 l12">
+            <h3 class="coachName center maringUp">
               <a class="black-text" href="https://teambodyproject.com/">
                 Team Body Project
               </a>
             </h3>
           </div>
-          <div class="row">
-            <div class="col s5 m4 marginUp">
+          <div class="row maringUp">
+            <div class="col s12 m4 marginUp">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
-              <div class="s4 m5 center">
+              <div class="s12 m5 center">
                 <div class="light">
-                  <a class="black-text" href="https://teambodyproject.com/">
+                  <a
+                    class="black-text center"
+                    href="https://teambodyproject.com/"
+                  >
                     <img
                       class="bodyProjectImg circlePic"
                       src={bodyProject}
@@ -63,7 +61,7 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s7 m6 youtubeVid">
+            <div class="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={0} />
               {/* <div class="carousel"> */}
             </div>
@@ -73,17 +71,17 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
-          <div class="row s12 l12 text-align-left">
+          <div class="row s12 l12">
             <a class="black-text" href="https://www.fitnessblender.com/">
-              <h3 class="coachName">Fitness Blender</h3>
+              <h3 class="coachName center maringUp">Fitness Blender</h3>
             </a>
           </div>
-          <div class="row">
-            <div class="col s5 m4 paddingBottom">
+          <div class="row maringUp">
+            <div class="col s12 m4 marginUp">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
-              <div class="s4 m5 center">
+              <div class="s12 m5 center">
                 <div class="light">
                   <a class="black-text" href="https://www.fitnessblender.com/">
                     <img
@@ -95,8 +93,9 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s7 m6 youtubeVid">
+            <div class="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={1} />
+              {/* <div class="carousel"> */}
             </div>
           </div>
         </div>
@@ -104,7 +103,7 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
-          <div class="row s12 l12 text-align-left">
+          <div class="row s12 l12">
             <a
               class="black-text"
               href="https://www.youtube.com/channel/UCpQ34afVgk8cRQBjSJ1xuJQ"
@@ -112,12 +111,12 @@ function WorkoutsComponent() {
               <h3 class="coachName">MadFit</h3>
             </a>
           </div>
-          <div class="row">
-            <div class="col s5 m4 paddingBottom">
+          <div class="row maringUp">
+            <div class="col s12 m4 marginUp">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
-              <div class="s4 m5 center">
+              <div class="s12 m5 center">
                 <div class="light">
                   <a
                     class="black-text"
@@ -132,8 +131,9 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s7 m6 youtubeVid">
+            <div class="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={2} />
+              {/* <div class="carousel"> */}
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ function WorkoutsComponent() {
 
       <div class="container">
         <div class="section">
-          <div class="row s12 l12 text-align-left">
+          <div class="row s12 l12">
             <a
               class="black-text"
               href="https://www.youtube.com/c/Pernillaschannel/videos"
@@ -149,12 +149,12 @@ function WorkoutsComponent() {
               <h3 class="coachName">Pernilla Stryker</h3>
             </a>
           </div>
-          <div class="row">
-            <div class="col s5 m4 paddingBottom">
+          <div class="row maringUp">
+            <div class="col s12 m4 marginUp">
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
-              <div class="s4 m5 center">
+              <div class="s12 m5 center">
                 <div class="light">
                   <a
                     class="black-text"
@@ -169,8 +169,9 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s7 m6 youtubeVid">
+            <div class="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={3} />
+              {/* <div class="carousel"> */}
             </div>
           </div>
         </div>

@@ -130,6 +130,7 @@
 
 .coachName {
   text-decoration: underline;
+  text-align: left;
 }
 
 .youtubeVid {
@@ -245,5 +246,10 @@
 
   .parallax-container {
     max-height: 280px;
+  }
+
+  .coachName {
+    text-decoration: underline;
+    text-align: center;
   }
 }
