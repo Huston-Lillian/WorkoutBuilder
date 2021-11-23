@@ -10,11 +10,6 @@ const styles3 = {
   "background-color": "lightgreen"
 };
 
-// styles: {
-//   ...prevState.styles,
-//   width: prevState.progress + percentInterval + "%"
-// }
-
 const styles2 = {
   height: `25px`,
   "background-color": "pink"
@@ -55,9 +50,11 @@ class WorkoutComponent extends Component<Props> {
     var elmnt = document.getElementById("activeWorkout");
     elmnt.scrollIntoView();
     let { exerciseObj, totalWorkoutTime } = this.state;
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = "Let's get moving";
-    window.speechSynthesis.speak(msg);
+    if (window.speechSynthesis) {
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = "Let's get moving";
+      window.speechSynthesis.speak(msg);
+    }
     clearInterval(this.intervalID);
 
     let percentInterval = 100 / exerciseObj[0].timeInSeconds;
@@ -76,12 +73,14 @@ class WorkoutComponent extends Component<Props> {
     let minutes = 0;
     let seconds = -1;
 
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = exerciseObj[i].exerciseName;
-    window.speechSynthesis.speak(msg);
-    var msg2 = new SpeechSynthesisUtterance();
-    msg2.text = exerciseObj[i].displayText;
-    window.speechSynthesis.speak(msg2);
+    if (window.speechSynthesis) {
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = exerciseObj[i].exerciseName;
+      window.speechSynthesis.speak(msg);
+      var msg2 = new SpeechSynthesisUtterance();
+      msg2.text = exerciseObj[i].displayText;
+      window.speechSynthesis.speak(msg2);
+    }
     this.intervalID = setInterval(() => {
       let { done, paused } = this.state;
       //Your code
@@ -119,8 +118,10 @@ class WorkoutComponent extends Component<Props> {
           // var msg = new SpeechSynthesisUtterance();
           // msg.text = exerciseObj[i].exerciseName;
           // window.speechSynthesis.speak(msg);
-          msg.text = "Excellent job, you're a true fitness champion!";
-          window.speechSynthesis.speak(msg);
+          if (window.speechSynthesis) {
+            msg.text = "Excellent job, you're a true fitness champion!";
+            window.speechSynthesis.speak(msg);
+          }
           this.setState({
             done: true,
             exerciseName: "REST IT OUT!",
@@ -174,9 +175,11 @@ class WorkoutComponent extends Component<Props> {
   }
 
   finish() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = "Excellent job, you're a true fitness champion!";
-    window.speechSynthesis.speak(msg);
+    if (window.speechSynthesis) {
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = "Excellent job, you're a true fitness champion!";
+      window.speechSynthesis.speak(msg);
+    }
     this.setState({
       done: true,
       exerciseName: "REST IT OUT!",

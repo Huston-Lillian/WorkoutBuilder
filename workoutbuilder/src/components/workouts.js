@@ -123,7 +123,7 @@ function WorkoutsComponent() {
                     href="https://www.youtube.com/channel/UCpQ34afVgk8cRQBjSJ1xuJQ"
                   >
                     <img
-                      class="workoutImgs circlePic workoutMarginUpImgs"
+                      class="workoutImgs circlePic"
                       src={madFit}
                       alt="Unsplashed background img 1"
                     />
@@ -161,7 +161,7 @@ function WorkoutsComponent() {
                     href="https://www.youtube.com/c/Pernillaschannel/videos"
                   >
                     <img
-                      class="workoutImgs circlePic workoutMarginUpImgs"
+                      class="workoutImgs circlePic"
                       src={pernilla}
                       alt="Unsplashed background img 1"
                     />

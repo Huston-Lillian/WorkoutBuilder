@@ -17,6 +17,7 @@ import WorkoutsComponent from "./components/workouts";
 import CustomWorkoutsComponent from "./components/customWorkout";
 import WorkoutScreenComponent from "./components/workoutScreen";
 import MyAdviceComponent from "./components/myadvice";
+import BuilderComponent from "./components/customBuilder";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
             element={<WorkoutScreenComponent />}
           />
           <Route exact path="/myadvice" element={<MyAdviceComponent />} />
+          <Route exact path="/builder" element={<BuilderComponent />} />
+
           <Route path="/*" element={<HomepageComponent />} />
         </Routes>
       </HashRouter>

@@ -161,6 +161,80 @@
   opacity: 50%;
 }
 
+#outlined-basic {
+  padding-left: 10px !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  margin: 0 0 0 0 !important;
+  height: 50px !important;
+}
+#outlined-basic:after {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  margin: 0 0 0 0 !important;
+}
+
+#outlined-basic:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  margin: 0 0 0 0 !important;
+}
+#outlined-basic:before {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  margin: 0 0 0 0 !important;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
+  background-color: transparent !important;
+}
+
+#timeDropdown:after {
+  border-bottom: none !important;
+}
+
+#timeDropdown:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+#timeDropdown:before {
+  border-bottom: none !important;
+}
+
+#timeDropdown {
+  margin-top: 4px !important;
+  margin-bottom: none !important;
+  border-bottom: none !important;
+  max-height: 3px !important;
+}
+
+#timeChoices {
+  max-height: 50px !important;
+}
+
+#timeDropdown-label {
+  max-height: 50px !important;
+}
+
+/* .builderInput {
+  margin-bottom: -10 !important;
+  margin: 0px !important;
+} */
+
+/* .timeDropdown {
+  border-bottom: none !important;
+  margin: 0px !important;
+  max-height: 50px !important;
+  text-decoration: none !important;
+}
+
+.timeDropsize {
+  max-height: 50px !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+} */
+
 @media only screen and (max-width: 600px) {
   .bodyProjectImg {
     width: 70%;
