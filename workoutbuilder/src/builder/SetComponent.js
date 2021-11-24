@@ -28,13 +28,18 @@ class SetComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      hack: false,
       name: this.props.copySet ? this.props.copySet.name : "",
       expanded: false,
       totalTime:
+        this.props.copySet &&
+        this.props.copySet.exerciseList &&
         this.props.copySet.exerciseList.length > 0
           ? this.calculateTotalTime(this.props.copySet.exerciseList)
           : "0 min 0 secs",
       exerciseList:
+        this.props.copySet &&
+        this.props.copySet.exerciseList &&
         this.props.copySet.exerciseList.length > 0
           ? this.props.copySet.exerciseList
           : [
@@ -52,6 +57,7 @@ class SetComponent extends Component {
     this.deleteTheSet = this.deleteTheSet.bind(this);
     this.calculateTotalTime = this.calculateTotalTime.bind(this);
     this.handleDropdown = this.handleDropdown.bind(this);
+    this.addOnBlur = this.addOnBlur.bind(this);
   }
 
   handleInput(value, index) {
@@ -60,10 +66,28 @@ class SetComponent extends Component {
       let exerciseList = Object.assign([], prevState.exerciseList);
       exerciseList[index] = value;
       let totalTime = this.calculateTotalTime(exerciseList);
+      console.log("am I here");
+
       console.log(value);
       handleChange(exerciseList, index, value.name);
-
       return { exerciseList, totalTime };
+    });
+  }
+
+  addOnBlur() {
+    let { handleChange, index } = this.props;
+    let { exerciseList, name, hack } = this.state;
+    // exerciseList.push({
+    //   timeInSeconds: 30,
+    //   displayText: "30 seconds",
+    //   exerciseName: ""
+    // });
+    console.log(name);
+    handleChange(exerciseList, index, name);
+    this.setState({
+      name,
+      exerciseList,
+      totalTime: this.calculateTotalTime(exerciseList)
     });
   }
 
@@ -132,11 +156,17 @@ class SetComponent extends Component {
   }
 
   render() {
-    let { exerciseList, name, totalTime, handleChange } = this.state;
+    let { exerciseList, name, totalTime } = this.state;
     return (
       <div>
-        <Grid container justify="center" item xs={12} style={{ marginTop: 10 }}>
-          <Grid container justify="center" direction="row" spacing={2}>
+        <Grid
+          container
+          justifyContent="center"
+          item
+          xs={12}
+          style={{ marginTop: 10 }}
+        >
+          <Grid container justifyContent="center" direction="row" spacing={2}>
             <Accordion
               style={{
                 marginBottom: 10
@@ -148,7 +178,12 @@ class SetComponent extends Component {
                 aria-controls="additional-actions1-content"
                 id="additional-actions1-header"
               >
-                <Grid container justify="center" direction="row" spacing={3}>
+                <Grid
+                  container
+                  justifyContent="center"
+                  direction="row"
+                  spacing={3}
+                >
                   <Grid item xs={4} sm={5}>
                     <FormControlLabel
                       aria-label="Acknowledge"
@@ -220,7 +255,7 @@ class SetComponent extends Component {
                         return (
                           <Grid
                             container
-                            justify="center"
+                            justifyContent="center"
                             direction="row"
                             key={index}
                           >
@@ -229,6 +264,7 @@ class SetComponent extends Component {
                                 deleteExercise={this.deleteExercise}
                                 index={index}
                                 addExercise={this.handleInput}
+                                addOnBlur={this.addOnBlur}
                                 copyExercise={exercise ? exercise : ""}
                               />
                             </Grid>
@@ -236,7 +272,12 @@ class SetComponent extends Component {
                         );
                       })}
                   </Grid>
-                  <Grid container justify="center" direction="row" spacing={1}>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    direction="row"
+                    spacing={1}
+                  >
                     <Grid item xs={9} sm={9}>
                       <Button
                         id="addExerciseButton"

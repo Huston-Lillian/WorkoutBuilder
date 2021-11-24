@@ -7,61 +7,61 @@ import githubIcon from "../pics/github_icon.png";
 
 function FooterComponent() {
   return (
-    <footer class="page-footer teal">
-      <div class="container">
-        <div class="row">
-          <div class="col l3 s12">
-            <h5 class="white-text">About Me</h5>
-            <p class="grey-text text-lighten-4">
+    <footer className="page-footer teal">
+      <div className="container">
+        <div className="row">
+          <div className="col l3 s12">
+            <h5 className="white-text">About Me</h5>
+            <p className="grey-text text-lighten-4">
               My name is Daniel Garza and I'm a software engineer with a passion
               for fitness.
             </p>
           </div>
-          <div class="col l1 s12"></div>
-          <div class="col l8 s12 left-align">
-            <h5 class="white-text">Connect</h5>
-            <div class="row center">
-              <div class="col s2 center">
+          <div className="col l1 s12"></div>
+          <div className="col l8 s12 left-align">
+            <h5 className="white-text">Connect</h5>
+            <div className="row center">
+              <div className="col s2 center">
                 <a
                   href="https://www.instagram.com/dan_the_realest_man/"
                   target="_blank"
                 >
-                  <img class="socialMedia-icon" src={instaIcon} />
+                  <img className="socialMedia-icon" src={instaIcon} />
                 </a>
               </div>
-              <div class="col s2 center">
+              <div className="col s2 center">
                 <a href="https://www.facebook.com/Dgza88" target="_blank">
-                  <img class="socialMedia-icon" src={facebookIcon} />
+                  <img className="socialMedia-icon" src={facebookIcon} />
                 </a>
               </div>
-              <div class="col s2 center">
+              <div className="col s2 center">
                 <a
                   href="https://www.snapchat.com/add/danielgarza8819"
                   target="_blank"
                 >
-                  <img class="socialMedia-icon" src={snapIcon} />
+                  <img className="socialMedia-icon" src={snapIcon} />
                 </a>
               </div>
-              <div class="col s2 center">
+              <div className="col s2 center">
                 <a href="https://www.linkedin.com/in/dgza88/" target="_blank">
-                  <img class="socialMedia-icon" src={linkedinIcon} />
+                  <img className="socialMedia-icon" src={linkedinIcon} />
                 </a>
               </div>
 
-              <div class="col s2 center">
+              <div className="col s2 center">
                 <a href="https://github.com/Dag2788" target="_blank">
-                  <img class="socialMedia-icon" src={githubIcon} />
+                  <img className="socialMedia-icon" src={githubIcon} />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
+      <div className="footer-copyright">
+        <div className="container">
           Made by{" "}
           <a
-            class="brown-text text-lighten-3"
+            className="brown-text text-lighten-3"
             href="https://dag2788.github.io/DanielG/"
           >
             Daniel G.

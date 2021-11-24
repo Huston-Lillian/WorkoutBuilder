@@ -14,6 +14,7 @@ class TextInput extends Component {
     super(props);
     this.state = { value: "" };
     this.handleChange = this.handleChange.bind(this);
+    this.onBlurChange = this.onBlurChange.bind(this);
   }
 
   handleChange(event) {
@@ -22,13 +23,21 @@ class TextInput extends Component {
     this.setState({ value: event.target.value });
   }
 
+  onBlurChange(event) {
+    let { handleInput } = this.props;
+    let { value } = this.state;
+    console.log("onBlur");
+    handleInput("save", { exerciseName: value });
+    this.setState({ value: value });
+  }
+
   render() {
     let { exerciseName } = this.props;
     return (
       <form noValidate>
         <TextField
           onChange={this.handleChange}
-          onBlur={this.handleChange}
+          onBlur={this.onBlurChange}
           id="outlined-basic"
           label="Exercise"
           variant="outlined"

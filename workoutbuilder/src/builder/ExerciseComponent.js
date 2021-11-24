@@ -10,7 +10,8 @@ type Props = {
   addExercise: Function,
   deleteExercise: Function,
   index: Number,
-  copyExercise: any
+  copyExercise: any,
+  addOnBlur: Function
 };
 /*eslint-enable */
 
@@ -35,7 +36,11 @@ class ExerciseComponent extends Component {
   }
 
   handleInput(key, value) {
-    let { addExercise, index } = this.props;
+    let { addExercise, index, addOnBlur } = this.props;
+    if (key === "save") {
+      addOnBlur();
+      return;
+    }
     this.setState(prevState => {
       let exerciseObj = Object.assign({}, prevState.exerciseObj);
       if (key === "time") {
@@ -59,7 +64,7 @@ class ExerciseComponent extends Component {
     return (
       <div>
         <Grid item xs={12} style={{ marginTop: 10 }}>
-          <Grid container justify="center" spacing={2}>
+          <Grid container justifyContent="center" spacing={2}>
             <Grid item>
               <TextInput
                 exerciseName={exerciseObj.exerciseName}

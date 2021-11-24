@@ -16,14 +16,14 @@ const styles = {
 function WorkoutsComponent() {
   return (
     <React.Fragment>
-      <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-          <div class="container ">
+      <div id="index-banner" className="parallax-container">
+        <div className="section no-pad-bot">
+          <div className="container ">
             <br></br>
             <br></br>
           </div>
         </div>
-        <div class="parallax">
+        <div className="parallax">
           <img
             src={background7}
             alt="Unsplashed background img 1"
@@ -32,28 +32,28 @@ function WorkoutsComponent() {
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row s12 l12">
-            <h3 class="coachName center maringUp">
-              <a class="black-text" href="https://teambodyproject.com/">
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12">
+            <h3 className="coachName center maringUp">
+              <a className="black-text" href="https://teambodyproject.com/">
                 Team Body Project
               </a>
             </h3>
           </div>
-          <div class="row maringUp">
-            <div class="col s12 m4 marginUp">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s12 m5 center">
-                <div class="light">
+              <div className="s12 m5 center">
+                <div className="light">
                   <a
-                    class="black-text center"
+                    className="black-text center"
                     href="https://teambodyproject.com/"
                   >
                     <img
-                      class="bodyProjectImg circlePic"
+                      className="bodyProjectImg circlePic"
                       src={bodyProject}
                       alt="Unsplashed background img 1"
                     />
@@ -61,31 +61,34 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6 youtubeVid center">
+            <div className="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={0} />
-              {/* <div class="carousel"> */}
+              {/* <div className="carousel"> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row s12 l12">
-            <a class="black-text" href="https://www.fitnessblender.com/">
-              <h3 class="coachName center maringUp">Fitness Blender</h3>
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12">
+            <a className="black-text" href="https://www.fitnessblender.com/">
+              <h3 className="coachName center maringUp">Fitness Blender</h3>
             </a>
           </div>
-          <div class="row maringUp">
-            <div class="col s12 m4 marginUp">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s12 m5 center">
-                <div class="light">
-                  <a class="black-text" href="https://www.fitnessblender.com/">
+              <div className="s12 m5 center">
+                <div className="light">
+                  <a
+                    className="black-text"
+                    href="https://www.fitnessblender.com/"
+                  >
                     <img
-                      class="workoutImgs circlePic workoutMarginUpImgs"
+                      className="workoutImgs circlePic workoutMarginUpImgs"
                       src={fitnessBlender}
                       alt="Unsplashed background img 1"
                     />
@@ -93,37 +96,37 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6 youtubeVid center">
+            <div className="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={1} />
-              {/* <div class="carousel"> */}
+              {/* <div className="carousel"> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row s12 l12">
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12">
             <a
-              class="black-text"
+              className="black-text"
               href="https://www.youtube.com/channel/UCpQ34afVgk8cRQBjSJ1xuJQ"
             >
-              <h3 class="coachName">MadFit</h3>
+              <h3 className="coachName">MadFit</h3>
             </a>
           </div>
-          <div class="row maringUp">
-            <div class="col s12 m4 marginUp">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s12 m5 center">
-                <div class="light">
+              <div className="s12 m5 center">
+                <div className="light">
                   <a
-                    class="black-text"
+                    className="black-text"
                     href="https://www.youtube.com/channel/UCpQ34afVgk8cRQBjSJ1xuJQ"
                   >
                     <img
-                      class="workoutImgs circlePic"
+                      className="workoutImgs circlePic"
                       src={madFit}
                       alt="Unsplashed background img 1"
                     />
@@ -131,37 +134,37 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6 youtubeVid center">
+            <div className="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={2} />
-              {/* <div class="carousel"> */}
+              {/* <div className="carousel"> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row s12 l12">
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12">
             <a
-              class="black-text"
+              className="black-text"
               href="https://www.youtube.com/c/Pernillaschannel/videos"
             >
-              <h3 class="coachName">Pernilla Stryker</h3>
+              <h3 className="coachName">Pernilla Stryker</h3>
             </a>
           </div>
-          <div class="row maringUp">
-            <div class="col s12 m4 marginUp">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s12 m5 center">
-                <div class="light">
+              <div className="s12 m5 center">
+                <div className="light">
                   <a
-                    class="black-text"
+                    className="black-text"
                     href="https://www.youtube.com/c/Pernillaschannel/videos"
                   >
                     <img
-                      class="workoutImgs circlePic"
+                      className="workoutImgs circlePic"
                       src={pernilla}
                       alt="Unsplashed background img 1"
                     />
@@ -169,24 +172,24 @@ function WorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6 youtubeVid center">
+            <div className="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={3} />
-              {/* <div class="carousel"> */}
+              {/* <div className="carousel"> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row s12 l12"></div>
-          <div class="row maringUp">
-            <div class="col s12 m4 marginUp">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12"></div>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s12 m5 center">
-                <div class="light"></div>
+              <div className="s12 m5 center">
+                <div className="light"></div>
               </div>
             </div>
           </div>

@@ -1,15 +1,7 @@
 import React from "react";
-import {
-  HashRouter,
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  Switch
-} from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import WorkoutComponent from "./components/WorkoutComponent";
 import NavbarComponent from "./components/navbar";
 import FooterComponent from "./components/footer";
 import HomepageComponent from "./components/homepage/homepage";
@@ -26,7 +18,7 @@ function App() {
       <HashRouter basename="/">
         <Routes>
           <Route exact path="/" element={<HomepageComponent />} />
-          <Route exact path="/workouts" exact element={<WorkoutsComponent />} />
+          <Route path="/workouts" exact element={<WorkoutsComponent />} />
           <Route
             exact
             path="/customWorkouts"

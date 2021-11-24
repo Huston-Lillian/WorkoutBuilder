@@ -7,13 +7,13 @@ function BuilderComponent() {
   window.scrollTo(0, 0);
   return (
     <React.Fragment>
-      <div class="row">
-        <div class="icon-block paddingBottom">
-          <h3 class="center-align">Create Your Own Workout</h3>
+      <div className="row">
+        <div className="icon-block paddingBottom">
+          <h3 className="center-align">Create Your Own Workout</h3>
         </div>
       </div>
-      <div class="container workoutScreen">
-        <div class="section">
+      <div className="container workoutScreen">
+        <div className="section">
           <SetListComponent />
         </div>
       </div>

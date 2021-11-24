@@ -3,7 +3,7 @@ import React from "react";
 function NavbarComponent() {
   return (
     <React.Fragment>
-      <ul id="dropdown1" class="dropdown-content">
+      <ul id="dropdown1" className="dropdown-content">
         <li>
           <a href="#/workouts">Workouts</a>
         </li>
@@ -13,26 +13,34 @@ function NavbarComponent() {
         <li>
           <a href="#/myadvice">My Fitness Advice</a>
         </li>
-        <li class="divider"></li>
+        <li className="divider"></li>
         <li>
           <a href="/WorkoutBuilder">Home</a>
         </li>
       </ul>
       <nav>
-        <div class=" white nav-wrapper" role="navigation">
-          <div class="nav-wrapper container">
-            <a id="logo-container" href="/WorkoutBuilder" class="brand-logo">
+        <div className=" white nav-wrapper" role="navigation">
+          <div className="nav-wrapper container">
+            <a
+              id="logo-container"
+              href="/WorkoutBuilder"
+              className="brand-logo"
+            >
               uFit
             </a>
-            <ul class="right hide-on-med-and-down">
+            <ul className="right hide-on-med-and-down">
               <li>
-                <a class="dropdown-trigger" href="#!" data-target="dropdown1">
-                  Menu<i class="material-icons right">arrow_drop_down</i>
+                <a
+                  className="dropdown-trigger"
+                  href="#!"
+                  data-target="dropdown1"
+                >
+                  Menu<i className="material-icons right">arrow_drop_down</i>
                 </a>
               </li>
             </ul>
 
-            <ul id="nav-mobile" class="sidenav">
+            <ul id="nav-mobile" className="sidenav">
               <li>
                 <a href="/WorkoutBuilder">Home</a>
               </li>
@@ -49,33 +57,33 @@ function NavbarComponent() {
             <a
               href="/WorkoutBuilder"
               data-target="nav-mobile"
-              class="sidenav-trigger"
+              className="sidenav-trigger"
             >
-              <i class="material-icons">menu</i>
+              <i className="material-icons">menu</i>
             </a>
           </div>
         </div>
       </nav>
-      {/* <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo">
+      {/* <nav className="white" role="navigation">
+        <div className="nav-wrapper container">
+          <a id="logo-container" href="#" className="brand-logo">
             uFit
           </a>
-          <ul class="right">
+          <ul className="right">
             <li>
-              <a class="dropdown-trigger" href="#!" data-target="dropdown1">
-                Menu<i class="material-icons right">arrow_drop_down</i>
+              <a className="dropdown-trigger" href="#!" data-target="dropdown1">
+                Menu<i className="material-icons right">arrow_drop_down</i>
               </a>
             </li>
           </ul>
 
-          <ul id="nav-mobile" class="sidenav">
+          <ul id="nav-mobile" className="sidenav">
             <li>
               <a href="#">Menu</a>
             </li>
           </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
+          <a href="#" data-target="nav-mobile" className="sidenav-trigger">
+            <i className="material-icons">menu</i>
           </a>
         </div>
       </nav> */}

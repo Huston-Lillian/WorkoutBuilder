@@ -17,19 +17,19 @@ function CustomWorkoutsComponent() {
   window.scrollTo(0, 0);
   return (
     <React.Fragment>
-      <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-          <div class="container">
+      <div id="index-banner" className="parallax-container">
+        <div className="section no-pad-bot">
+          <div className="container">
             <br></br>
-            {/* <div class="row center">
-              <h3 class="header col s4 m3 blue-grey lighten-5 seeThroughWorkouts black-text">
+            {/* <div className="row center">
+              <h3 className="header col s4 m3 blue-grey lighten-5 seeThroughWorkouts black-text">
                 THIS IS YOUR GYM
               </h3>
             </div> */}
             <br></br>
           </div>
         </div>
-        <div class="parallax">
+        <div className="parallax">
           <img
             src={background8}
             alt="Unsplashed background img 1"
@@ -38,209 +38,209 @@ function CustomWorkoutsComponent() {
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s5 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s5 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m5 center">
-                <div class="light">
+              <div className="s4 m5 center">
+                <div className="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    className="bodyProjectImg circlePic"
                     src={abs2}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
-              <div class="row center">
-                <h3 class="black-text">Amrap Ab Workout</h3>
-                <h5 class="black-text">15 minutes. Try it!</h5>
-                <div class="light">
-                  <a
+            <div className="col s7 m6">
+              <div className="row center">
+                <h3 className="black-text">Amrap Ab Workout</h3>
+                <h5 className="black-text">15 minutes. Try it!</h5>
+                <div className="light">
+                  <span
                     //href="/workoutScreen/0"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    <Link class="white-text" to="/workoutScreen/0">
+                    <Link className="white-text" to="/workoutScreen/0">
                       {" "}
                       Start Workout
                     </Link>
-                  </a>
+                  </span>
                 </div>
               </div>
-              {/* <div class="col s4 m8">
-                <i class="material-icons large ">navigate_before</i>
+              {/* <div className="col s4 m8">
+                <i className="material-icons large ">navigate_before</i>
               </div>
-              <div class="col s4 m1"></div>
-              <div class="col s4 m3">
-                <i class="material-icons large ">navigate_next</i>
+              <div className="col s4 m1"></div>
+              <div className="col s4 m3">
+                <i className="material-icons large ">navigate_next</i>
               </div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s5 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s5 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m5 center">
-                <div class="light">
+              <div className="s4 m5 center">
+                <div className="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    className="bodyProjectImg circlePic"
                     src={legs}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
-              <div class="row center">
-                <h3 class="black-text">Lower Body Workout</h3>
-                <h5 class="black-text">16 minutes. Try it!</h5>
-                <div class="light">
+            <div className="col s7 m6">
+              <div className="row center">
+                <h3 className="black-text">Lower Body Workout</h3>
+                <h5 className="black-text">16 minutes. Try it!</h5>
+                <div className="light">
                   <a
                     //href="/workoutScreen/1"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    <Link class="white-text" to="/workoutScreen/1">
+                    <Link className="white-text" to="/workoutScreen/1">
                       {" "}
                       Start Workout
                     </Link>
                   </a>
                 </div>
               </div>
-              {/* <div class="col s4 m8">
-                <i class="material-icons large ">navigate_before</i>
+              {/* <div className="col s4 m8">
+                <i className="material-icons large ">navigate_before</i>
               </div>
-              <div class="col s4 m1"></div>
-              <div class="col s4 m3">
-                <i class="material-icons large ">navigate_next</i>
+              <div className="col s4 m1"></div>
+              <div className="col s4 m3">
+                <i className="material-icons large ">navigate_next</i>
               </div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s5 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s5 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m5 center">
-                <div class="light">
+              <div className="s4 m5 center">
+                <div className="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    className="bodyProjectImg circlePic"
                     src={stretching}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
-              <div class="row center">
-                <h3 class="black-text">Stretching</h3>
-                <h5 class="black-text">8 minutes. Try it!</h5>
-                <div class="light">
+            <div className="col s7 m6">
+              <div className="row center">
+                <h3 className="black-text">Stretching</h3>
+                <h5 className="black-text">8 minutes. Try it!</h5>
+                <div className="light">
                   <a
                     //href="/workoutScreen/2"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    <Link class="white-text" to="/workoutScreen/2">
+                    <Link className="white-text" to="/workoutScreen/2">
                       {" "}
                       Start Workout
                     </Link>
                   </a>
                 </div>
               </div>
-              {/* <div class="col s4 m8">
-                <i class="material-icons large ">navigate_before</i>
+              {/* <div className="col s4 m8">
+                <i className="material-icons large ">navigate_before</i>
               </div>
-              <div class="col s4 m1"></div>
-              <div class="col s4 m3">
-                <i class="material-icons large ">navigate_next</i>
+              <div className="col s4 m1"></div>
+              <div className="col s4 m3">
+                <i className="material-icons large ">navigate_next</i>
               </div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s5 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s5 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m5 center">
-                <div class="light">
+              <div className="s4 m5 center">
+                <div className="light">
                   <img
-                    class="bodyProjectImg circlePic"
+                    className="bodyProjectImg circlePic"
                     src={upperBody}
                     alt="Unsplashed background img 1"
                   />
                 </div>
               </div>
             </div>
-            <div class="col s7 m6">
-              <div class="row center">
-                <h3 class="black-text">Full Body Workout</h3>
-                <h5 class="black-text">22 minutes. Try it!</h5>
-                <div class="light">
+            <div className="col s7 m6">
+              <div className="row center">
+                <h3 className="black-text">Full Body Workout</h3>
+                <h5 className="black-text">22 minutes. Try it!</h5>
+                <div className="light">
                   <a
                     // href="/workoutScreen/3"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
-                    <Link class="white-text" to="/workoutScreen/3">
+                    <Link className="white-text" to="/workoutScreen/3">
                       {" "}
                       Start Workout
                     </Link>
                   </a>
                 </div>
               </div>
-              {/* <div class="col s4 m8">
-                <i class="material-icons large ">navigate_before</i>
+              {/* <div className="col s4 m8">
+                <i className="material-icons large ">navigate_before</i>
               </div>
-              <div class="col s4 m1"></div>
-              <div class="col s4 m3">
-                <i class="material-icons large ">navigate_next</i>
+              <div className="col s4 m1"></div>
+              <div className="col s4 m3">
+                <i className="material-icons large ">navigate_next</i>
               </div> */}
             </div>
           </div>
         </div>
       </div>
 
-      {/* <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 m3">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src={stretching} />
+      {/* <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m3">
+              <div className="card">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src={stretching} />
                 </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    Stretching<i class="material-icons right">more_vert</i>
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">
+                    Stretching<i className="material-icons right">more_vert</i>
                   </span>
                   <p>
                     <a href="/workoutScreen">Start Workout</a>
                   </p>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">
-                    Stretching<i class="material-icons right">close</i>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">
+                    Stretching<i className="material-icons right">close</i>
                   </span>
                   <p>
                     Here is some more information about this product that is
@@ -249,22 +249,22 @@ function CustomWorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m3">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src={abs} />
+            <div className="col s12 m3">
+              <div className="card">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src={abs} />
                 </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    Extreme Abs<i class="material-icons right">more_vert</i>
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">
+                    Extreme Abs<i className="material-icons right">more_vert</i>
                   </span>
                   <p>
                     <a href="/workoutScreen">Start Workout</a>
                   </p>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">
-                    Extreme Abs<i class="material-icons right">close</i>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">
+                    Extreme Abs<i className="material-icons right">close</i>
                   </span>
                   <p>
                     Here is some more information about this product that is
@@ -273,23 +273,23 @@ function CustomWorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m3">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src={upperBody} />
+            <div className="col s12 m3">
+              <div className="card">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src={upperBody} />
                 </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">
                     Upper Body Cardio
-                    <i class="material-icons right">more_vert</i>
+                    <i className="material-icons right">more_vert</i>
                   </span>
                   <p>
                     <a href="/workoutScreen">Start Workout</a>
                   </p>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">
-                    Upper Body Cardio<i class="material-icons right">close</i>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">
+                    Upper Body Cardio<i className="material-icons right">close</i>
                   </span>
                   <p>
                     Here is some more information about this product that is
@@ -298,23 +298,23 @@ function CustomWorkoutsComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m3">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src={lowerBody} />
+            <div className="col s12 m3">
+              <div className="card">
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img className="activator" src={lowerBody} />
                 </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
+                <div className="card-content">
+                  <span className="card-title activator grey-text text-darken-4">
                     Lower Body Cardio
-                    <i class="material-icons right">more_vert</i>
+                    <i className="material-icons right">more_vert</i>
                   </span>
                   <p>
                     <a href="/workoutScreen">Start Workout</a>
                   </p>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">
-                    Lower Body Cardio<i class="material-icons right">close</i>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">
+                    Lower Body Cardio<i className="material-icons right">close</i>
                   </span>
                   <p>
                     Here is some more information about this product that is

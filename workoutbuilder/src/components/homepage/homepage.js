@@ -15,24 +15,24 @@ const styles = {
 function HomepageComponent() {
   return (
     <React.Fragment>
-      <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-          <div class="container">
+      <div id="index-banner" className="parallax-container">
+        <div className="section no-pad-bot">
+          <div className="container">
             <br></br>
-            <div class="row center">
-              <h1 class="center header col s6 l4 teal-text text-lighten-2">
+            <div className="row center">
+              <h1 className="center header col s6 l4 teal-text text-lighten-2">
                 uFit Workouts
               </h1>
             </div>
-            <div class="row center">
-              <div class="header col l4 light">
+            <div className="row center">
+              <div className="header col l4 light">
                 <a
                   href="#/workouts"
                   id="download-button"
-                  class="btn btn-large waves-effect waves-light teal lighten-1"
+                  className="btn btn-large waves-effect waves-light teal lighten-1"
                 >
                   Free Workouts
-                  {/* <Link class="white-text" to="/workouts" replace>
+                  {/* <Link className="white-text" to="/workouts" replace>
                     {" "}
                     Free Workouts
                   </Link> */}
@@ -42,7 +42,7 @@ function HomepageComponent() {
             <br></br>
           </div>
         </div>
-        <div class="parallax">
+        <div className="parallax">
           <img
             src={background4}
             alt="Unsplashed background img 1"
@@ -51,18 +51,18 @@ function HomepageComponent() {
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m3 center">
-                <div class="light">
+              <div className="s4 m3 center">
+                <div className="light">
                   <a href="#/workouts">
                     <img
-                      class="cheatMeal circlePic"
+                      className="cheatMeal circlePic"
                       src={free}
                       alt="Unsplashed background img 1"
                     />
@@ -70,26 +70,26 @@ function HomepageComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6">
-              <div class="row center">
-                <h3 class="black-text">
+            <div className="col s12 m6">
+              <div className="row center">
+                <h3 className="black-text">
                   {" "}
-                  <a class="teal-text text-lighten-2" href="#/workouts">
+                  <a className="teal-text text-lighten-2" href="#/workouts">
                     FREE Workouts
                   </a>
                 </h3>{" "}
-                <h5 class="black-text">
+                <h5 className="black-text">
                   I've compiled the best, most effective and enjoyable free
                   workouts to help you on your fitness journey. You'll be able
                   to easily access a great catalog of free workouts on YouTube
                   here at uFit.
                 </h5>
-                <div class="s12 m4 center">
-                  <div class="light">
+                <div className="s12 m4 center">
+                  <div className="light">
                     <a
                       href="#/workouts"
                       id="download-button"
-                      class="btn btn-large waves-effect waves-light teal lighten-1"
+                      className="btn btn-large waves-effect waves-light teal lighten-1"
                     >
                       Free Workouts
                     </a>
@@ -101,18 +101,18 @@ function HomepageComponent() {
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m3 center">
-                <div class="light">
+              <div className="s4 m3 center">
+                <div className="light">
                   <a href="#/customWorkouts">
                     <img
-                      class="cheatMeal circlePic"
+                      className="cheatMeal circlePic"
                       src={custom}
                       alt="Unsplashed background img 1"
                     />
@@ -120,27 +120,30 @@ function HomepageComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6">
-              <div class="row center">
-                <h3 class="black-text">
+            <div className="col s12 m6">
+              <div className="row center">
+                <h3 className="black-text">
                   {" "}
-                  <a class="teal-text text-lighten-2" href="#/customWorkouts">
+                  <a
+                    className="teal-text text-lighten-2"
+                    href="#/customWorkouts"
+                  >
                     Custom Workouts
                   </a>
                 </h3>
-                <h5 class="black-text">
+                <h5 className="black-text">
                   <p>
                     I am developing a tool that will allow you to create your
                     own custom circuit workouts. For now I've provided several
                     workouts for you to try.
                   </p>
                 </h5>
-                <div class="s12 m4 center">
-                  <div class="light">
+                <div className="s12 m4 center">
+                  <div className="light">
                     <a
                       href="#/customWorkouts"
                       id="download-button"
-                      class="btn btn-large waves-effect waves-light teal lighten-1"
+                      className="btn btn-large waves-effect waves-light teal lighten-1"
                     >
                       Custom Workouts
                     </a>
@@ -152,18 +155,18 @@ function HomepageComponent() {
         </div>
       </div>
 
-      <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 m4 customWorkoutImg">
-              <div class="icon-block">
-                <h5 class="center"></h5>
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
               </div>
-              <div class="s4 m3 center">
-                <div class="light">
+              <div className="s4 m3 center">
+                <div className="light">
                   <a href="#/myadvice">
                     <img
-                      class="cheatMeal circlePic"
+                      className="cheatMeal circlePic"
                       src={advice}
                       alt="Unsplashed background img 1"
                     />
@@ -171,24 +174,24 @@ function HomepageComponent() {
                 </div>
               </div>
             </div>
-            <div class="col s12 m6">
-              <div class="row center">
-                <h3 class="black-text">
-                  <a class="teal-text text-lighten-2" href="#/myadvice">
+            <div className="col s12 m6">
+              <div className="row center">
+                <h3 className="black-text">
+                  <a className="teal-text text-lighten-2" href="#/myadvice">
                     Fitness Advice
                   </a>
                 </h3>
-                <h5 class="black-text">
+                <h5 className="black-text">
                   Here you can find information on your TDEE, the importance of
                   protein, calorie deficits, the effects of alcohol, the
                   importance of rest and asleep, and more.
                 </h5>
-                <div class="s12 m4 center">
-                  <div class="light">
+                <div className="s12 m4 center">
+                  <div className="light">
                     <a
                       href="#/myadvice"
                       id="download-button"
-                      class="btn btn-large waves-effect waves-light teal lighten-1"
+                      className="btn btn-large waves-effect waves-light teal lighten-1"
                     >
                       Fitness Advice
                     </a>
@@ -200,29 +203,29 @@ function HomepageComponent() {
         </div>
       </div>
 
-      {/* <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons large">money_off</i>
+      {/* <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4">
+              <div className="icon-block">
+                <h2 className="center brown-text">
+                  <i className="material-icons large">money_off</i>
                 </h2>
-                <h5 class="center">Free Online Workouts</h5>
+                <h5 className="center">Free Online Workouts</h5>
 
-                <p class="light">
+                <p className="light">
                   I've compiled the best, most effective and enjoyable free
                   workouts to help you on your fitness journey. You'll be able
                   to easily access a great catalog of free workouts on YouTube
                   here at uFit.
                 </p>
               </div>
-              <div class="s12 m4 center">
-                <div class="light">
+              <div className="s12 m4 center">
+                <div className="light">
                   <a
                     href="/workouts"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
                     Free Workouts
                   </a>
@@ -230,26 +233,26 @@ function HomepageComponent() {
               </div>
             </div>
 
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons">build</i>
+            <div className="col s12 m4">
+              <div className="icon-block">
+                <h2 className="center brown-text">
+                  <i className="material-icons">build</i>
                 </h2>
-                <h5 class="center">Workout Builder</h5>
+                <h5 className="center">Workout Builder</h5>
 
-                <p class="light">
+                <p className="light">
                   I developed a tool that allows you to create your own custom
                   circuit workouts. I've also provided several workouts for you
                   to try. The tool you need to find a workout that actually
                   works for you!
                 </p>
               </div>
-              <div class="s12 m4 center">
-                <div class="light">
+              <div className="s12 m4 center">
+                <div className="light">
                   <a
                     href="/customWorkouts"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
                     Workout Builder
                   </a>
@@ -257,14 +260,14 @@ function HomepageComponent() {
               </div>
             </div>
 
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons">directions</i>
+            <div className="col s12 m4">
+              <div className="icon-block">
+                <h2 className="center brown-text">
+                  <i className="material-icons">directions</i>
                 </h2>
-                <h5 class="center">Need Fitness Advice?</h5>
+                <h5 className="center">Need Fitness Advice?</h5>
 
-                <p class="light">
+                <p className="light">
                   Here you can find information on your TDEE, the importance of
                   protein, calorie deficits, the effects of alcohol, menstrual
                   cycle and menopause, the importance of rest and asleep, and
@@ -272,12 +275,12 @@ function HomepageComponent() {
                 </p>
               </div>
 
-              <div class="s12 m4 center">
-                <div class="light">
+              <div className="s12 m4 center">
+                <div className="light">
                   <a
                     href="/myadvice"
                     id="download-button"
-                    class="btn btn-large waves-effect waves-light teal lighten-1"
+                    className="btn btn-large waves-effect waves-light teal lighten-1"
                   >
                     Fitness Tips
                   </a>
@@ -288,12 +291,12 @@ function HomepageComponent() {
         </div>
       </div> */}
 
-      <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-          <div class="container">
-            <div class="row center">
+      <div className="parallax-container valign-wrapper">
+        <div className="section no-pad-bot">
+          <div className="container">
+            <div className="row center">
               <div className="col l6" />
-              <h5 class="header col s12 l4 light">
+              <h5 className="header col s12 l4 light">
                 "My goal is to help you live a sustainable healthy and active
                 lifestyle without sacrificing your happiness."
                 <br></br>
@@ -302,7 +305,7 @@ function HomepageComponent() {
             </div>
           </div>
         </div>
-        <div class="parallax">
+        <div className="parallax">
           <img
             src={background5}
             alt="Unsplashed background img 2"
@@ -311,15 +314,15 @@ function HomepageComponent() {
         </div>
       </div>
 
-      {/* <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 center">
+      {/* <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 center">
               <h3>
-                <i class="mdi-content-send brown-text"></i>
+                <i className="mdi-content-send brown-text"></i>
               </h3>
               <h4>uFit Nutrition</h4>
-              <p class="left-align light">
+              <p className="left-align light">
                 Congratulations! You have what it takes to be a fitness
                 champion! My goal is to help guide you on your fitness journey!
                 uFit Nutrition gives you the information needed to find a
@@ -339,32 +342,32 @@ function HomepageComponent() {
         </div>
       </div> */}
 
-      {/* <div class="parallax-container valign-wrapper">
-        <div class="container ">
-          <div class="row center">
-            <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons large">adjust</i>
+      {/* <div className="parallax-container valign-wrapper">
+        <div className="container ">
+          <div className="row center">
+            <div className="col s12 m3 grey seeThrough darken-4 paddingBottom">
+              <div className="icon-block">
+                <h2 className="center brown-text">
+                  <i className="material-icons large">adjust</i>
                 </h2>
-                <h5 class="center">Calorie Deficits</h5>
+                <h5 className="center">Calorie Deficits</h5>
 
-                <p class="light">
+                <p className="light">
                   The key to weight loss is understanding the energy balance
                   equation, that is, calories in vs. calories out. In order to
                   be in a caloric deficit, calories burnt ...Learn more.
                 </p>
               </div>
             </div>
-            <div class="col m1" />
-            <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons">battery_charging_full</i>
+            <div className="col m1" />
+            <div className="col s12 m3 grey seeThrough darken-4 paddingBottom">
+              <div className="icon-block">
+                <h2 className="center brown-text">
+                  <i className="material-icons">battery_charging_full</i>
                 </h2>
-                <h5 class="center">Protein</h5>
+                <h5 className="center">Protein</h5>
 
-                <p class="light">
+                <p className="light">
                   Eating a protein-rich diet can help people lose weight because
                   it can help them avoid overeating. A high protein diet can
                   help build lean muscle when combined with exercise ...Learn
@@ -372,16 +375,16 @@ function HomepageComponent() {
                 </p>
               </div>
             </div>
-            <div class="col m1" />
+            <div className="col m1" />
 
-            <div class="col s12 m3 grey seeThrough darken-4 paddingBottom">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons">sentiment_very_satisfied</i>
+            <div className="col s12 m3 grey seeThrough darken-4 paddingBottom">
+              <div className="icon-block">
+                <h2 className="center brown-text">
+                  <i className="material-icons">sentiment_very_satisfied</i>
                 </h2>
-                <h5 class="center">Healthy Menu</h5>
+                <h5 className="center">Healthy Menu</h5>
 
-                <p class="light">
+                <p className="light">
                   Emphasizes vegetables, fruits, whole grains, and fat-free or
                   low-fat dairy products. Includes lean meats, poultry, fish,
                   beans, eggs, and nuts...Learn more
@@ -390,7 +393,7 @@ function HomepageComponent() {
             </div>
           </div>
         </div>
-        <div class="parallax">
+        <div className="parallax">
           <img src={background6} alt="Unsplashed background img 3" />
         </div>
       </div> */}

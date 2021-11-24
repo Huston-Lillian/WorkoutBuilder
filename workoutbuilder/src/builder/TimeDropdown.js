@@ -7,7 +7,8 @@ import { isMobile } from "react-device-detect";
 /*eslint-disable */
 type Props = {
   selectedTime: String,
-  handleInput: Function
+  handleInput: Function,
+  addOnBlur: Function
 };
 
 class TimeDropdown extends Component {
@@ -15,11 +16,21 @@ class TimeDropdown extends Component {
     super(props);
     this.state = { value: 30 };
     this.handleChange = this.handleChange.bind(this);
+    this.handleOnBlur = this.handleOnBlur.bind(this);
   }
 
   handleChange(event, value) {
     let { handleInput } = this.props;
     handleInput("time", {
+      timeInSeconds: value ? value : 30,
+      displayText: value ? timerOptions[value].text : "30 seconds"
+    });
+    this.setState({ value: event.target.value });
+  }
+
+  handleOnBlur(event, value) {
+    let { handleInput } = this.props;
+    handleInput("save", {
       timeInSeconds: value ? value : 30,
       displayText: value ? timerOptions[value].text : "30 seconds"
     });
@@ -34,6 +45,7 @@ class TimeDropdown extends Component {
         options={Object.keys(timerOptions).map(name => name)}
         getOptionLabel={option => timerOptions[option].text}
         onChange={this.handleChange}
+        onBlur={this.handleOnBlur}
         style={{ width: isMobile ? 150 : 180, height: 5 }}
         defaultValue={30}
         value={selectedTime ? selectedTime : 30}

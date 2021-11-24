@@ -74,7 +74,7 @@ class WorkoutComponent extends Component<Props> {
     let seconds = -1;
 
     if (window.speechSynthesis) {
-      var msg = new SpeechSynthesisUtterance();
+      msg = new SpeechSynthesisUtterance();
       msg.text = exerciseObj[i].exerciseName;
       window.speechSynthesis.speak(msg);
       var msg2 = new SpeechSynthesisUtterance();
@@ -222,87 +222,91 @@ class WorkoutComponent extends Component<Props> {
             type="video/mp4"
           />
         </video> */}
-        <div class="row">
-          <div class="icon-block">
-            <h3 class="left-align">{workoutName}</h3>
+        <div className="row">
+          <div className="icon-block">
+            <h3 className="left-align">{workoutName}</h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col s4 m4">
+        <div className="row">
+          <div className="col s4 m4">
             {totalTime ? (
               <a
                 onClick={this.exerciseLoop}
-                class="fitText yellow darken-4 waves-effect waves-light btn-large"
+                className="fitText yellow darken-4 waves-effect waves-light btn-large"
               >
-                <i class="material-icons right">refresh</i>Restart
+                <i className="material-icons right">refresh</i>Restart
               </a>
             ) : (
               <a
                 onClick={this.exerciseLoop}
-                class="fitText green darken-4 waves-effect waves-light btn-large"
+                className="fitText green darken-4 waves-effect waves-light btn-large"
               >
-                <i class="material-icons right">play_arrow</i>Start
+                <i className="material-icons right">play_arrow</i>Start
               </a>
             )}
             {/* /* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div class=" center col s4 m4">
+          <div className=" center col s4 m4">
             {paused ? (
               <a
                 onClick={this.pause}
-                class="fitText green darken-4 waves-effect waves-light btn-large"
+                className="fitText green darken-4 waves-effect waves-light btn-large"
               >
-                <i class="material-icons right">play_arrow</i>Play
+                <i className="material-icons right">play_arrow</i>Play
               </a>
             ) : (
               <a
                 onClick={this.pause}
-                class="fitText grey waves-effect waves-light btn-large"
+                className="fitText grey waves-effect waves-light btn-large"
               >
-                <i class="material-icons right">pause</i>Pause
+                <i className="material-icons right">pause</i>Pause
               </a>
             )}
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div class=" right-align  col s4 m4">
+          <div className=" right-align  col s4 m4">
             <a
               onClick={this.finish}
-              class="fitText red waves-effect waves-light btn-large"
+              className="fitText red waves-effect waves-light btn-large"
             >
-              <i class="material-icons right">stop</i>Finish
+              <i className="material-icons right">stop</i>Finish
             </a>
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div class="col s12 m12 paddingBottom">
-            <h2 id="activeWorkout" class="center" style={{ color: "#8B0000" }}>
+          <div className="col s12 m12 paddingBottom">
+            <h2
+              id="activeWorkout"
+              className="center"
+              style={{ color: "#8B0000" }}
+            >
               {exerciseName}
             </h2>
             <br></br>
-            <h3 class="center" style={{ color: "red" }}>
+            <h3 className="center" style={{ color: "red" }}>
               {timeRemaining}
             </h3>
             {!done && (
               <React.Fragment>
-                <div class="col l4"></div>
-                <div class="col s12 l4 progress" style={styles2}>
+                <div className="col l4"></div>
+                <div className="col s12 l4 progress" style={styles2}>
                   <div
-                    class="determinate"
+                    className="determinate"
                     style={{
                       width: progress + "%",
                       "background-color": "red"
                     }}
                   ></div>
                 </div>
-                <div class="col l2"></div>
+                <div className="col l2"></div>
               </React.Fragment>
             )}
             <br></br>
             {/* {nextExercise && (
               <React.Fragment>
-                <h6 class="center">Next exercise: </h6>
-                <h3 class="center" style={{ color: "#87CEEB" }}>
+                <h6 className="center">Next exercise: </h6>
+                <h3 className="center" style={{ color: "#87CEEB" }}>
                   {nextExercise}
                 </h3>
               </React.Fragment>
@@ -311,39 +315,39 @@ class WorkoutComponent extends Component<Props> {
           </div>
         </div>
 
-        <div class="row center">
+        <div className="row center">
           {nextExercise && (
             <React.Fragment>
-              <h6 class="col s12 l12 center">Next exercise: </h6>
-              <h4 class="col s12 l12 center" style={{ color: "darkgreen" }}>
+              <h6 className="col s12 l12 center">Next exercise: </h6>
+              <h4 className="col s12 l12 center" style={{ color: "darkgreen" }}>
                 {nextExercise}
               </h4>
             </React.Fragment>
           )}
         </div>
 
-        <div class="row">
-          {/* <div class="col s2 m4">
-            <a onClick={this.finish} class="waves-effect waves-light btn-large">
-              <i class="material-icons right">cloud</i>Finish
+        <div className="row">
+          {/* <div className="col s2 m4">
+            <a onClick={this.finish} className="waves-effect waves-light btn-large">
+              <i className="material-icons right">cloud</i>Finish
             </a>
           </div> center col s12 m12 */}
           {
             <React.Fragment>
-              <div class="center col s1 l4"></div>
-              <div class="center col s4 l2 totalTimeMargin">
+              <div className="center col s1 l4"></div>
+              <div className="center col s4 l2 totalTimeMargin">
                 <h5>Total time: </h5>{" "}
-                {/* <h3 class="center col s3 l4">{totalTime}</h3> */}
+                {/* <h3 className="center col s3 l4">{totalTime}</h3> */}
               </div>
-              <div class="left-align col s6 l3">
+              <div className="left-align col s6 l3">
                 <h3>{totalTime ? totalTime : "0: 0: 0"}</h3>
               </div>
-              <div class="center col s1 l3"></div>
+              <div className="center col s1 l3"></div>
             </React.Fragment>
           }
-          {/* <div class="col s2 m3">
-            <a onClick={this.pause} class="waves-effect waves-light btn-large">
-              <i class="material-icons right">cloud</i>Pause
+          {/* <div className="col s2 m3">
+            <a onClick={this.pause} className="waves-effect waves-light btn-large">
+              <i className="material-icons right">cloud</i>Pause
             </a>
           </div> */}
           {/* <button onClick={this.finish}>Finish Workout</button>
@@ -351,18 +355,18 @@ class WorkoutComponent extends Component<Props> {
         </div>
         {
           <React.Fragment>
-            <div class="row">
-              <div class="col l3"></div>
-              <div class="col s12 l6 progress" style={styles3}>
+            <div className="row">
+              <div className="col l3"></div>
+              <div className="col s12 l6 progress" style={styles3}>
                 <div
-                  class="determinate"
+                  className="determinate"
                   style={{
                     width: totalProgress + "%",
                     "background-color": "green"
                   }}
                 ></div>
               </div>{" "}
-              {/* <div class="col l2"></div> */}
+              {/* <div className="col l2"></div> */}
             </div>
           </React.Fragment>
         }

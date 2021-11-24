@@ -22,17 +22,18 @@ class DemoCarousel extends Component {
   render() {
     return (
       <Carousel>
-        {this.state.links.map(link => (
-          <div class="paddingBottom">
+        {this.state.links.map((link, index) => (
+          <div className="paddingBottom" key={index}>
             <iframe
+              showthumbs={"false"}
               width="480"
               height="300"
               src={link}
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="true"
-              class="responsive-iframe"
+              allowFullScreen={true}
+              className="responsive-iframe"
             ></iframe>
           </div>
         ))}
