@@ -176,6 +176,22 @@ function WorkoutsComponent() {
           </div>
         </div>
       </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row s12 l12"></div>
+          <div class="row maringUp">
+            <div class="col s12 m4 marginUp">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s12 m5 center">
+                <div class="light"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

@@ -250,13 +250,13 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
     margin-bottom: 15px;
   }
 
-  /* .carousel {
-    margin-top: -50px !important;
-    padding: 0px !important;
-  } */
-
   .youtubeVid {
     margin-top: -65px;
+  }
+
+  .lastVidHeight {
+    margin-top: 200px !important;
+    padding-top: 180px !important;
   }
 
   .paddingBottom {
@@ -325,5 +325,17 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
   .coachName {
     text-decoration: underline;
     text-align: center;
+  }
+
+  #outlined-basic {
+    padding-left: 5px !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    margin: 0 0 0 0 !important;
+    height: 50px !important;
+  }
+
+  .alignButton {
+    margin-top: 25px !important;
   }
 }

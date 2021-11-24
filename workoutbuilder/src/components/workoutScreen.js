@@ -11,7 +11,6 @@ function WorkoutScreenComponent() {
       <div class="container workoutScreen">
         <div class="section">
           <WorkoutComponent id={id} />
-          <SetListComponent />
         </div>
       </div>
     </React.Fragment>

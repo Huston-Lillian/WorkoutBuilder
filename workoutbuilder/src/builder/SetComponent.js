@@ -19,6 +19,7 @@ type Props = {
   deleteSet: Function,
   index: Number,
   handleChange: Function,
+  handleDropdownChoices: Function,
   copySet: any
 };
 /*eslint-enable */
@@ -50,6 +51,7 @@ class SetComponent extends Component {
     this.deleteExercise = this.deleteExercise.bind(this);
     this.deleteTheSet = this.deleteTheSet.bind(this);
     this.calculateTotalTime = this.calculateTotalTime.bind(this);
+    this.handleDropdown = this.handleDropdown.bind(this);
   }
 
   handleInput(value, index) {
@@ -96,8 +98,13 @@ class SetComponent extends Component {
   handleName(event) {
     let { exerciseList } = this.state;
     let { handleChange, index } = this.props;
-    handleChange(exerciseList, index, event.target.value);
+    handleChange(exerciseList, index, event.target.value, "name");
     this.setState({ name: event.target.value });
+  }
+
+  handleDropdown(event) {
+    let { handleDropdownChoices } = this.props;
+    handleDropdownChoices();
   }
 
   deleteTheSet() {
@@ -125,7 +132,7 @@ class SetComponent extends Component {
   }
 
   render() {
-    let { exerciseList, name, totalTime } = this.state;
+    let { exerciseList, name, totalTime, handleChange } = this.state;
     return (
       <div>
         <Grid container justify="center" item xs={12} style={{ marginTop: 10 }}>
@@ -150,7 +157,8 @@ class SetComponent extends Component {
                       control={
                         <TextField
                           onChange={this.handleName}
-                          onBlur={this.handleName}
+                          onBlur={this.handleDropdown}
+                          onFocus={this.handleName}
                           id="outlined-basic"
                           label="Circuit Name"
                           variant="outlined"
