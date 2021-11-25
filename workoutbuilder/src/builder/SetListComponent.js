@@ -49,7 +49,8 @@ class SetListComponent extends Component {
             }
           ]
         }
-      }
+      },
+      dropdwonList: ["Warm Up", "Push Up"]
     };
     this.handleChange = this.handleChange.bind(this);
     this.deleteSet = this.deleteSet.bind(this);
@@ -74,22 +75,49 @@ class SetListComponent extends Component {
     }
   }
 
-  handleDropdownChoices() {
-    let { setList, uniqueSetList } = this.state;
+  handleDropdownChoices(setName) {
+    let { setList, uniqueSetList, dropdwonList } = this.state;
+    let uniqueSetListKeys = Object.keys(uniqueSetList);
+    // let setListKeys = setList.map((set) => set.name)
 
-    for (let j = 0; j < setList.length; j++) {
-      if (setList[j]) {
-        if (!uniqueSetList[setList[j].name]) {
-          let obj = {
-            name: setList[j].name,
-            totalTime: setList[j].totalTime,
-            exerciseList: setList[j].exerciseList
-          };
-          uniqueSetList[setList[j].name] = obj;
-        }
+    setList.forEach(element => {
+      if (
+        dropdwonList.indexOf(element.name) === -1 &&
+        element.name.length > 0
+      ) {
+        dropdwonList.push(element.name);
       }
-    }
-    this.setState({ uniqueSetList });
+    });
+
+    uniqueSetListKeys.forEach(element => {
+      if (dropdwonList.indexOf(element) === -1 && element.length > 0) {
+        dropdwonList.push(element);
+      }
+    });
+
+    console.log(dropdwonList);
+
+    dropdwonList.forEach(name => {
+      if (!uniqueSetList[name]) {
+        let wantedSet = setList.filter(set => set.name === setName)[0];
+        uniqueSetList[name] = wantedSet;
+      }
+    });
+
+    // console.log(JSON.stringify(uniqueSetList));
+    // for (let j = 0; j < setList.length; j++) {
+    //   if (setList[j]) {
+    //     if (!uniqueSetList[setList[j].name]) {
+    //       let obj = {
+    //         name: setList[j].name,
+    //         totalTime: setList[j].totalTime,
+    //         exerciseList: setList[j].exerciseList
+    //       };
+    //       uniqueSetList[setList[j].name] = obj;
+    //     }
+    //   }
+    // }
+    this.setState({ ...uniqueSetList });
     //console.log("from handle dropdown " + JSON.stringify(setList));
   }
 
@@ -115,27 +143,39 @@ class SetListComponent extends Component {
   }
 
   copySet(event, value) {
-    this.forceUpdate();
+    // this.forceUpdate();
     let { setList, uniqueSetList } = this.state;
+    console.log(value);
     //console.log("inside copyset");
-    //console.log(setList);
+    // console.log(setList);
+    console.log(JSON.stringify(uniqueSetList));
+
     //console.log(value);
-    for (let i = 0; i < setList.length; i++) {
-      if (setList[i] && setList[i].name === value) {
-        setList.push(setList[i]);
-        this.setState({
-          setList
-        });
-        return;
-      }
-    }
+    // for (let i = 0; i < setList.length; i++) {
+    //   if (setList[i] && setList[i].name === value) {
+    //     setList.push(setList[i]);
+    //     this.setState({
+    //       setList
+    //     });
+    //     return;
+    //   }
+    // }
 
     if (uniqueSetList[value]) {
-      //console.log("copying pre-made set");
-
+      console.log("copying pre-made set");
+      //let wantedSet = setList.filter(set => set.name === value);
       //console.log(uniqueSetList[value].exerciseList);
-      //console.log(setList);
-      setList.push(uniqueSetList[value]);
+      // console.log(uniqueSetList[value]);
+      //uniqueSetList[value] = wantedSet;
+      let obj = {
+        name: uniqueSetList[value].name,
+        totalTime: uniqueSetList[value].totalTime,
+        exerciseList: uniqueSetList[value].exerciseList
+      };
+
+      console.log(obj);
+      setList.push(obj);
+      console.log(setList);
       this.setState({
         setList
       });
@@ -146,7 +186,7 @@ class SetListComponent extends Component {
   wow() {}
 
   render() {
-    let { setList, uniqueSetList } = this.state;
+    let { setList, uniqueSetList, dropdwonList } = this.state;
 
     return (
       <div id="toClickAway">
@@ -182,20 +222,17 @@ class SetListComponent extends Component {
           {Object.keys(uniqueSetList).length > 0 && (
             <Autocomplete
               id="timeDropdown"
-              options={Object.keys(uniqueSetList)}
+              options={dropdwonList}
               disableClearable
               blurOnSelect
               clearOnBlur
               selectOnFocus
               includeInputInList
               onChange={this.copySet}
-              //onFocus={this.wow}
               onClick={() => this.setValue(null)}
               style={{ width: isMobile ? 150 : 180, height: 5 }}
-              //defaultValue={"Add Circuit"}
-              //value={this.option}
+              value={option => uniqueSetList[option].name}
               className="paddingBottom"
-              getOptionLabel={option => uniqueSetList[option].name}
               renderInput={params => (
                 <TextField
                   id="circuitChoices"

@@ -128,7 +128,8 @@ class SetComponent extends Component {
 
   handleDropdown(event) {
     let { handleDropdownChoices } = this.props;
-    handleDropdownChoices();
+    let { name } = this.state;
+    handleDropdownChoices(name);
   }
 
   deleteTheSet() {
