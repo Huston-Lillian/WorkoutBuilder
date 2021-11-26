@@ -62,15 +62,17 @@ class SetListComponent extends Component {
 
   handleChange(event, index, name) {
     let { setList } = this.state;
-    //console.log(name);
+    console.log("setList handle change, name and index");
+    console.log(name);
+    console.log(index);
     if (setList[index]) {
       if (name) {
         setList[index].name = name;
       }
       setList[index].exerciseList = event;
-      console.log(event);
-      console.log("SetList");
-      console.log(setList);
+      //console.log(event);
+      //console.log("SetList");
+      //console.log(setList);
       this.setState({ setList });
     }
   }
@@ -79,6 +81,10 @@ class SetListComponent extends Component {
     let { setList, uniqueSetList, dropdwonList } = this.state;
     let uniqueSetListKeys = Object.keys(uniqueSetList);
     // let setListKeys = setList.map((set) => set.name)
+
+    // console.log(dropdwonList);
+    // console.log(setList);
+    // console.log(uniqueSetList);
 
     setList.forEach(element => {
       if (
@@ -89,18 +95,26 @@ class SetListComponent extends Component {
       }
     });
 
+    // console.log(dropdwonList);
+
     uniqueSetListKeys.forEach(element => {
       if (dropdwonList.indexOf(element) === -1 && element.length > 0) {
         dropdwonList.push(element);
       }
     });
 
-    console.log(dropdwonList);
-
+    // console.log(dropdwonList);
     dropdwonList.forEach(name => {
       if (!uniqueSetList[name]) {
         let wantedSet = setList.filter(set => set.name === setName)[0];
         uniqueSetList[name] = wantedSet;
+      } else {
+        let wantedSet = setList.filter(set => set.name === setName)[0];
+        // console.log("editing a copy of existing set");
+        // console.log(wantedSet);
+        // console.log(setName);
+        uniqueSetList[setName] = wantedSet;
+        return;
       }
     });
 
@@ -118,6 +132,8 @@ class SetListComponent extends Component {
     //   }
     // }
     this.setState({ ...uniqueSetList });
+    console.log(JSON.stringify(uniqueSetList));
+
     //console.log("from handle dropdown " + JSON.stringify(setList));
   }
 
@@ -145,10 +161,10 @@ class SetListComponent extends Component {
   copySet(event, value) {
     // this.forceUpdate();
     let { setList, uniqueSetList } = this.state;
-    console.log(value);
-    //console.log("inside copyset");
+    //console.log(value);
+    // console.log("inside copyset");
     // console.log(setList);
-    console.log(JSON.stringify(uniqueSetList));
+    // console.log(JSON.stringify(uniqueSetList));
 
     //console.log(value);
     // for (let i = 0; i < setList.length; i++) {
@@ -169,13 +185,21 @@ class SetListComponent extends Component {
       //uniqueSetList[value] = wantedSet;
       let obj = {
         name: uniqueSetList[value].name,
-        totalTime: uniqueSetList[value].totalTime,
-        exerciseList: uniqueSetList[value].exerciseList
+        totalTime: uniqueSetList[value].totalTime
+        //exerciseList: uniqueSetList[value].exerciseList
       };
 
-      console.log(obj);
+      let exercises = [];
+
+      uniqueSetList[value].exerciseList.forEach(exercise => {
+        exercises.push(exercise);
+      });
+
+      obj.exerciseList = exercises;
+      // console.log(obj);
       setList.push(obj);
       console.log(setList);
+
       this.setState({
         setList
       });

@@ -66,9 +66,9 @@ class SetComponent extends Component {
       let exerciseList = Object.assign([], prevState.exerciseList);
       exerciseList[index] = value;
       let totalTime = this.calculateTotalTime(exerciseList);
-      console.log("am I here");
+      //console.log("am I here");
 
-      console.log(value);
+      //console.log(value);
       handleChange(exerciseList, index, value.name);
       return { exerciseList, totalTime };
     });
@@ -82,7 +82,7 @@ class SetComponent extends Component {
     //   displayText: "30 seconds",
     //   exerciseName: ""
     // });
-    console.log(name);
+    //console.log(name);
     handleChange(exerciseList, index, name);
     this.setState({
       name,
@@ -94,12 +94,16 @@ class SetComponent extends Component {
   addNewExercise() {
     let { handleChange, index } = this.props;
     let { exerciseList, name } = this.state;
+
     exerciseList.push({
       timeInSeconds: 30,
       displayText: "30 seconds",
       exerciseName: ""
     });
-    console.log(name);
+    // console.log("I am being called for all my sets");
+    // console.log(exerciseList);
+    // console.log(name);
+    // console.log(index);
     handleChange(exerciseList, index, name);
     this.setState({
       name,

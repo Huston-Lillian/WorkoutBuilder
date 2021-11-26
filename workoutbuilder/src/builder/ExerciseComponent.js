@@ -49,6 +49,9 @@ class ExerciseComponent extends Component {
       } else {
         exerciseObj.exerciseName = value.exerciseName;
       }
+      console.log("checking what Imn adding");
+      //console.log(exerciseObj[index]);
+      console.log(exerciseObj);
       addExercise(exerciseObj, index);
       return { exerciseObj };
     });

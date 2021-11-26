@@ -5,6 +5,8 @@ import me from "../pics/me.png";
 import protein from "../pics/protein.jpeg";
 import active from "../pics/active.jpeg";
 import nutritionBanner from "../pics/nutritionBanner.jpeg";
+import background12 from "../pics/background12.jpeg";
+
 import water from "../pics/water.png";
 import sleep from "../pics/sleep.jpeg";
 import food from "../pics/food.jpeg";
@@ -34,7 +36,7 @@ function MyAdviceComponent() {
         </div>
         <div class="parallax">
           <img
-            src={nutritionBanner}
+            src={background12}
             alt="Unsplashed background img 1"
             style={styles}
           />
