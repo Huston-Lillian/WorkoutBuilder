@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/WorkoutBuilder/static/css/main.03fe5b48.chunk.css",
-    "main.js": "/WorkoutBuilder/static/js/main.0a0ff482.chunk.js",
-    "main.js.map": "/WorkoutBuilder/static/js/main.0a0ff482.chunk.js.map",
+    "main.js": "/WorkoutBuilder/static/js/main.508f4745.chunk.js",
+    "main.js.map": "/WorkoutBuilder/static/js/main.508f4745.chunk.js.map",
     "runtime-main.js": "/WorkoutBuilder/static/js/runtime-main.f80d49d4.js",
     "runtime-main.js.map": "/WorkoutBuilder/static/js/runtime-main.f80d49d4.js.map",
     "static/css/2.8e161bee.chunk.css": "/WorkoutBuilder/static/css/2.8e161bee.chunk.css",
-    "static/js/2.d0838825.chunk.js": "/WorkoutBuilder/static/js/2.d0838825.chunk.js",
-    "static/js/2.d0838825.chunk.js.map": "/WorkoutBuilder/static/js/2.d0838825.chunk.js.map",
+    "static/js/2.b636cbcb.chunk.js": "/WorkoutBuilder/static/js/2.b636cbcb.chunk.js",
+    "static/js/2.b636cbcb.chunk.js.map": "/WorkoutBuilder/static/js/2.b636cbcb.chunk.js.map",
     "static/js/3.aac785b0.chunk.js": "/WorkoutBuilder/static/js/3.aac785b0.chunk.js",
     "static/js/3.aac785b0.chunk.js.map": "/WorkoutBuilder/static/js/3.aac785b0.chunk.js.map",
     "index.html": "/WorkoutBuilder/index.html",
     "static/css/2.8e161bee.chunk.css.map": "/WorkoutBuilder/static/css/2.8e161bee.chunk.css.map",
     "static/css/main.03fe5b48.chunk.css.map": "/WorkoutBuilder/static/css/main.03fe5b48.chunk.css.map",
-    "static/js/2.d0838825.chunk.js.LICENSE.txt": "/WorkoutBuilder/static/js/2.d0838825.chunk.js.LICENSE.txt",
+    "static/js/2.b636cbcb.chunk.js.LICENSE.txt": "/WorkoutBuilder/static/js/2.b636cbcb.chunk.js.LICENSE.txt",
     "static/media/active.044323f0.jpeg": "/WorkoutBuilder/static/media/active.044323f0.jpeg",
     "static/media/background12.b3cd23d7.jpeg": "/WorkoutBuilder/static/media/background12.b3cd23d7.jpeg",
     "static/media/background4.50611c26.jpeg": "/WorkoutBuilder/static/media/background4.50611c26.jpeg",
@@ -38,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.f80d49d4.js",
     "static/css/2.8e161bee.chunk.css",
-    "static/js/2.d0838825.chunk.js",
+    "static/js/2.b636cbcb.chunk.js",
     "static/css/main.03fe5b48.chunk.css",
-    "static/js/main.0a0ff482.chunk.js"
+    "static/js/main.508f4745.chunk.js"
   ]
 }
