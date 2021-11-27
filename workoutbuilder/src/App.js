@@ -10,6 +10,7 @@ import CustomWorkoutsComponent from "./components/customWorkout";
 import WorkoutScreenComponent from "./components/workoutScreen";
 import MyAdviceComponent from "./components/myadvice";
 import BuilderComponent from "./components/customBuilder";
+import CustomWorkoutScreenComponent from "./components/CustomWorkoutScreenComponent";
 
 function App() {
   return (
@@ -28,6 +29,11 @@ function App() {
             exact
             path="/workoutScreen/:id"
             element={<WorkoutScreenComponent />}
+          />
+          <Route
+            exact
+            path="/customWorkoutScreen/:workoutObj"
+            element={<CustomWorkoutScreenComponent />}
           />
           <Route exact path="/myadvice" element={<MyAdviceComponent />} />
           <Route exact path="/builder" element={<BuilderComponent />} />

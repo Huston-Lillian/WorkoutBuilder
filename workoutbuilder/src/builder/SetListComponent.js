@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 import Grid from "@material-ui/core/Grid";
 import SetComponent from "./SetComponent";
@@ -6,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import { useLocation } from "react-router-dom";
 
 /*eslint-disable */
 type Props = {
@@ -45,12 +47,13 @@ class SetListComponent extends Component {
             {
               timeInSeconds: 60,
               displayText: "60 seconds",
-              exerciseName: "3 Way V Ups"
+              exerciseName: "Push Ups"
             }
           ]
         }
       },
-      dropdwonList: ["Warm Up", "Push Up"]
+      dropdwonList: ["Warm Up", "Push Up"],
+      workoutObj: {}
     };
     this.handleChange = this.handleChange.bind(this);
     this.deleteSet = this.deleteSet.bind(this);
@@ -58,6 +61,7 @@ class SetListComponent extends Component {
     this.copySet = this.copySet.bind(this);
     this.wow = this.wow.bind(this);
     this.handleDropdownChoices = this.handleDropdownChoices.bind(this);
+    this.buildWorkout = this.buildWorkout.bind(this);
   }
 
   handleChange(event, index, name) {
@@ -80,6 +84,7 @@ class SetListComponent extends Component {
   handleDropdownChoices(setName) {
     let { setList, uniqueSetList, dropdwonList } = this.state;
     let uniqueSetListKeys = Object.keys(uniqueSetList);
+    this.buildWorkout();
     // let setListKeys = setList.map((set) => set.name)
 
     // console.log(dropdwonList);
@@ -133,7 +138,6 @@ class SetListComponent extends Component {
     // }
     this.setState({ ...uniqueSetList });
     console.log(JSON.stringify(uniqueSetList));
-
     //console.log("from handle dropdown " + JSON.stringify(setList));
   }
 
@@ -209,8 +213,52 @@ class SetListComponent extends Component {
 
   wow() {}
 
+  buildWorkout() {
+    let { setList } = this.state;
+    if (setList.length === 0) {
+      return;
+    } else {
+      console.log("building working out");
+      console.log(setList);
+      let totalTimeInSeconds = 0;
+      let workOutExercises = [];
+      for (let i = 0; i < setList.length; i++) {
+        if (setList[i]) {
+          for (let j = 0; j < setList[i].exerciseList.length; j++) {
+            totalTimeInSeconds += parseInt(
+              setList[i].exerciseList[j].timeInSeconds
+            );
+            setList[i].exerciseList[j].timeInSeconds = parseInt(
+              setList[i].exerciseList[j].timeInSeconds
+            );
+            workOutExercises.push(setList[i].exerciseList[j]);
+          }
+        }
+      }
+      console.log("total time in seconds " + totalTimeInSeconds);
+      console.log("total list of exercises ");
+      console.log(workOutExercises);
+      let workoutObj = {
+        totalTime: totalTimeInSeconds,
+        name: "Custom Circuit Workout",
+        exerciseList: workOutExercises
+      };
+      this.setState({
+        workoutObj: workoutObj
+      });
+      //return workoutObj
+      // const navigate = useNavigation();
+      // navigate("#/customWorkoutScreen/:" + workoutObj);
+      //this.props.history.push("#/customWorkoutScreen/:" + workoutObj);
+      //<Redirect to={"#/customWorkoutScreen/:" + workoutObj} />;
+      window.location.href =
+        "#/customWorkoutScreen/" +
+        encodeURIComponent(JSON.stringify(workoutObj));
+    }
+  }
+
   render() {
-    let { setList, uniqueSetList, dropdwonList } = this.state;
+    let { setList, uniqueSetList, dropdwonList, workoutObj } = this.state;
 
     return (
       <div id="toClickAway">
@@ -291,6 +339,36 @@ class SetListComponent extends Component {
             </Button>
           </div>
         </Grid>
+        <div className="container">
+          <div className="row center">
+            <div className="header col l12 s12 light paddingBottom">
+              {workoutObj && (
+                <a
+                  onClick={this.buildWorkout}
+                  // href={
+                  //   "#/customWorkoutScreen/:" +
+                  //   encodeURIComponent(JSON.stringify(workoutObj))
+                  // }
+                  id="download-button"
+                  className="btn btn-large waves-effect waves-light teal lighten-1"
+                >
+                  Start Workout
+                  {/* <Link
+                    className="white-text"
+                    to={
+                      "#/customWorkoutScreen/:" +
+                      encodeURIComponent(JSON.stringify(workoutObj))
+                    }
+                    replace
+                  >
+                    {" "}
+                    Start Workout
+                  </Link> */}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
