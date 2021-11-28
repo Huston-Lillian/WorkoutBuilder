@@ -204,7 +204,7 @@ class SetComponent extends Component {
                           variant="outlined"
                           value={name ? name : ""}
                           style={{
-                            width: isMobile ? 100 : "auto",
+                            width: isMobile ? 110 : "auto",
                             paddingLeft: isMobile ? 10 : 0
                           }}
                         />
@@ -215,7 +215,8 @@ class SetComponent extends Component {
                   <Grid item xs={5} sm={5}>
                     <Typography
                       style={{
-                        marginTop: 15
+                        marginTop: 15,
+                        paddingLeft: isMobile ? 20 : 0
                       }}
                     >
                       {totalTime}{" "}

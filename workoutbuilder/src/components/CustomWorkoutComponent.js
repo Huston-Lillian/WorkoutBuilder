@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { exerciseObject } from "../constants/Workouts";
+import NoSleep from "nosleep.js";
 
 type Props = {
   workoutObj: any
@@ -14,6 +14,8 @@ const styles2 = {
   height: `25px`,
   "background-color": "pink"
 };
+
+var noSleep = new NoSleep();
 
 class CustomWorkoutComponent extends Component<Props> {
   constructor(props) {
@@ -47,6 +49,8 @@ class CustomWorkoutComponent extends Component<Props> {
   exerciseLoop() {
     // var video = document.getElementById("myVideo");
     // video.play();
+    noSleep.enable();
+
     var elmnt = document.getElementById("activeWorkout");
     elmnt.scrollIntoView();
     let { exerciseObj, totalWorkoutTime } = this.state;
@@ -105,10 +109,12 @@ class CustomWorkoutComponent extends Component<Props> {
           this.setState({
             progress: 0.0
           });
-          msg.text = exerciseObj[i].exerciseName;
-          window.speechSynthesis.speak(msg);
-          msg2.text = exerciseObj[i].displayText;
-          window.speechSynthesis.speak(msg2);
+          if (window.speechSynthesis) {
+            msg.text = exerciseObj[i].exerciseName;
+            window.speechSynthesis.speak(msg);
+            msg2.text = exerciseObj[i].displayText;
+            window.speechSynthesis.speak(msg2);
+          }
         } else if (i === exerciseObj.length - 1 && y === 0) {
           // i = 0;
           // y = exerciseObj[i].timeInSeconds;
@@ -146,8 +152,10 @@ class CustomWorkoutComponent extends Component<Props> {
           timeRemaining: yMin + ":  " + ySec + " remaining"
         });
         if (ySec <= 3 && ySec > 0) {
-          msg.text = ySec;
-          window.speechSynthesis.speak(msg);
+          if (window.speechSynthesis) {
+            msg.text = ySec;
+            window.speechSynthesis.speak(msg);
+          }
         }
         y--;
         yMin = Math.floor(y / 60);
@@ -175,6 +183,7 @@ class CustomWorkoutComponent extends Component<Props> {
   }
 
   finish() {
+    noSleep.disable();
     if (window.speechSynthesis) {
       var msg = new SpeechSynthesisUtterance();
       msg.text = "Excellent job, you're a true fitness champion!";
