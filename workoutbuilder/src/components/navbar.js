@@ -8,6 +8,9 @@ function NavbarComponent() {
           <a href="#/workouts">Workouts</a>
         </li>
         <li>
+          <a href="#/builder">Workout Builder</a>
+        </li>
+        <li>
           <a href="#/customWorkouts">Custom Workouts</a>
         </li>
         <li>
@@ -46,6 +49,9 @@ function NavbarComponent() {
               </li>
               <li>
                 <a href="#/workouts">Workouts</a>
+              </li>
+              <li>
+                <a href="#/builder">Workout Builder</a>
               </li>
               <li>
                 <a href="#/customWorkouts">Custom Workouts</a>

@@ -84,7 +84,7 @@ class SetListComponent extends Component {
   handleDropdownChoices(setName) {
     let { setList, uniqueSetList, dropdwonList } = this.state;
     let uniqueSetListKeys = Object.keys(uniqueSetList);
-    this.buildWorkout();
+    // this.buildWorkout();
     // let setListKeys = setList.map((set) => set.name)
 
     // console.log(dropdwonList);
@@ -225,15 +225,21 @@ class SetListComponent extends Component {
       for (let i = 0; i < setList.length; i++) {
         if (setList[i]) {
           for (let j = 0; j < setList[i].exerciseList.length; j++) {
-            totalTimeInSeconds += parseInt(
-              setList[i].exerciseList[j].timeInSeconds
-            );
-            setList[i].exerciseList[j].timeInSeconds = parseInt(
-              setList[i].exerciseList[j].timeInSeconds
-            );
-            workOutExercises.push(setList[i].exerciseList[j]);
+            if (setList[i].exerciseList[j].exerciseName.length > 0) {
+              totalTimeInSeconds += parseInt(
+                setList[i].exerciseList[j].timeInSeconds
+              );
+              setList[i].exerciseList[j].timeInSeconds = parseInt(
+                setList[i].exerciseList[j].timeInSeconds
+              );
+              workOutExercises.push(setList[i].exerciseList[j]);
+            }
           }
         }
+      }
+
+      if (workOutExercises.length === 0) {
+        return;
       }
       console.log("total time in seconds " + totalTimeInSeconds);
       console.log("total list of exercises ");
@@ -323,14 +329,14 @@ class SetListComponent extends Component {
                 fontSize="large"
                 style={{
                   paddingLeft: isMobile ? -10 : 0,
-                  marginTop: isMobile ? 80 : 45,
+                  marginTop: isMobile ? 45 : 45,
                   color: "green"
                 }}
               />
               <p
                 style={{
                   paddingLeft: isMobile ? 10 : 0,
-                  marginTop: isMobile ? 75 : 60,
+                  marginTop: isMobile ? 60 : 60,
                   color: "green"
                 }}
               >
@@ -343,7 +349,7 @@ class SetListComponent extends Component {
           <div className="row center">
             <div className="header col l12 s12 light paddingBottom">
               {workoutObj && (
-                <a
+                <button
                   onClick={this.buildWorkout}
                   // href={
                   //   "#/customWorkoutScreen/:" +
@@ -353,18 +359,7 @@ class SetListComponent extends Component {
                   className="btn btn-large waves-effect waves-light teal lighten-1"
                 >
                   Start Workout
-                  {/* <Link
-                    className="white-text"
-                    to={
-                      "#/customWorkoutScreen/:" +
-                      encodeURIComponent(JSON.stringify(workoutObj))
-                    }
-                    replace
-                  >
-                    {" "}
-                    Start Workout
-                  </Link> */}
-                </a>
+                </button>
               )}
             </div>
           </div>

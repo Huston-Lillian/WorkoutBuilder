@@ -235,6 +235,100 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
   text-decoration: none !important;
 } */
 
+.progressbar-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.progressbar-complete {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  background-color: #25bd39;
+  border-radius: 10px;
+  animation: g 2500ms infinite ease-in-out;
+  z-index: 2;
+}
+.progressbar-liquid {
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  animation: g 2500ms infinite ease-in-out,
+    r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  background-color: #25bd46;
+  border-radius: 40%;
+}
+
+.progress {
+  z-index: 2;
+}
+
+@keyframes g {
+  0% {
+    background-color: #25bd88;
+  }
+  50% {
+    background-color: #609e6e;
+  }
+  100% {
+    background-color: #6ebd25;
+  }
+}
+
+@keyframes r {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.progressbar-complete-red {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  background-color: #f70c03;
+  border-radius: 10px;
+  animation: p 2500ms infinite ease-in-out;
+  z-index: 2;
+}
+.progressbar-liquid-red {
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  animation: p 2500ms infinite ease-in-out,
+    r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  background-color: #df1414;
+  border-radius: 40%;
+}
+
+@keyframes p {
+  0% {
+    background-color: #f13e26;
+  }
+  50% {
+    background-color: #d41e18;
+  }
+  100% {
+    background-color: #f80c03;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .bodyProjectImg {
     width: 70%;

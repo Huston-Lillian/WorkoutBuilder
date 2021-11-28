@@ -204,7 +204,8 @@ class SetComponent extends Component {
                           variant="outlined"
                           value={name ? name : ""}
                           style={{
-                            width: isMobile ? 100 : "auto"
+                            width: isMobile ? 100 : "auto",
+                            paddingLeft: isMobile ? 10 : 0
                           }}
                         />
                       }

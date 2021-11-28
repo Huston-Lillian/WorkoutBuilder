@@ -290,7 +290,7 @@ class WorkoutComponent extends Component<Props> {
             {!done && (
               <React.Fragment>
                 <div className="col l4"></div>
-                <div className="col s12 l4 progress" style={styles2}>
+                {/* <div className="col s12 l4 progress" style={styles2}>
                   <div
                     className="determinate"
                     style={{
@@ -298,6 +298,18 @@ class WorkoutComponent extends Component<Props> {
                       "background-color": "red"
                     }}
                   ></div>
+                </div> */}
+                <div
+                  className="progressbar-container col s12 l4 "
+                  style={styles2}
+                >
+                  <div
+                    className="progressbar-complete-red"
+                    style={{ width: `${progress}%` }}
+                  >
+                    <div className="progressbar-liquid-red"></div>
+                  </div>
+                  {/* <span className="progress">{progress}%</span> */}
                 </div>
                 <div className="col l2"></div>
               </React.Fragment>
@@ -357,15 +369,30 @@ class WorkoutComponent extends Component<Props> {
           <React.Fragment>
             <div className="row">
               <div className="col l3"></div>
-              <div className="col s12 l6 progress" style={styles3}>
+              {/* <div
+                className="col s12 l6 progress progress-bar-striped"
+                style={styles3}
+              >
                 <div
                   className="determinate"
                   style={{
-                    width: totalProgress + "%",
-                    "background-color": "green"
+                    width: totalProgress + "%"
+                    // "background-color": "green"
                   }}
                 ></div>
-              </div>{" "}
+              </div>{" "} */}
+              <div
+                className="progressbar-container col s12 l6 "
+                style={styles3}
+              >
+                <div
+                  className="progressbar-complete"
+                  style={{ width: `${totalProgress}%` }}
+                >
+                  <div className="progressbar-liquid"></div>
+                </div>
+                {/* <span className="progress">{progress}%</span> */}
+              </div>
               {/* <div className="col l2"></div> */}
             </div>
           </React.Fragment>

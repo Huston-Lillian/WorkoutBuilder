@@ -6,6 +6,7 @@ import background6 from "../../pics/background6.jpeg";
 import free from "../../pics/free.png";
 import custom from "../../pics/custom.png";
 import advice from "../../pics/advice.png";
+import build from "../../pics/build.png";
 
 const styles = {
   transform: `translate3d(-50%, 309.727px, 0px)`,
@@ -110,6 +111,56 @@ function HomepageComponent() {
               </div>
               <div className="s4 m3 center">
                 <div className="light">
+                  <a href="#/builder">
+                    <img
+                      className="cheatMeal circlePic"
+                      src={build}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col s12 m6">
+              <div className="row center">
+                <h3 className="black-text">
+                  {" "}
+                  <a className="teal-text text-lighten-2" href="#/builder">
+                    Workout Builder
+                  </a>
+                </h3>
+                <h5 className="black-text">
+                  <p>
+                    I developed a tool to help you design and create your own
+                    custom circuit workouts.
+                  </p>
+                </h5>
+                <div className="s12 m4 center">
+                  <div className="light">
+                    <a
+                      href="#/builder"
+                      id="download-button"
+                      className="btn btn-large waves-effect waves-light teal lighten-1"
+                    >
+                      Workout Builder
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
+              </div>
+              <div className="s4 m3 center">
+                <div className="light">
                   <a href="#/customWorkouts">
                     <img
                       className="cheatMeal circlePic"
@@ -133,9 +184,8 @@ function HomepageComponent() {
                 </h3>
                 <h5 className="black-text">
                   <p>
-                    I am developing a tool that will allow you to create your
-                    own custom circuit workouts. For now I've provided several
-                    workouts for you to try.
+                    I've created several workouts for you to try using my
+                    Workout Builder tool.
                   </p>
                 </h5>
                 <div className="s12 m4 center">

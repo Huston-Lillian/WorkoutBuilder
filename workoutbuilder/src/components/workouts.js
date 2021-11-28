@@ -14,6 +14,7 @@ const styles = {
 };
 
 function WorkoutsComponent() {
+  window.scrollTo(0, 0);
   return (
     <React.Fragment>
       <div id="index-banner" className="parallax-container">

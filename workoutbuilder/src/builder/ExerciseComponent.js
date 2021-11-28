@@ -4,6 +4,7 @@ import "@fontsource/roboto";
 import TextInput from "./TextInput";
 import TimeDropdown from "./TimeDropdown";
 import CancelIcon from "@material-ui/icons/Cancel";
+import { isMobile } from "react-device-detect";
 
 /*eslint-disable */
 type Props = {
@@ -67,7 +68,12 @@ class ExerciseComponent extends Component {
     return (
       <div>
         <Grid item xs={12} style={{ marginTop: 10 }}>
-          <Grid container justifyContent="center" spacing={2}>
+          <Grid
+            container
+            justifyContent="center"
+            spacing={2}
+            style={{ marginTop: isMobile ? -10 : 0 }}
+          >
             <Grid item>
               <TextInput
                 exerciseName={exerciseObj.exerciseName}
