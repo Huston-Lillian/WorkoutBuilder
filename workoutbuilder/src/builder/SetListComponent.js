@@ -66,10 +66,10 @@ class SetListComponent extends Component {
 
   handleChange(event, index, name) {
     let { setList } = this.state;
-    console.log("setList handle change, name and index");
-    console.log(name);
-    console.log(index);
-    if (setList[index]) {
+    // console.log("setList handle change, name and index");
+
+    // console.log(event);
+    if (name && setList[index]) {
       if (name) {
         setList[index].name = name;
       }
@@ -78,6 +78,11 @@ class SetListComponent extends Component {
       //console.log("SetList");
       //console.log(setList);
       this.setState({ setList });
+      console.log("handle input, event:");
+      console.log(event);
+      console.log("handle input, index:");
+      console.log(index);
+      console.log(setList);
     }
   }
 
@@ -138,6 +143,9 @@ class SetListComponent extends Component {
     // }
     this.setState({ ...uniqueSetList });
     console.log(JSON.stringify(uniqueSetList));
+    console.log("Set list dropdown choices");
+
+    console.log(setList);
     //console.log("from handle dropdown " + JSON.stringify(setList));
   }
 
@@ -202,6 +210,8 @@ class SetListComponent extends Component {
       obj.exerciseList = exercises;
       // console.log(obj);
       setList.push(obj);
+      console.log("Set list copy set");
+
       console.log(setList);
 
       this.setState({
@@ -225,15 +235,13 @@ class SetListComponent extends Component {
       for (let i = 0; i < setList.length; i++) {
         if (setList[i]) {
           for (let j = 0; j < setList[i].exerciseList.length; j++) {
-            if (setList[i].exerciseList[j].exerciseName.length > 0) {
-              totalTimeInSeconds += parseInt(
-                setList[i].exerciseList[j].timeInSeconds
-              );
-              setList[i].exerciseList[j].timeInSeconds = parseInt(
-                setList[i].exerciseList[j].timeInSeconds
-              );
-              workOutExercises.push(setList[i].exerciseList[j]);
-            }
+            totalTimeInSeconds += parseInt(
+              setList[i].exerciseList[j].timeInSeconds
+            );
+            setList[i].exerciseList[j].timeInSeconds = parseInt(
+              setList[i].exerciseList[j].timeInSeconds
+            );
+            workOutExercises.push(setList[i].exerciseList[j]);
           }
         }
       }
@@ -252,6 +260,8 @@ class SetListComponent extends Component {
       this.setState({
         workoutObj: workoutObj
       });
+
+      console.log(workoutObj);
       //return workoutObj
       // const navigate = useNavigation();
       // navigate("#/customWorkoutScreen/:" + workoutObj);
