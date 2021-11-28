@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/WorkoutBuilder/static/css/main.09a40ebb.chunk.css",
-    "main.js": "/WorkoutBuilder/static/js/main.bde09408.chunk.js",
-    "main.js.map": "/WorkoutBuilder/static/js/main.bde09408.chunk.js.map",
+    "main.js": "/WorkoutBuilder/static/js/main.719bd0f6.chunk.js",
+    "main.js.map": "/WorkoutBuilder/static/js/main.719bd0f6.chunk.js.map",
     "runtime-main.js": "/WorkoutBuilder/static/js/runtime-main.f80d49d4.js",
     "runtime-main.js.map": "/WorkoutBuilder/static/js/runtime-main.f80d49d4.js.map",
     "static/css/2.8e161bee.chunk.css": "/WorkoutBuilder/static/css/2.8e161bee.chunk.css",
@@ -41,6 +41,6 @@
     "static/css/2.8e161bee.chunk.css",
     "static/js/2.b636cbcb.chunk.js",
     "static/css/main.09a40ebb.chunk.css",
-    "static/js/main.bde09408.chunk.js"
+    "static/js/main.719bd0f6.chunk.js"
   ]
 }
