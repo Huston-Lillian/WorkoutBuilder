@@ -35,6 +35,20 @@ object-assign
  * Date: 2021-03-02T17:08Z
  */
 
+/*! exports provided: default */
+
+/*! no static exports found */
+
+/*! react */
+
+/*!******************************!*\
+        !*** ./src/react-webcam.tsx ***!
+        \******************************/
+
+/*!**************************************************************************************!*\
+        !*** external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"} ***!
+        \**************************************************************************************/
+
 /**
  * A better abstraction over CSS.
  *
