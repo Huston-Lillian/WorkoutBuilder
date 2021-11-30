@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.marginBottonNone {
+  margin-bottom: 0px !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -215,6 +219,64 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
 
 #timeDropdown-label {
   max-height: 50px !important;
+}
+
+.instaLogo {
+  width: 35%;
+  height: auto;
+}
+
+.youTubeLogo {
+  width: 30%;
+  height: auto;
+}
+
+.metaLogo {
+  width: 40%;
+  height: auto;
+}
+
+.pb2Icon {
+  width: 80%;
+  height: auto;
+}
+
+.pb2Icon2 {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.proteinBarsIcon {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.proteinBarsZoneP {
+  width: 100%;
+  height: auto;
+  margin-top: 35px;
+}
+
+.proteinPuffs {
+  width: 73%;
+  height: auto;
+}
+
+.riceCakesImg {
+  width: 60%;
+  height: auto;
+}
+
+.fruitImg {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.lowCalImg {
+  width: 83%;
+  height: auto;
 }
 
 /* .builderInput {
@@ -431,5 +493,10 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
 
   .alignButton {
     margin-top: 25px !important;
+  }
+
+  .lowCalImg {
+    width: 60%;
+    height: auto;
   }
 }

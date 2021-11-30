@@ -5,7 +5,10 @@
     <link rel="icon" href="%PUBLIC_URL%/faviconfit.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="A free Fitness Hub" />
+    <meta
+      name="description"
+      content="A Free Fitness Hub with a Custom Workout Builder"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/faviconfit.jpeg" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -41,6 +44,19 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KNR9R5SQKQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-KNR9R5SQKQ");
+    </script>
     <title>uFit</title>
   </head>
   <body>

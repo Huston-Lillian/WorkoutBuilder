@@ -6,6 +6,7 @@ import protein from "../pics/protein.jpeg";
 import active from "../pics/active.jpeg";
 import nutritionBanner from "../pics/nutritionBanner.jpeg";
 import background12 from "../pics/background12.jpeg";
+import lowCal from "../pics/lowCalorie.png";
 
 import water from "../pics/water.png";
 import sleep from "../pics/sleep.jpeg";
@@ -318,6 +319,39 @@ function MyAdviceComponent() {
               <div class="icon-block">
                 <h5 class="center"></h5>
               </div>
+              <div class="s4 m3 center">
+                <div class="light">
+                  <img
+                    class="lowCalImg circlePic"
+                    src={lowCal}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="row center">
+                <h3 class="black-text">Low Calorie Snacks</h3>
+                <h5 class="black-text">
+                  I strongly encourage you to find healthier, low calorie
+                  options for your preferred snacks and cravings. I eat a lot of
+                  fruit because it is sweet, easy to digest, and very low in
+                  calories. I also eat popcorn, rice cakes, and low calorie ice
+                  cream.
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 m4 customWorkoutImg">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
               <div class="s4 m5 center">
                 <div class="light">
                   <img
@@ -374,6 +408,17 @@ function MyAdviceComponent() {
                     </li>
                   </ul>
                 </h5>
+                <a
+                  href="#/proteinProducts"
+                  id="download-button"
+                  className="btn btn-large waves-effect waves-light teal lighten-1"
+                >
+                  My Favorite Protein Products
+                  {/* <Link className="white-text" to="/workouts" replace>
+                    {" "}
+                    Free Workouts
+                  </Link> */}
+                </a>
               </div>
             </div>
           </div>

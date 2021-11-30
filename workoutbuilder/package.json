@@ -2,7 +2,7 @@
   "name": "workoutbuilder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dag2733.github.io/WorkoutBuilder",
+  "homepage": "https://ufitworkouts.com",
   "dependencies": {
     "@fontsource/roboto": "^4.5.1",
     "@material-ui/core": "^4.12.3",

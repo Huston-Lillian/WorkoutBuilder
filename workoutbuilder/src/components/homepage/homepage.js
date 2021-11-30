@@ -7,6 +7,7 @@ import free from "../../pics/free.png";
 import custom from "../../pics/custom.png";
 import advice from "../../pics/advice.png";
 import build from "../../pics/build.png";
+import experts from "../../pics/fitness_experts.png";
 
 const styles = {
   transform: `translate3d(-50%, 309.727px, 0px)`,
@@ -244,6 +245,53 @@ function HomepageComponent() {
                       className="btn btn-large waves-effect waves-light teal lighten-1"
                     >
                       Fitness Advice
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
+              </div>
+              <div className="s4 m3 center">
+                <div className="light">
+                  <a href="#/fitnessGurus">
+                    <img
+                      className="cheatMeal circlePic"
+                      src={experts}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col s12 m6">
+              <div className="row center">
+                <h3 className="black-text">
+                  <a className="teal-text text-lighten-2" href="#/fitnessGurus">
+                    Fitness Experts
+                  </a>
+                </h3>
+                <h5 className="black-text">
+                  List of the most influential fitness experts I follow and how
+                  they have helped me on my fitness journey.
+                </h5>
+                <div className="s12 m4 center">
+                  <div className="light">
+                    <a
+                      href="#/fitnessGurus"
+                      id="download-button"
+                      className="btn btn-large waves-effect waves-light teal lighten-1"
+                    >
+                      Fitness Experts
                     </a>
                   </div>
                 </div>

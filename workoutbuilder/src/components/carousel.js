@@ -25,7 +25,7 @@ class DemoCarousel extends Component {
         {this.state.links.map((link, index) => (
           <div className="paddingBottom" key={index}>
             <iframe
-              showthumbs={"false"}
+              showthumbs={false}
               width="480"
               height="300"
               src={link}

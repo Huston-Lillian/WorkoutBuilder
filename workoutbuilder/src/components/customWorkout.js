@@ -6,6 +6,7 @@ import lowerBody from "../pics/lowerBody.jpeg";
 import stretching from "../pics/stretching.jpeg";
 import upperBody from "../pics/upperBody.jpeg";
 import background8 from "../pics/background8.jpeg";
+
 import legs from "../pics/legs.jpeg";
 
 const styles = {

@@ -11,6 +11,8 @@ import WorkoutScreenComponent from "./components/workoutScreen";
 import MyAdviceComponent from "./components/myadvice";
 import BuilderComponent from "./components/customBuilder";
 import CustomWorkoutScreenComponent from "./components/CustomWorkoutScreenComponent";
+import FitnessGurusComponent from "./components/fitnessGurus";
+import ProteinProductsComponent from "./components/proteinProducts";
 
 function App() {
   return (
@@ -37,6 +39,16 @@ function App() {
           />
           <Route exact path="/myadvice" element={<MyAdviceComponent />} />
           <Route exact path="/builder" element={<BuilderComponent />} />
+          <Route
+            exact
+            path="/fitnessGurus"
+            element={<FitnessGurusComponent />}
+          />
+          <Route
+            exact
+            path="/proteinProducts"
+            element={<ProteinProductsComponent />}
+          />
 
           <Route path="/*" element={<HomepageComponent />} />
         </Routes>
