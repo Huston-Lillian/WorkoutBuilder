@@ -1,18 +1,23 @@
 import React, { Component } from "react";
 import NoSleep from "nosleep.js";
+import Webcam from "react-webcam";
 
 type Props = {
   workoutObj: any
 };
 
+const videoConstraints = {
+  facingMode: "user"
+};
+
 const styles3 = {
   height: `25px`,
-  "background-color": "lightgreen"
+  backgroundColor: "lightgreen"
 };
 
 const styles2 = {
   height: `25px`,
-  "background-color": "pink"
+  backgroundColor: "pink"
 };
 
 var noSleep = new NoSleep();
@@ -21,6 +26,7 @@ class CustomWorkoutComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
+      allowMirror: false,
       workoutName: "Custom Circuit Workout",
       exerciseObj: this.props.workoutObj.exerciseList,
       totalWorkoutTime: this.props.workoutObj.totalTime,
@@ -44,6 +50,7 @@ class CustomWorkoutComponent extends Component<Props> {
     this.exerciseLoop = this.exerciseLoop.bind(this);
     this.finish = this.finish.bind(this);
     this.pause = this.pause.bind(this);
+    this.enableMirror = this.enableMirror.bind(this);
   }
 
   exerciseLoop() {
@@ -210,6 +217,14 @@ class CustomWorkoutComponent extends Component<Props> {
     }
   }
 
+  enableMirror() {
+    let { allowMirror } = this.state;
+    allowMirror = !allowMirror;
+    this.setState({
+      allowMirror
+    });
+  }
+
   render() {
     let {
       totalTime,
@@ -220,7 +235,8 @@ class CustomWorkoutComponent extends Component<Props> {
       workoutName,
       progress,
       totalProgress,
-      done
+      done,
+      allowMirror
     } = this.state;
     return (
       <div noValidate>
@@ -233,11 +249,20 @@ class CustomWorkoutComponent extends Component<Props> {
         </video> */}
         <div className="row">
           <div className="icon-block">
-            <h3 className="left-align">{workoutName}</h3>
+            <h3
+              className="left-align"
+              style={
+                allowMirror
+                  ? { color: "black", textShadow: "2px 2px white" }
+                  : { color: "black" }
+              }
+            >
+              {workoutName}
+            </h3>
           </div>
         </div>
         <div className="row">
-          <div className="col s4 m4">
+          <div className="left-align col s4 m3 mirrorBtn">
             {totalTime ? (
               <a
                 onClick={this.exerciseLoop}
@@ -255,7 +280,7 @@ class CustomWorkoutComponent extends Component<Props> {
             )}
             {/* /* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div className=" center col s4 m4">
+          <div className=" center col s4 m3 mirrorBtn">
             {paused ? (
               <a
                 onClick={this.pause}
@@ -274,7 +299,7 @@ class CustomWorkoutComponent extends Component<Props> {
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div className=" right-align  col s4 m4">
+          <div className=" center  col s4 m3 mirrorBtn">
             <a
               onClick={this.finish}
               className="fitText red waves-effect waves-light btn-large"
@@ -284,16 +309,46 @@ class CustomWorkoutComponent extends Component<Props> {
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
+          <div className="right-align col s4 m3 mirrorBtn">
+            <a
+              onClick={this.enableMirror}
+              className="fitText waves-effect waves-light btn-large"
+            >
+              <i className="material-icons right ">accessibility</i>
+              Mirror
+            </a>
+          </div>
+          {allowMirror && (
+            <Webcam
+              audio={false}
+              height={"auto"}
+              className="background-videoMirror"
+              screenshotFormat="image/jpeg"
+              width={"auto"}
+              videoConstraints={videoConstraints}
+            />
+          )}
           <div className="col s12 m12 paddingBottom">
             <h2
               id="activeWorkout"
               className="center"
-              style={{ color: "#8B0000" }}
+              style={
+                allowMirror
+                  ? { color: "black", textShadow: "2px 2px white" }
+                  : { color: "#8B0000" }
+              }
             >
               {exerciseName}
             </h2>
             <br></br>
-            <h3 className="center" style={{ color: "red" }}>
+            <h3
+              className="center"
+              style={
+                allowMirror
+                  ? { color: "black", textShadow: "2px 2px white" }
+                  : { color: "red" }
+              }
+            >
               {timeRemaining}
             </h3>
             {!done && (
@@ -339,8 +394,24 @@ class CustomWorkoutComponent extends Component<Props> {
         <div className="row center">
           {nextExercise && (
             <React.Fragment>
-              <h6 className="col s12 l12 center">Next exercise: </h6>
-              <h4 className="col s12 l12 center" style={{ color: "darkgreen" }}>
+              <h6
+                className="col s12 l12 center"
+                style={
+                  allowMirror
+                    ? { color: "black", textShadow: "2px 2px white" }
+                    : { color: "black" }
+                }
+              >
+                Next exercise:{" "}
+              </h6>
+              <h4
+                className="col s12 l12 center"
+                style={
+                  allowMirror
+                    ? { color: "black", textShadow: "2px 2px white" }
+                    : { color: "darkgreen" }
+                }
+              >
                 {nextExercise}
               </h4>
             </React.Fragment>
@@ -356,11 +427,25 @@ class CustomWorkoutComponent extends Component<Props> {
           {
             <React.Fragment>
               <div className="center col s1 l4"></div>
-              <div className="center col s4 l2 totalTimeMargin">
+              <div
+                className="center col s4 l2 totalTimeMargin"
+                style={
+                  allowMirror
+                    ? { color: "black", textShadow: "2px 2px white" }
+                    : { color: "black" }
+                }
+              >
                 <h5>Total time: </h5>{" "}
                 {/* <h3 className="center col s3 l4">{totalTime}</h3> */}
               </div>
-              <div className="left-align col s6 l3">
+              <div
+                className="left-align col s6 l3"
+                style={
+                  allowMirror
+                    ? { color: "black", textShadow: "2px 2px white" }
+                    : { color: "black" }
+                }
+              >
                 <h3>{totalTime ? totalTime : "0: 0: 0"}</h3>
               </div>
               <div className="center col s1 l3"></div>
