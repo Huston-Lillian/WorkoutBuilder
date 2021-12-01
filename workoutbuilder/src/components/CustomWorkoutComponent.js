@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import NoSleep from "nosleep.js";
 import Webcam from "react-webcam";
+import MusicPlayerComponent from "./musicPlayer";
+import $ from "jquery";
 
 type Props = {
   workoutObj: any
@@ -51,6 +53,18 @@ class CustomWorkoutComponent extends Component<Props> {
     this.finish = this.finish.bind(this);
     this.pause = this.pause.bind(this);
     this.enableMirror = this.enableMirror.bind(this);
+    this.scrollToMusic = this.scrollToMusic.bind(this);
+    this.scrollToWorkout = this.scrollToWorkout.bind(this);
+  }
+
+  scrollToWorkout() {
+    var elmnt = document.getElementById("titleUp");
+    elmnt.scrollIntoView();
+  }
+
+  scrollToMusic() {
+    var elmnt = document.getElementById("musicPlaylist");
+    elmnt.scrollIntoView();
   }
 
   exerciseLoop() {
@@ -240,16 +254,10 @@ class CustomWorkoutComponent extends Component<Props> {
     } = this.state;
     return (
       <div noValidate>
-        {/* <video autoplay muted loop id="myVideo">
-          <source
-            src={natureVid}
-            // src="https://video-previews.elements.envatousercontent.com/files/2054584a-ecf8-4865-bedc-c2d92f3b815f/video_preview_h264.mp4"
-            type="video/mp4"
-          />
-        </video> */}
         <div className="row">
           <div className="icon-block">
             <h3
+              id="titleUp"
               className="left-align"
               style={
                 allowMirror
@@ -262,7 +270,7 @@ class CustomWorkoutComponent extends Component<Props> {
           </div>
         </div>
         <div className="row">
-          <div className="left-align col s4 m3 mirrorBtn">
+          <div className="center col s4 m3 mirrorBtn">
             {totalTime ? (
               <a
                 onClick={this.exerciseLoop}
@@ -278,7 +286,6 @@ class CustomWorkoutComponent extends Component<Props> {
                 <i className="material-icons right">play_arrow</i>Start
               </a>
             )}
-            {/* /* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
           <div className=" center col s4 m3 mirrorBtn">
             {paused ? (
@@ -296,8 +303,6 @@ class CustomWorkoutComponent extends Component<Props> {
                 <i className="material-icons right">pause</i>Pause
               </a>
             )}
-
-            {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
           <div className=" center  col s4 m3 mirrorBtn">
             <a
@@ -306,16 +311,23 @@ class CustomWorkoutComponent extends Component<Props> {
             >
               <i className="material-icons right">stop</i>Finish
             </a>
-
-            {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div className="right-align col s4 m3 mirrorBtn">
+          <div className="center col s4 m3 mirrorBtn">
             <a
               onClick={this.enableMirror}
               className="fitText waves-effect waves-light btn-large"
             >
               <i className="material-icons right ">accessibility</i>
               Mirror
+            </a>
+          </div>
+          <div className="center col s4 m3 mirrorBtn">
+            <a
+              onClick={this.scrollToMusic}
+              className="fitText blue waves-effect waves-light btn-large"
+            >
+              <i className="material-icons right ">music_note</i>
+              Music
             </a>
           </div>
           {allowMirror && (
@@ -354,15 +366,6 @@ class CustomWorkoutComponent extends Component<Props> {
             {!done && (
               <React.Fragment>
                 <div className="col l4"></div>
-                {/* <div className="col s12 l4 progress" style={styles2}>
-                  <div
-                    className="determinate"
-                    style={{
-                      width: progress + "%",
-                      "background-color": "red"
-                    }}
-                  ></div>
-                </div> */}
                 <div
                   className="progressbar-container col s12 l4 "
                   style={styles2}
@@ -373,21 +376,11 @@ class CustomWorkoutComponent extends Component<Props> {
                   >
                     <div className="progressbar-liquid-red"></div>
                   </div>
-                  {/* <span className="progress">{progress}%</span> */}
                 </div>
                 <div className="col l2"></div>
               </React.Fragment>
             )}
             <br></br>
-            {/* {nextExercise && (
-              <React.Fragment>
-                <h6 className="center">Next exercise: </h6>
-                <h3 className="center" style={{ color: "#87CEEB" }}>
-                  {nextExercise}
-                </h3>
-              </React.Fragment>
-              color "#87CEEB"
-            )} */}
           </div>
         </div>
 
@@ -419,11 +412,6 @@ class CustomWorkoutComponent extends Component<Props> {
         </div>
 
         <div className="row">
-          {/* <div className="col s2 m4">
-            <a onClick={this.finish} className="waves-effect waves-light btn-large">
-              <i className="material-icons right">cloud</i>Finish
-            </a>
-          </div> center col s12 m12 */}
           {
             <React.Fragment>
               <div className="center col s1 l4"></div>
@@ -436,7 +424,6 @@ class CustomWorkoutComponent extends Component<Props> {
                 }
               >
                 <h5>Total time: </h5>{" "}
-                {/* <h3 className="center col s3 l4">{totalTime}</h3> */}
               </div>
               <div
                 className="left-align col s6 l3"
@@ -451,27 +438,11 @@ class CustomWorkoutComponent extends Component<Props> {
               <div className="center col s1 l3"></div>
             </React.Fragment>
           }
-          {/* <div className="col s2 m3">
-            <a onClick={this.pause} className="waves-effect waves-light btn-large">
-              <i className="material-icons right">cloud</i>Pause
-            </a>
-          </div> */}
-          {/* <button onClick={this.finish}>Finish Workout</button>
-        <button onClick={this.pause}>Continue Workout</button> */}
         </div>
         {
           <React.Fragment>
             <div className="row">
               <div className="col l3"></div>
-              {/* <div className="col s12 l6 progress" style={styles3}>
-                <div
-                  className="determinate"
-                  style={{
-                    width: totalProgress + "%",
-                    "background-color": "green"
-                  }}
-                ></div>
-              </div>{" "} */}
               <div
                 className="progressbar-container col s12 l6 "
                 style={styles3}
@@ -482,9 +453,20 @@ class CustomWorkoutComponent extends Component<Props> {
                 >
                   <div className="progressbar-liquid"></div>
                 </div>
-                {/* <span className="progress">{progress}%</span> */}
               </div>
-              {/* <div className="col l2"></div> */}
+              <span id="musicPlaylist"></span>
+              <MusicPlayerComponent
+                id="musicPlaylist"
+                allowMirror={allowMirror}
+              />
+              <div className="center col s12 m12">
+                <a
+                  onClick={this.scrollToWorkout}
+                  className="fitText blue waves-effect waves-light btn-large"
+                >
+                  <i className="material-icons center ">arrow_upward</i>
+                </a>
+              </div>
             </div>
           </React.Fragment>
         }

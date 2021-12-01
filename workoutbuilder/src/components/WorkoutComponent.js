@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NoSleep from "nosleep.js";
 import Webcam from "react-webcam";
 import { exerciseObject } from "../constants/Workouts";
+import MusicPlayerComponent from "./musicPlayer";
 
 type Props = {
   id: number
@@ -27,6 +28,7 @@ class WorkoutComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
+      showPlayUnderPlaylist: false,
       allowMirror: false,
       workoutName: exerciseObject[this.props.id].name,
       exerciseObj: exerciseObject[this.props.id].exerciseList,
@@ -52,6 +54,23 @@ class WorkoutComponent extends Component<Props> {
     this.finish = this.finish.bind(this);
     this.pause = this.pause.bind(this);
     this.enableMirror = this.enableMirror.bind(this);
+    this.scrollToMusic = this.scrollToMusic.bind(this);
+    this.scrollToWorkout = this.scrollToWorkout.bind(this);
+  }
+
+  scrollToWorkout() {
+    var elmnt = document.getElementById("titleUp");
+    elmnt.scrollIntoView();
+  }
+
+  scrollToMusic() {
+    let { showPlayUnderPlaylist } = this.state;
+    showPlayUnderPlaylist = !showPlayUnderPlaylist;
+    var elmnt = document.getElementById("musicPlaylist");
+    elmnt.scrollIntoView();
+    this.setState({
+      showPlayUnderPlaylist
+    });
   }
 
   exerciseLoop() {
@@ -250,6 +269,7 @@ class WorkoutComponent extends Component<Props> {
         <div className="row">
           <div className="icon-block">
             <h3
+              id="titleUp"
               className="left-align"
               style={
                 allowMirror
@@ -262,7 +282,7 @@ class WorkoutComponent extends Component<Props> {
           </div>
         </div>
         <div className="row">
-          <div className="left-align col s4 m3 mirrorBtn">
+          <div className="center col s4 m3 mirrorBtn">
             {totalTime ? (
               <a
                 onClick={this.exerciseLoop}
@@ -309,13 +329,22 @@ class WorkoutComponent extends Component<Props> {
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
-          <div className="right-align col s4 m3 mirrorBtn">
+          <div className="center col s4 m3 mirrorBtn">
             <a
               onClick={this.enableMirror}
               className="fitText waves-effect waves-light btn-large"
             >
               <i className="material-icons right ">accessibility</i>
               Mirror
+            </a>
+          </div>
+          <div className="center col s4 m3 mirrorBtn">
+            <a
+              onClick={this.scrollToMusic}
+              className="fitText blue waves-effect waves-light btn-large"
+            >
+              <i className="material-icons right ">music_note</i>
+              Music
             </a>
           </div>
 
@@ -489,6 +518,19 @@ class WorkoutComponent extends Component<Props> {
                 {/* <span className="progress">{progress}%</span> */}
               </div>
               {/* <div className="col l2"></div> */}
+            </div>
+            <span id="musicPlaylist"></span>
+            <MusicPlayerComponent
+              id="musicPlaylist"
+              allowMirror={allowMirror}
+            />
+            <div className="center col s12 m12">
+              <a
+                onClick={this.scrollToWorkout}
+                className="fitText blue waves-effect waves-light btn-large"
+              >
+                <i className="material-icons center ">arrow_upward</i>
+              </a>
             </div>
           </React.Fragment>
         }

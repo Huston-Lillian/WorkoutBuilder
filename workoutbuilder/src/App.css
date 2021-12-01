@@ -283,6 +283,10 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
   margin-top: 25px !important;
 }
 
+.paddingBottomPlayList {
+  margin-top: 20px !important;
+}
+
 .background-videoMirror {
   width: 100vw;
   height: 100vh;
