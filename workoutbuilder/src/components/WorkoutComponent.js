@@ -519,7 +519,6 @@ class WorkoutComponent extends Component<Props> {
               </div>
               {/* <div className="col l2"></div> */}
             </div>
-            <span id="musicPlaylist"></span>
             <MusicPlayerComponent
               id="musicPlaylist"
               allowMirror={allowMirror}

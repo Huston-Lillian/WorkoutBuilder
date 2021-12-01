@@ -47,14 +47,14 @@ class MusicPlayerComponent extends Component {
       <div className="container">
         <div className="section">
           <div className="row s12 l12"></div>
-          <div className="row maringUp">
+          <div className="row maringUp paddingBottomPlayList">
             <div className="col s12 m4 marginUp">
               <div className="icon-block">
                 <h5 className="center"></h5>
               </div>
               <div className="s12 m5 center"></div>
             </div>
-            <div className="col s12 m12 center paddingBottomPlayList">
+            <div className="col s12 m12 center">
               {/* <Carousel data-indicators="false">
                 {musicPlaylist.map((link, index) => (
                   <div style={allowMirror ? styles : null} key={index}>
@@ -71,7 +71,11 @@ class MusicPlayerComponent extends Component {
               </Carousel> */}
               <Carousel data-indicators="false">
                 {musicPlaylist.map((link, index) => (
-                  <div style={allowMirror ? styles : null} key={index}>
+                  <div
+                    id="musicPlaylist"
+                    style={allowMirror ? styles : null}
+                    key={index}
+                  >
                     {index <= 2 && (
                       <iframe
                         id="AmazonMusicEmbedB09C21L3YP"

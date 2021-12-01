@@ -454,11 +454,7 @@ class CustomWorkoutComponent extends Component<Props> {
                   <div className="progressbar-liquid"></div>
                 </div>
               </div>
-              <span id="musicPlaylist"></span>
-              <MusicPlayerComponent
-                id="musicPlaylist"
-                allowMirror={allowMirror}
-              />
+              <MusicPlayerComponent allowMirror={allowMirror} />
               <div className="center col s12 m12">
                 <a
                   onClick={this.scrollToWorkout}

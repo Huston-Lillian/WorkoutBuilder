@@ -13,6 +13,7 @@ import BuilderComponent from "./components/customBuilder";
 import CustomWorkoutScreenComponent from "./components/CustomWorkoutScreenComponent";
 import FitnessGurusComponent from "./components/fitnessGurus";
 import ProteinProductsComponent from "./components/proteinProducts";
+import AboutMeComponent from "./components/aboutMe";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             path="/proteinProducts"
             element={<ProteinProductsComponent />}
           />
+          <Route exact path="/aboutMe" element={<AboutMeComponent />} />
 
           <Route path="/*" element={<HomepageComponent />} />
         </Routes>
