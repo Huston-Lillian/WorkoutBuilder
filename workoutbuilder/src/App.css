@@ -81,6 +81,11 @@
   border-radius: 50%;
 }
 
+.aboutmePic {
+  height: auto;
+  width: 30%;
+}
+
 .workoutScreen {
   min-height: 100vh;
 }
@@ -519,5 +524,10 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
   .lowCalImg {
     width: 60%;
     height: auto;
+  }
+
+  .aboutMeImages {
+    height: auto !important;
+    width: 55% !important;
   }
 }

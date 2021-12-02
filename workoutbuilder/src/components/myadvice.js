@@ -68,6 +68,17 @@ function MyAdviceComponent() {
                   your body and doing what works best for you."{" "}
                   <h5 class="teal-text text-darken-2"> Daniel Garza</h5>
                 </h4>
+                <a
+                  href="#/aboutMe"
+                  id="download-button"
+                  className="btn btn-large waves-effect waves-light teal lighten-1"
+                >
+                  My Fitness Journey
+                  {/* <Link className="white-text" to="/workouts" replace>
+                    {" "}
+                    Free Workouts
+                  </Link> */}
+                </a>
               </div>
             </div>
           </div>
