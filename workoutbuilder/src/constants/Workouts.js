@@ -288,191 +288,101 @@ export const exerciseObject = {
   },
   2: {
     name: "Stretching",
-    totalTime: 247,
+    totalTime: 380,
     exerciseList: [
       {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "3 Deep Breaths"
       },
       {
-        timeInSeconds: 10,
-        displayText: "10 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Standing Hamstring strectch left side"
       },
       {
-        timeInSeconds: 10,
-        displayText: "10 seconds",
-        exerciseName: "Standing Hamstring strectch left side"
+        timeInSeconds: 20,
+        displayText: "20 seconds",
+        exerciseName: "Standing Hamstring strectch right side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Hip flexor stretch left side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Turn into a deep side lunge"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Hip flexor stretch right side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Turn into a deep side lunge"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Standing Hamstring stretch middle"
       },
       {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "3 Deep Breaths"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Squat, elbows to knee stretch"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Quad Strech Left Side"
       },
       {
-        timeInSeconds: 15,
+        timeInSeconds: 20,
         displayText: "15 seconds",
         exerciseName: "Quad Strech Right Side"
       },
       {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "3 Deep Breaths"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Tricep Stretch Left Side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Tricep Stretch Right Side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Shoulder Stretch Left Side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Shoulder Stretch Right Side"
       },
       {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "Neck circles"
       },
       {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
-        exerciseName: "3 Deep Breaths"
-      },
-      {
-        timeInSeconds: 10,
-        displayText: "10 seconds",
-        exerciseName: "Standing Hamstring strectch left side"
-      },
-      {
-        timeInSeconds: 10,
-        displayText: "10 seconds",
-        exerciseName: "Standing Hamstring strectch left side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Hip flexor stretch left side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Turn into a deep side lunge"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Hip flexor stretch right side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Turn into a deep side lunge"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Standing Hamstring stretch middle"
-      },
-      {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
-        exerciseName: "3 Deep Breaths"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Squat, elbows to knee stretch"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Quad Strech Left Side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Quad Strech Right Side"
-      },
-      {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
-        exerciseName: "3 Deep Breaths"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Tricep Stretch Left Side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Tricep Stretch Right Side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Shoulder Stretch Left Side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Shoulder Stretch Right Side"
-      },
-      {
-        timeInSeconds: 15,
-        displayText: "15 seconds",
-        exerciseName: "Neck circles"
-      },
-      {
-        timeInSeconds: 8,
-        displayText: "8 seconds",
+        timeInSeconds: 20,
+        displayText: "20 seconds",
         exerciseName: "3 Deep Breaths"
       }
     ]

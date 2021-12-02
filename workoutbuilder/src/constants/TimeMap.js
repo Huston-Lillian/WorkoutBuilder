@@ -3,6 +3,8 @@ export const timerOptions = {
   8: { value: 8, text: "8 seconds" },
   10: { value: 10, text: "10 seconds" },
   15: { value: 15, text: "15 seconds" },
+  20: { value: 20, text: "20 seconds" },
+  25: { value: 25, text: "25 seconds" },
   30: { value: 30, text: "30 seconds" },
   45: { value: 45, text: "45 seconds" },
   60: { value: 60, text: "60 seconds" },

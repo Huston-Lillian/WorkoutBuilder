@@ -151,7 +151,7 @@ function CustomWorkoutsComponent() {
             <div className="col s7 m6">
               <div className="row center">
                 <h3 className="black-text">Stretching</h3>
-                <h5 className="black-text">8 minutes. Try it!</h5>
+                <h5 className="black-text">7 minutes. Try it!</h5>
                 <div className="light">
                   <a
                     //href="/workoutScreen/2"

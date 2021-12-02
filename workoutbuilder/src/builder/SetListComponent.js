@@ -8,6 +8,7 @@ import AddCircleIcon from "@material-ui/icons/AddCircle";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { useLocation } from "react-router-dom";
+import { prebuiltSets } from "../constants/prebuiltSets";
 
 /*eslint-disable */
 type Props = {
@@ -28,32 +29,49 @@ class SetListComponent extends Component {
           exerciseList: []
         }
       ],
-      uniqueSetList: {
-        "Warm Up": {
-          name: "Warm Up",
-          totalTime: 30,
-          exerciseList: [
-            {
-              timeInSeconds: 60,
-              displayText: "60 seconds",
-              exerciseName: "3 Way V Ups"
-            }
-          ]
-        },
-        "Push Up": {
-          name: "Push Up",
-          totalTime: 30,
-          exerciseList: [
-            {
-              timeInSeconds: 60,
-              displayText: "60 seconds",
-              exerciseName: "Push Ups"
-            }
-          ]
-        }
-      },
-      dropdwonList: ["Warm Up", "Push Up"],
-      workoutObj: {}
+      uniqueSetList: prebuiltSets,
+      // uniqueSetList: {
+      //   "Warm Up": {
+      //     name: "Warm Up",
+      //     totalTime: 30,
+      //     exerciseList: [
+      //       {
+      //         timeInSeconds: 60,
+      //         displayText: "60 seconds",
+      //         exerciseName: "3 Way V Ups"
+      //       }
+      //     ]
+      //   },
+      //   "Push Up": {
+      //     name: "Push Up",
+      //     totalTime: 30,
+      //     exerciseList: [
+      //       {
+      //         timeInSeconds: 60,
+      //         displayText: "60 seconds",
+      //         exerciseName: "Push Ups"
+      //       }
+      //     ]
+      //   }
+      // },
+      dropdwonList: [
+        "Warm Up",
+        "Warm Up 2",
+        "Stretches",
+        "Rest",
+        "HIIT Cardio 1",
+        "HIIT Transition Set",
+        "HIIT Cardio 2",
+        "HIIT Cardio 3",
+        "HIIT Cardio 4",
+        "HIIT Cardio 5",
+        "HIIT Cardio 6",
+        "HIIT Cardio 7",
+        "HIIT Cardio 8",
+        "Triceps"
+      ],
+      workoutObj: {},
+      totalWorkOutTime: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.deleteSet = this.deleteSet.bind(this);
@@ -62,6 +80,7 @@ class SetListComponent extends Component {
     this.wow = this.wow.bind(this);
     this.handleDropdownChoices = this.handleDropdownChoices.bind(this);
     this.buildWorkout = this.buildWorkout.bind(this);
+    this.calculateWorkoutTime = this.calculateWorkoutTime.bind(this);
   }
 
   handleChange(event, index, name) {
@@ -83,6 +102,7 @@ class SetListComponent extends Component {
       console.log("handle input, index:");
       console.log(index);
       console.log(setList);
+      this.calculateWorkoutTime();
     }
   }
 
@@ -154,6 +174,7 @@ class SetListComponent extends Component {
     if (setList[index]) {
       delete setList[index];
       this.setState({ setList });
+      this.calculateWorkoutTime();
     }
   }
 
@@ -217,6 +238,8 @@ class SetListComponent extends Component {
       this.setState({
         setList
       });
+
+      this.calculateWorkoutTime();
       return;
     }
   }
@@ -273,8 +296,53 @@ class SetListComponent extends Component {
     }
   }
 
+  calculateWorkoutTime() {
+    let { setList } = this.state;
+    if (setList.length === 0) {
+      this.setState({
+        totalWorkOutTime: ""
+      });
+      return;
+    } else {
+      console.log("calculating working out time");
+      console.log(setList);
+      let totalTimeInSeconds = 0;
+      for (let i = 0; i < setList.length; i++) {
+        if (setList[i]) {
+          for (let j = 0; j < setList[i].exerciseList.length; j++) {
+            totalTimeInSeconds += parseInt(
+              setList[i].exerciseList[j].timeInSeconds
+            );
+          }
+        }
+      }
+      let yMin = Math.floor(totalTimeInSeconds / 60);
+      let ySec = totalTimeInSeconds % 60;
+      let value = "";
+      if (yMin <= 1) {
+        value = yMin + " min  " + ySec + " secs";
+      } else if (yMin >= 60) {
+        let hr = Math.floor(yMin / 60);
+        let min = yMin % 60;
+        value = hr + " hr " + min + " mins  " + ySec + " secs";
+      } else {
+        value = yMin + " mins  " + ySec + " secs";
+      }
+      console.log(value);
+      this.setState({
+        totalWorkOutTime: value
+      });
+    }
+  }
+
   render() {
-    let { setList, uniqueSetList, dropdwonList, workoutObj } = this.state;
+    let {
+      setList,
+      uniqueSetList,
+      dropdwonList,
+      workoutObj,
+      totalWorkOutTime
+    } = this.state;
 
     return (
       <div id="toClickAway">
@@ -355,9 +423,17 @@ class SetListComponent extends Component {
             </Button>
           </div>
         </Grid>
+
         <div className="container">
           <div className="row center">
             <div className="header col l12 s12 light paddingBottom">
+              <h5>{totalWorkOutTime}</h5>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row center">
+            <div className="header col l12 s12 light">
               {workoutObj && (
                 <button
                   onClick={this.buildWorkout}
