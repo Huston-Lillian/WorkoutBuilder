@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2c84a959.chunk.css",
-    "main.js": "/static/js/main.4c4b5a45.chunk.js",
-    "main.js.map": "/static/js/main.4c4b5a45.chunk.js.map",
+    "main.js": "/static/js/main.6c547dfa.chunk.js",
+    "main.js.map": "/static/js/main.6c547dfa.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a0248048.js",
     "runtime-main.js.map": "/static/js/runtime-main.a0248048.js.map",
     "static/css/2.291c0eba.chunk.css": "/static/css/2.291c0eba.chunk.css",
@@ -52,7 +52,6 @@
     "static/media/lightnfit.d64e48bc.png": "/static/media/lightnfit.d64e48bc.png",
     "static/media/linkedin_icon.8c053397.png": "/static/media/linkedin_icon.8c053397.png",
     "static/media/lowCalorie.31f23f09.png": "/static/media/lowCalorie.31f23f09.png",
-    "static/media/lowerBody.a13964f4.jpeg": "/static/media/lowerBody.a13964f4.jpeg",
     "static/media/madFit.cbd861a6.jpeg": "/static/media/madFit.cbd861a6.jpeg",
     "static/media/me.3cafe15f.png": "/static/media/me.3cafe15f.png",
     "static/media/moveNicole.f7e95d3e.jpeg": "/static/media/moveNicole.f7e95d3e.jpeg",
@@ -82,6 +81,6 @@
     "static/css/2.291c0eba.chunk.css",
     "static/js/2.5937eb9d.chunk.js",
     "static/css/main.2c84a959.chunk.css",
-    "static/js/main.4c4b5a45.chunk.js"
+    "static/js/main.6c547dfa.chunk.js"
   ]
 }
