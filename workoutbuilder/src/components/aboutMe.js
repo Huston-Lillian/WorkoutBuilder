@@ -40,7 +40,7 @@ let gurus = [
     name: "Early Days of Weight Training",
     year: "2004- 2007",
     description:
-      "Read Arnold's Encyclopedia of Modern Bodybuilding. Attempted and discovered the exercises that engage my muscles the most. Learned about super sets, negative reps, how to train for strenght. I used the apartment complex's gym. At this point I did not know anything about nutrition nor was I consuming any supplements."
+      "Read Arnold's Encyclopedia of Modern Bodybuilding. Attempted and discovered the exercises that engage my muscles the most. Learned about super sets, negative reps, how to train for strength. I used the apartment complex's gym. At this point I did not know anything about nutrition nor was I consuming any supplements."
   },
   {
     name: "Joined Gold's Gym",
@@ -80,7 +80,7 @@ let gurus = [
     styles: styleCollegeAbs,
     year: "2018- 2021",
     description:
-      "I learned the real purpose of Intermittent Fasting is to get to a calorie deficit. I learned about TFE, TDEE, calorie cycling, the energy balance equation, and protein intake. I estimated the calories in the foods I consumed and made slight adjustments to my diet. I got tired of driving to a crowded gym so I ditched the weights and stuck to Insanity. I got down to 170 lbs and I felt in the best shape of my life. I started an ongoing goal to always be fit on my birthday."
+      "I learned the real purpose of Intermittent Fasting is to get to a calorie deficit. I learned about TEF, TDEE, calorie cycling, the energy balance equation, and protein intake. I estimated the calories in the foods I consumed and made slight adjustments to my diet. I got tired of driving to a crowded gym so I ditched the weights and stuck to Insanity. I got down to 170 lbs and I felt in the best shape of my life. I started an ongoing goal to always be fit on my birthday."
   },
   {
     name: "From Fit to Fat - Texas Winter Storm Edition",
@@ -104,7 +104,7 @@ let gurus = [
     image: lastAboutMePic,
     styles: styleCollegeAbs,
     description:
-      "It took 90 days for me to get back to 170 lbs. I added Kari Pearce's 10 minute a day ab programs to my Insanity and Team Body Project workouts. I'm on day 220 since I set the goal. I aim to be more resilient next time life happens. It is hearder to eat right than to workout daily. Working smarter not harder means controlling our calories."
+      "It took 90 days for me to get back to 170 lbs. I added Kari Pearce's 10 minute a day ab programs to my Insanity and Team Body Project workouts. I aim to be more resilient next time life happens. It is harder to eat right daily than to workout daily. Working smarter not harder means controlling our calories."
   }
 ];
 

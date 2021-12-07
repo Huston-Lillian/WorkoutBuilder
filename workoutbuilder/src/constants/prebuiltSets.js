@@ -219,12 +219,12 @@ export const prebuiltSets = {
       },
       {
         timeInSeconds: 30,
-        displayText: "60 seconds",
+        displayText: "30 seconds",
         exerciseName: "Uppercuts"
       },
       {
         timeInSeconds: 30,
-        displayText: "60 seconds",
+        displayText: "30 seconds",
         exerciseName: "Jabs"
       },
       {

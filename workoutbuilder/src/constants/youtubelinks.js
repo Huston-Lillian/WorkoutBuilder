@@ -46,5 +46,29 @@ export const youTubeLinks = {
     // "https://www.youtube.com/embed/x9r_j7Lgy48",
     // "https://www.youtube.com/embed/Zj82gmAR3bc",
     // "https://www.youtube.com/embed/jD-qEd2MUXw"
+  ],
+  4: [
+    "https://www.youtube.com/embed/ghAhdn7xWCw",
+    "https://www.youtube.com/embed/ACWvqXKsmDw"
+  ],
+  5: [
+    "https://www.youtube.com/embed/EpRBZrtjpMM",
+    "https://www.youtube.com/embed/_RHDEq3qvD0"
+  ],
+  6: [
+    "https://www.youtube.com/embed/9JAR0GcL0kc",
+    "https://www.youtube.com/embed/60T1eRQzlGw"
+  ],
+  7: [
+    "https://www.youtube.com/embed/kuwF-Oi6Nt0",
+    "https://www.youtube.com/embed/_59x2ayZvC4"
+  ],
+  8: [
+    "https://www.youtube.com/embed/qDrPFgtRRkI",
+    "https://www.youtube.com/embed/H73ipHamM84"
+  ],
+  9: [
+    "https://www.youtube.com/embed/MYp8vNL9-wg",
+    "https://www.youtube.com/embed/oXH2aDh8F3s"
   ]
 };

@@ -12,6 +12,11 @@ const videoConstraints = {
   facingMode: "user"
 };
 
+const audioConstraints = {
+  audio: false,
+  muted: true
+};
+
 const styles3 = {
   height: `25px`,
   backgroundColor: "lightgreen"
@@ -28,6 +33,7 @@ class CustomWorkoutComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
+      isIos: false,
       allowMirror: false,
       workoutName: "Custom Circuit Workout",
       exerciseObj: this.props.workoutObj.exerciseList,
@@ -55,7 +61,33 @@ class CustomWorkoutComponent extends Component<Props> {
     this.enableMirror = this.enableMirror.bind(this);
     this.scrollToMusic = this.scrollToMusic.bind(this);
     this.scrollToWorkout = this.scrollToWorkout.bind(this);
+    this.speakNow = this.speakNow.bind(this);
+    this.handleOnUserMedia = this.handleOnUserMedia.bind(this);
   }
+
+  componentDidMount() {
+    let isIos =
+      [
+        "iPad Simulator",
+        "iPhone Simulator",
+        "iPod Simulator",
+        "iPad",
+        "iPhone",
+        "iPod"
+      ].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+    this.setState({
+      isIos: isIos
+    });
+  }
+
+  handleOnUserMedia = () => {
+    this.webcam.current.stream.addEventListener("inactive", target => {
+      console.log("Webcam was stopped");
+      console.log({ target });
+    });
+  };
 
   scrollToWorkout() {
     var elmnt = document.getElementById("titleUp");
@@ -67,29 +99,49 @@ class CustomWorkoutComponent extends Component<Props> {
     elmnt.scrollIntoView();
   }
 
-  exerciseLoop() {
-    // var video = document.getElementById("myVideo");
-    // video.play();
-    noSleep.enable();
-
-    var elmnt = document.getElementById("activeWorkout");
-    elmnt.scrollIntoView();
-    let { exerciseObj, totalWorkoutTime } = this.state;
+  speakNow(text) {
     if (window.speechSynthesis) {
       var msg = new SpeechSynthesisUtterance();
-      msg.text = "Let's get moving";
+      let voices = window.speechSynthesis.getVoices();
+      msg.lang = "en-US";
+      msg.voice = voices.find(voice => voice.lang === "en-US");
+      msg.text = text;
+      msg.volume = 1;
       window.speechSynthesis.speak(msg);
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
+
+  finish() {
+    noSleep.disable();
+    this.speakNow("Excellent job, you're a true fitness champion!");
+    this.setState({
+      done: true,
+      exerciseName: "REST IT OUT!",
+      timeRemaining: "Amazing Job!",
+      nextExercise: ""
+    });
+  }
+
+  exerciseLoop() {
+    noSleep.disable();
+    this.speakNow("Start Moving,");
+
     clearInterval(this.intervalID);
 
-    let percentInterval = 100 / exerciseObj[0].timeInSeconds;
-    let totalPercentageInterval = 100 / totalWorkoutTime;
     this.setState({
       done: false,
       paused: false,
       progress: 0.0,
       totalProgress: 0.0
     });
+    //testing working cam on safari
+    let { exerciseObj, totalWorkoutTime } = this.state;
+    let percentInterval = 100 / exerciseObj[0].timeInSeconds;
+    let totalPercentageInterval = 100 / totalWorkoutTime;
     let i = 0;
     let y = exerciseObj[i].timeInSeconds;
     let yMin = Math.floor(y / 60);
@@ -97,16 +149,20 @@ class CustomWorkoutComponent extends Component<Props> {
     let hours = 0;
     let minutes = 0;
     let seconds = -1;
-
-    if (window.speechSynthesis) {
-      msg = new SpeechSynthesisUtterance();
-      msg.text = exerciseObj[i].exerciseName;
-      window.speechSynthesis.speak(msg);
-      var msg2 = new SpeechSynthesisUtterance();
-      msg2.text = exerciseObj[i].displayText;
-      window.speechSynthesis.speak(msg2);
-    }
+    let firstRun = true;
     this.intervalID = setInterval(() => {
+      if (firstRun) {
+        try {
+          noSleep.enable();
+        } catch (error) {
+          console.log(error);
+        }
+        var elmnt = document.getElementById("activeWorkout");
+        elmnt.scrollIntoView();
+        this.speakNow(exerciseObj[i].exerciseName);
+        this.speakNow(exerciseObj[i].displayText);
+        firstRun = false;
+      }
       let { done, paused } = this.state;
       //Your code
       if (done) {
@@ -130,25 +186,10 @@ class CustomWorkoutComponent extends Component<Props> {
           this.setState({
             progress: 0.0
           });
-          if (window.speechSynthesis) {
-            msg.text = exerciseObj[i].exerciseName;
-            window.speechSynthesis.speak(msg);
-            msg2.text = exerciseObj[i].displayText;
-            window.speechSynthesis.speak(msg2);
-          }
+          this.speakNow(exerciseObj[i].exerciseName);
+          this.speakNow(exerciseObj[i].displayText);
         } else if (i === exerciseObj.length - 1 && y === 0) {
-          // i = 0;
-          // y = exerciseObj[i].timeInSeconds;
-          // yMin = Math.floor(y / 60);
-          // ySec = y % 60;
-
-          // var msg = new SpeechSynthesisUtterance();
-          // msg.text = exerciseObj[i].exerciseName;
-          // window.speechSynthesis.speak(msg);
-          if (window.speechSynthesis) {
-            msg.text = "Excellent job, you're a true fitness champion!";
-            window.speechSynthesis.speak(msg);
-          }
+          this.speakNow("Excellent job, you're a true fitness champion!");
           this.setState({
             done: true,
             exerciseName: "REST IT OUT!",
@@ -173,10 +214,7 @@ class CustomWorkoutComponent extends Component<Props> {
           timeRemaining: yMin + ":  " + ySec + " remaining"
         });
         if (ySec <= 3 && ySec > 0) {
-          if (window.speechSynthesis) {
-            msg.text = ySec;
-            window.speechSynthesis.speak(msg);
-          }
+          this.speakNow(ySec);
         }
         y--;
         yMin = Math.floor(y / 60);
@@ -197,25 +235,6 @@ class CustomWorkoutComponent extends Component<Props> {
         }));
       }
     }, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalID);
-  }
-
-  finish() {
-    noSleep.disable();
-    if (window.speechSynthesis) {
-      var msg = new SpeechSynthesisUtterance();
-      msg.text = "Excellent job, you're a true fitness champion!";
-      window.speechSynthesis.speak(msg);
-    }
-    this.setState({
-      done: true,
-      exerciseName: "REST IT OUT!",
-      timeRemaining: "Amazing Job!",
-      nextExercise: ""
-    });
   }
 
   pause() {
@@ -250,7 +269,8 @@ class CustomWorkoutComponent extends Component<Props> {
       progress,
       totalProgress,
       done,
-      allowMirror
+      allowMirror,
+      isIos
     } = this.state;
     return (
       <div noValidate>
@@ -261,7 +281,7 @@ class CustomWorkoutComponent extends Component<Props> {
               className="left-align"
               style={
                 allowMirror
-                  ? { color: "black", textShadow: "2px 2px white" }
+                  ? { color: "white", textShadow: "2px 2px black" }
                   : { color: "black" }
               }
             >
@@ -312,6 +332,7 @@ class CustomWorkoutComponent extends Component<Props> {
               <i className="material-icons right">stop</i>Finish
             </a>
           </div>
+          {/* {!isIos && ( */}
           <div className="center col s4 m3 mirrorBtn">
             <a
               onClick={this.enableMirror}
@@ -321,6 +342,8 @@ class CustomWorkoutComponent extends Component<Props> {
               Mirror
             </a>
           </div>
+          {/* )} */}
+          {/* {!isIos && ( */}
           <div className="center col s4 m3 mirrorBtn">
             <a
               onClick={this.scrollToMusic}
@@ -330,23 +353,30 @@ class CustomWorkoutComponent extends Component<Props> {
               Music
             </a>
           </div>
+          {/* )} */}
           {allowMirror && (
             <Webcam
+              id="webcamVideo"
               audio={false}
+              muted={true}
               height={"auto"}
               className="background-videoMirror"
               screenshotFormat="image/jpeg"
               width={"auto"}
               videoConstraints={videoConstraints}
+              audioConstraints={audioConstraints}
+              ref={e => (this.webcam = e)}
+              onUserMedia={this.handleOnUserMedia}
             />
           )}
+          {/* <a id="speakingDiv" className="hidden"></a> */}
           <div className="col s12 m12 paddingBottom">
             <h2
               id="activeWorkout"
               className="center"
               style={
                 allowMirror
-                  ? { color: "black", textShadow: "2px 2px white" }
+                  ? { color: "white", textShadow: "2px 2px black" }
                   : { color: "#8B0000" }
               }
             >
@@ -357,7 +387,7 @@ class CustomWorkoutComponent extends Component<Props> {
               className="center"
               style={
                 allowMirror
-                  ? { color: "black", textShadow: "2px 2px white" }
+                  ? { color: "white", textShadow: "2px 2px black" }
                   : { color: "red" }
               }
             >
@@ -391,7 +421,7 @@ class CustomWorkoutComponent extends Component<Props> {
                 className="col s12 l12 center"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "black" }
                 }
               >
@@ -401,7 +431,7 @@ class CustomWorkoutComponent extends Component<Props> {
                 className="col s12 l12 center"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "darkgreen" }
                 }
               >
@@ -419,7 +449,7 @@ class CustomWorkoutComponent extends Component<Props> {
                 className="center col s4 l2 totalTimeMargin"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "black" }
                 }
               >
@@ -429,7 +459,7 @@ class CustomWorkoutComponent extends Component<Props> {
                 className="left-align col s6 l3"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "black" }
                 }
               >
@@ -454,15 +484,17 @@ class CustomWorkoutComponent extends Component<Props> {
                   <div className="progressbar-liquid"></div>
                 </div>
               </div>
-              <MusicPlayerComponent allowMirror={allowMirror} />
-              <div className="center col s12 m12">
-                <a
-                  onClick={this.scrollToWorkout}
-                  className="fitText blue waves-effect waves-light btn-large"
-                >
-                  <i className="material-icons center ">arrow_upward</i>
-                </a>
-              </div>
+              {!isIos && <MusicPlayerComponent allowMirror={allowMirror} />}
+              {!isIos && (
+                <div className="center col s12 m12">
+                  <a
+                    onClick={this.scrollToWorkout}
+                    className="fitText blue waves-effect waves-light btn-large"
+                  >
+                    <i className="material-icons center ">arrow_upward</i>
+                  </a>
+                </div>
+              )}
             </div>
           </React.Fragment>
         }

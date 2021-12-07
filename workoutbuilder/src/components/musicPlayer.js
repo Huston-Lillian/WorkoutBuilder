@@ -69,7 +69,7 @@ class MusicPlayerComponent extends Component {
                   </div>
                 ))}
               </Carousel> */}
-              <Carousel data-indicators="false">
+              <Carousel showThumbs={false} data-indicators="false">
                 {musicPlaylist.map((link, index) => (
                   <div
                     id="musicPlaylist"
@@ -84,7 +84,7 @@ class MusicPlayerComponent extends Component {
                         height="410px"
                         style={{
                           border: "1px solid rgba(0, 0, 0, 0.12)",
-                          "max-width": ""
+                          maxWidth: ""
                         }}
                       ></iframe>
                     )}
@@ -95,7 +95,7 @@ class MusicPlayerComponent extends Component {
                         width="100%"
                         height="410px"
                         frameBorder="0"
-                        allowfullscreen=""
+                        allowFullScreen=""
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                       ></iframe>
                     )}

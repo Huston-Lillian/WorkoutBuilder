@@ -28,6 +28,7 @@ class WorkoutComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
+      isIos: false,
       showPlayUnderPlaylist: false,
       allowMirror: false,
       workoutName: exerciseObject[this.props.id].name,
@@ -56,6 +57,24 @@ class WorkoutComponent extends Component<Props> {
     this.enableMirror = this.enableMirror.bind(this);
     this.scrollToMusic = this.scrollToMusic.bind(this);
     this.scrollToWorkout = this.scrollToWorkout.bind(this);
+    this.speakNow = this.speakNow.bind(this);
+  }
+
+  componentDidMount() {
+    let isIos =
+      [
+        "iPad Simulator",
+        "iPhone Simulator",
+        "iPod Simulator",
+        "iPad",
+        "iPhone",
+        "iPod"
+      ].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+    this.setState({
+      isIos: isIos
+    });
   }
 
   scrollToWorkout() {
@@ -73,28 +92,165 @@ class WorkoutComponent extends Component<Props> {
     });
   }
 
-  exerciseLoop() {
-    // var video = document.getElementById("myVideo");
-    // video.play();
-    noSleep.enable();
-    var elmnt = document.getElementById("activeWorkout");
-    elmnt.scrollIntoView();
-    let { exerciseObj, totalWorkoutTime } = this.state;
+  speakNow(text) {
     if (window.speechSynthesis) {
       var msg = new SpeechSynthesisUtterance();
-      msg.text = "Let's get moving";
+      let voices = window.speechSynthesis.getVoices();
+      msg.lang = "en-US";
+      msg.voice = voices.find(voice => voice.lang === "en-US");
+      msg.text = text;
+      msg.volume = 1;
       window.speechSynthesis.speak(msg);
     }
+  }
+
+  // exerciseLoop() {
+  //   // var video = document.getElementById("myVideo");
+  //   // video.play();
+  //   noSleep.enable();
+  //   var elmnt = document.getElementById("activeWorkout");
+  //   elmnt.scrollIntoView();
+  //   let { exerciseObj, totalWorkoutTime } = this.state;
+  //   if (window.speechSynthesis) {
+  //     var msg = new SpeechSynthesisUtterance();
+  //     msg.text = "Let's get moving";
+  //     window.speechSynthesis.speak(msg);
+  //   }
+  //   clearInterval(this.intervalID);
+
+  //   let percentInterval = 100 / exerciseObj[0].timeInSeconds;
+  //   let totalPercentageInterval = 100 / totalWorkoutTime;
+  //   this.setState({
+  //     done: false,
+  //     paused: false,
+  //     progress: 0.0,
+  //     totalProgress: 0.0
+  //   });
+  //   let i = 0;
+  //   let y = exerciseObj[i].timeInSeconds;
+  //   let yMin = Math.floor(y / 60);
+  //   let ySec = y % 60;
+  //   let hours = 0;
+  //   let minutes = 0;
+  //   let seconds = -1;
+
+  //   if (window.speechSynthesis) {
+  //     msg = new SpeechSynthesisUtterance();
+  //     msg.text = exerciseObj[i].exerciseName;
+  //     window.speechSynthesis.speak(msg);
+  //     var msg2 = new SpeechSynthesisUtterance();
+  //     msg2.text = exerciseObj[i].displayText;
+  //     window.speechSynthesis.speak(msg2);
+  //   }
+  //   this.intervalID = setInterval(() => {
+  //     let { done, paused } = this.state;
+  //     //Your code
+  //     if (done) {
+  //       clearInterval(this.intervalID);
+  //       this.setState({
+  //         totalTime: hours + ": " + minutes + " : " + seconds,
+  //         done: true,
+  //         paused: false,
+  //         timeLoop: () => {}
+  //       });
+  //       this.intervalID = 0;
+  //       return;
+  //     } else if (paused) {
+  //     } else if (!paused) {
+  //       if (y === 0 && i + 1 < exerciseObj.length) {
+  //         i++;
+  //         y = exerciseObj[i].timeInSeconds;
+  //         percentInterval = 100 / exerciseObj[i].timeInSeconds;
+  //         yMin = Math.floor(y / 60);
+  //         ySec = y % 60;
+  //         this.setState({
+  //           progress: 0.0
+  //         });
+  //         if (window.speechSynthesis) {
+  //           msg.text = exerciseObj[i].exerciseName;
+  //           window.speechSynthesis.speak(msg);
+  //           msg2.text = exerciseObj[i].displayText;
+  //           window.speechSynthesis.speak(msg2);
+  //         }
+  //       } else if (i === exerciseObj.length - 1 && y === 0) {
+  //         // i = 0;
+  //         // y = exerciseObj[i].timeInSeconds;
+  //         // yMin = Math.floor(y / 60);
+  //         // ySec = y % 60;
+
+  //         // var msg = new SpeechSynthesisUtterance();
+  //         // msg.text = exerciseObj[i].exerciseName;
+  //         // window.speechSynthesis.speak(msg);
+  //         if (window.speechSynthesis) {
+  //           msg.text = "Excellent job, you're a true fitness champion!";
+  //           window.speechSynthesis.speak(msg);
+  //         }
+  //         this.setState({
+  //           done: true,
+  //           exerciseName: "REST IT OUT!",
+  //           timeRemaining: "Amazing Job!",
+  //           nextExercise: ""
+  //         });
+  //         clearInterval(this.intervalID);
+  //         this.setState({
+  //           totalTime: hours + ": " + minutes + " : " + (seconds + 1),
+  //           done: true,
+  //           paused: false,
+  //           timeLoop: () => {}
+  //         });
+  //         this.intervalID = 0;
+  //         return;
+  //       }
+  //       this.setState({
+  //         nextExercise: exerciseObj[i + 1]
+  //           ? exerciseObj[i + 1].exerciseName
+  //           : "",
+  //         exerciseName: exerciseObj[i].exerciseName,
+  //         timeRemaining: yMin + ":  " + ySec + " remaining"
+  //       });
+  //       if (ySec <= 3 && ySec > 0) {
+  //         if (window.speechSynthesis) {
+  //           msg.text = ySec;
+  //           window.speechSynthesis.speak(msg);
+  //         }
+  //       }
+  //       y--;
+  //       yMin = Math.floor(y / 60);
+  //       ySec = y % 60;
+  //       seconds++;
+  //       if (seconds === 60) {
+  //         seconds = 0;
+  //         minutes++;
+  //       }
+  //       if (minutes === 60) {
+  //         minutes = 0;
+  //         hours++;
+  //       }
+  //       this.setState(prevState => ({
+  //         totalTime: hours + ": " + minutes + ": " + seconds,
+  //         progress: prevState.progress + percentInterval,
+  //         totalProgress: prevState.totalProgress + totalPercentageInterval
+  //       }));
+  //     }
+  //   }, 1000);
+  // }
+
+  exerciseLoop() {
+    noSleep.disable();
+    this.speakNow("Start Moving,");
+
     clearInterval(this.intervalID);
 
-    let percentInterval = 100 / exerciseObj[0].timeInSeconds;
-    let totalPercentageInterval = 100 / totalWorkoutTime;
     this.setState({
       done: false,
       paused: false,
       progress: 0.0,
       totalProgress: 0.0
     });
+    //testing working cam on safari
+    let { exerciseObj, totalWorkoutTime } = this.state;
+    let percentInterval = 100 / exerciseObj[0].timeInSeconds;
+    let totalPercentageInterval = 100 / totalWorkoutTime;
     let i = 0;
     let y = exerciseObj[i].timeInSeconds;
     let yMin = Math.floor(y / 60);
@@ -102,16 +258,20 @@ class WorkoutComponent extends Component<Props> {
     let hours = 0;
     let minutes = 0;
     let seconds = -1;
-
-    if (window.speechSynthesis) {
-      msg = new SpeechSynthesisUtterance();
-      msg.text = exerciseObj[i].exerciseName;
-      window.speechSynthesis.speak(msg);
-      var msg2 = new SpeechSynthesisUtterance();
-      msg2.text = exerciseObj[i].displayText;
-      window.speechSynthesis.speak(msg2);
-    }
+    let firstRun = true;
     this.intervalID = setInterval(() => {
+      if (firstRun) {
+        try {
+          noSleep.enable();
+        } catch (error) {
+          console.log(error);
+        }
+        var elmnt = document.getElementById("activeWorkout");
+        elmnt.scrollIntoView();
+        this.speakNow(exerciseObj[i].exerciseName);
+        this.speakNow(exerciseObj[i].displayText);
+        firstRun = false;
+      }
       let { done, paused } = this.state;
       //Your code
       if (done) {
@@ -135,25 +295,10 @@ class WorkoutComponent extends Component<Props> {
           this.setState({
             progress: 0.0
           });
-          if (window.speechSynthesis) {
-            msg.text = exerciseObj[i].exerciseName;
-            window.speechSynthesis.speak(msg);
-            msg2.text = exerciseObj[i].displayText;
-            window.speechSynthesis.speak(msg2);
-          }
+          this.speakNow(exerciseObj[i].exerciseName);
+          this.speakNow(exerciseObj[i].displayText);
         } else if (i === exerciseObj.length - 1 && y === 0) {
-          // i = 0;
-          // y = exerciseObj[i].timeInSeconds;
-          // yMin = Math.floor(y / 60);
-          // ySec = y % 60;
-
-          // var msg = new SpeechSynthesisUtterance();
-          // msg.text = exerciseObj[i].exerciseName;
-          // window.speechSynthesis.speak(msg);
-          if (window.speechSynthesis) {
-            msg.text = "Excellent job, you're a true fitness champion!";
-            window.speechSynthesis.speak(msg);
-          }
+          this.speakNow("Excellent job, you're a true fitness champion!");
           this.setState({
             done: true,
             exerciseName: "REST IT OUT!",
@@ -178,10 +323,7 @@ class WorkoutComponent extends Component<Props> {
           timeRemaining: yMin + ":  " + ySec + " remaining"
         });
         if (ySec <= 3 && ySec > 0) {
-          if (window.speechSynthesis) {
-            msg.text = ySec;
-            window.speechSynthesis.speak(msg);
-          }
+          this.speakNow(ySec);
         }
         y--;
         yMin = Math.floor(y / 60);
@@ -210,11 +352,7 @@ class WorkoutComponent extends Component<Props> {
 
   finish() {
     noSleep.disable();
-    if (window.speechSynthesis) {
-      var msg = new SpeechSynthesisUtterance();
-      msg.text = "Excellent job, you're a true fitness champion!";
-      window.speechSynthesis.speak(msg);
-    }
+    this.speakNow("Excellent job, you're a true fitness champion!");
     this.setState({
       done: true,
       exerciseName: "REST IT OUT!",
@@ -255,17 +393,11 @@ class WorkoutComponent extends Component<Props> {
       progress,
       totalProgress,
       done,
-      allowMirror
+      allowMirror,
+      isIos
     } = this.state;
     return (
       <div noValidate>
-        {/* <video autoplay muted loop id="myVideo">
-          <source
-            src={natureVid}
-            // src="https://video-previews.elements.envatousercontent.com/files/2054584a-ecf8-4865-bedc-c2d92f3b815f/video_preview_h264.mp4"
-            type="video/mp4"
-          />
-        </video> */}
         <div className="row">
           <div className="icon-block">
             <h3
@@ -273,7 +405,7 @@ class WorkoutComponent extends Component<Props> {
               className="left-align"
               style={
                 allowMirror
-                  ? { color: "black", textShadow: "2px 2px white" }
+                  ? { color: "white", textShadow: "2px 2px black" }
                   : { color: "black" }
               }
             >
@@ -329,6 +461,7 @@ class WorkoutComponent extends Component<Props> {
 
             {/* <button onClick={this.exerciseLoop}>Start Workout</button> */}
           </div>
+
           <div className="center col s4 m3 mirrorBtn">
             <a
               onClick={this.enableMirror}
@@ -338,6 +471,7 @@ class WorkoutComponent extends Component<Props> {
               Mirror
             </a>
           </div>
+
           <div className="center col s4 m3 mirrorBtn">
             <a
               onClick={this.scrollToMusic}
@@ -351,6 +485,7 @@ class WorkoutComponent extends Component<Props> {
           {allowMirror && (
             <Webcam
               audio={false}
+              muted={true}
               height={"auto"}
               className="background-videoMirror"
               screenshotFormat="image/jpeg"
@@ -364,7 +499,7 @@ class WorkoutComponent extends Component<Props> {
               className="center"
               style={
                 allowMirror
-                  ? { color: "black", textShadow: "2px 2px white" }
+                  ? { color: "white", textShadow: "2px 2px black" }
                   : { color: "#8B0000" }
               }
             >
@@ -375,7 +510,7 @@ class WorkoutComponent extends Component<Props> {
               className="center"
               style={
                 allowMirror
-                  ? { color: "black", textShadow: "2px 2px white" }
+                  ? { color: "white", textShadow: "2px 2px black" }
                   : { color: "red" }
               }
               // style={{ color: "red" }}
@@ -428,7 +563,7 @@ class WorkoutComponent extends Component<Props> {
                 className="col s12 l12 center"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "black" }
                 }
               >
@@ -438,7 +573,7 @@ class WorkoutComponent extends Component<Props> {
                 className="col s12 l12 center"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "darkgreen" }
                 }
               >
@@ -461,7 +596,7 @@ class WorkoutComponent extends Component<Props> {
                 className="center col s4 l2 totalTimeMargin"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "black" }
                 }
               >
@@ -472,7 +607,7 @@ class WorkoutComponent extends Component<Props> {
                 className="left-align col s6 l3"
                 style={
                   allowMirror
-                    ? { color: "black", textShadow: "2px 2px white" }
+                    ? { color: "white", textShadow: "2px 2px black" }
                     : { color: "black" }
                 }
               >
@@ -519,18 +654,22 @@ class WorkoutComponent extends Component<Props> {
               </div>
               {/* <div className="col l2"></div> */}
             </div>
-            <MusicPlayerComponent
-              id="musicPlaylist"
-              allowMirror={allowMirror}
-            />
-            <div className="center col s12 m12">
-              <a
-                onClick={this.scrollToWorkout}
-                className="fitText blue waves-effect waves-light btn-large"
-              >
-                <i className="material-icons center ">arrow_upward</i>
-              </a>
-            </div>
+            {!isIos && (
+              <MusicPlayerComponent
+                id="musicPlaylist"
+                allowMirror={allowMirror}
+              />
+            )}
+            {!isIos && (
+              <div className="center col s12 m12">
+                <a
+                  onClick={this.scrollToWorkout}
+                  className="fitText blue waves-effect waves-light btn-large"
+                >
+                  <i className="material-icons center ">arrow_upward</i>
+                </a>
+              </div>
+            )}
           </React.Fragment>
         }
       </div>
