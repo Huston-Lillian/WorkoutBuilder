@@ -83,16 +83,31 @@ class SetListComponent extends Component {
     this.calculateWorkoutTime = this.calculateWorkoutTime.bind(this);
   }
 
-  handleChange(event, index, name) {
+  handleChange(event, index, name, task, deleteAtIndex) {
     let { setList } = this.state;
     // console.log("setList handle change, name and index");
-
     // console.log(event);
+    if (task === "delete") {
+      console.log("will i see this on deletion of an exercise??");
+      console.log(index);
+      console.log(name);
+      console.log(event);
+      console.log(deleteAtIndex);
+      this.calculateWorkoutTime();
+      for (let i = 0; i < setList.length; i++) {
+        if (setList[i] && setList[i].name === name && i === deleteAtIndex) {
+          setList[i].exerciseList = event;
+        }
+      }
+      return;
+    }
     if (name && setList[index]) {
       if (name) {
         setList[index].name = name;
       }
       setList[index].exerciseList = event;
+      console.log(setList[index]);
+      console.log(setList[index].exerciseList);
       //console.log(event);
       //console.log("SetList");
       //console.log(setList);
@@ -101,7 +116,8 @@ class SetListComponent extends Component {
       console.log(event);
       console.log("handle input, index:");
       console.log(index);
-      console.log(setList);
+      console.log(setList[index]);
+      console.log("from handle change");
       this.calculateWorkoutTime();
     }
   }
@@ -174,6 +190,8 @@ class SetListComponent extends Component {
     if (setList[index]) {
       delete setList[index];
       this.setState({ setList });
+      console.log("from delete set");
+
       this.calculateWorkoutTime();
     }
   }
@@ -239,6 +257,8 @@ class SetListComponent extends Component {
         setList
       });
 
+      console.log("from copy set");
+
       this.calculateWorkoutTime();
       return;
     }
@@ -257,14 +277,19 @@ class SetListComponent extends Component {
       let workOutExercises = [];
       for (let i = 0; i < setList.length; i++) {
         if (setList[i]) {
+          if (!setList[i].name) {
+            continue;
+          }
           for (let j = 0; j < setList[i].exerciseList.length; j++) {
-            totalTimeInSeconds += parseInt(
-              setList[i].exerciseList[j].timeInSeconds
-            );
-            setList[i].exerciseList[j].timeInSeconds = parseInt(
-              setList[i].exerciseList[j].timeInSeconds
-            );
-            workOutExercises.push(setList[i].exerciseList[j]);
+            if (setList[i].exerciseList[j]) {
+              totalTimeInSeconds += parseInt(
+                setList[i].exerciseList[j].timeInSeconds
+              );
+              setList[i].exerciseList[j].timeInSeconds = parseInt(
+                setList[i].exerciseList[j].timeInSeconds
+              );
+              workOutExercises.push(setList[i].exerciseList[j]);
+            }
           }
         }
       }
@@ -310,9 +335,11 @@ class SetListComponent extends Component {
       for (let i = 0; i < setList.length; i++) {
         if (setList[i]) {
           for (let j = 0; j < setList[i].exerciseList.length; j++) {
-            totalTimeInSeconds += parseInt(
-              setList[i].exerciseList[j].timeInSeconds
-            );
+            if (setList[i].exerciseList[j]) {
+              totalTimeInSeconds += parseInt(
+                setList[i].exerciseList[j].timeInSeconds
+              );
+            }
           }
         }
       }
@@ -366,6 +393,7 @@ class SetListComponent extends Component {
                     <SetComponent
                       deleteSet={this.deleteSet}
                       index={index}
+                      setListIndex={index}
                       handleChange={this.handleChange}
                       handleDropdownChoices={this.handleDropdownChoices}
                       copySet={exercise ? exercise : ""}

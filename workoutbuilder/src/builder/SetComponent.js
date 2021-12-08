@@ -18,6 +18,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 type Props = {
   deleteSet: Function,
   index: Number,
+  setListIndex: Number,
   handleChange: Function,
   handleDropdownChoices: Function,
   copySet: any
@@ -113,10 +114,10 @@ class SetComponent extends Component {
   }
 
   deleteExercise(index) {
-    let { handleChange } = this.props;
+    let { handleChange, setListIndex } = this.props;
     let { exerciseList, name } = this.state;
     delete exerciseList[index];
-    handleChange(exerciseList, index, name);
+    handleChange(exerciseList, index, name, "delete", setListIndex);
     this.setState({
       exerciseList,
       totalTime: this.calculateTotalTime(exerciseList)
