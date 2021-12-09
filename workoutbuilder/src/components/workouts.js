@@ -11,6 +11,8 @@ import moveNicole from "../pics/moveNicole.jpeg";
 import psychetruth from "../pics/psychetruth.jpeg";
 import buffdude from "../pics/buffdude.jpeg";
 import criticalBench from "../pics/criticalbench.png";
+import popSugar from "../pics/popsugar.png";
+import zumbaClass from "../pics/zumbaClass.jpeg";
 
 import jQuery from "jquery";
 import DemoCarousel from "./carousel";
@@ -410,6 +412,82 @@ function WorkoutsComponent() {
             </div>
             <div className="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={7} />
+              {/* <div className="carousel"> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12">
+            <a
+              className="black-text"
+              href="https://www.youtube.com/c/POPSUGARFitness/videos"
+            >
+              <h3 className="coachName">PopSugar Fitness</h3>
+            </a>
+          </div>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
+              </div>
+              <div className="s12 m5 center">
+                <div className="light">
+                  <a
+                    className="black-text"
+                    href="https://www.youtube.com/c/POPSUGARFitness/videos"
+                  >
+                    <img
+                      className="workoutImgs circlePic"
+                      src={popSugar}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col s12 m6 youtubeVid center">
+              <DemoCarousel showArrows={true} id={10} />
+              {/* <div className="carousel"> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="section">
+          <div className="row s12 l12">
+            <a
+              className="black-text"
+              href="https://www.youtube.com/c/ZumbaClassInc/videos"
+            >
+              <h3 className="coachName">Zumba Class</h3>
+            </a>
+          </div>
+          <div className="row maringUp">
+            <div className="col s12 m4 marginUp">
+              <div className="icon-block">
+                <h5 className="center"></h5>
+              </div>
+              <div className="s12 m5 center">
+                <div className="light">
+                  <a
+                    className="black-text"
+                    href="https://www.youtube.com/c/ZumbaClassInc/videos"
+                  >
+                    <img
+                      className="workoutImgs circlePic"
+                      src={zumbaClass}
+                      alt="Unsplashed background img 1"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col s12 m6 youtubeVid center">
+              <DemoCarousel showArrows={true} id={11} />
               {/* <div className="carousel"> */}
             </div>
           </div>

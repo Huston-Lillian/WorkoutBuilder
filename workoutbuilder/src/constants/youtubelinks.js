@@ -70,5 +70,13 @@ export const youTubeLinks = {
   9: [
     "https://www.youtube.com/embed/MYp8vNL9-wg",
     "https://www.youtube.com/embed/oXH2aDh8F3s"
+  ],
+  10: [
+    "https://www.youtube.com/embed/ZWk19OVon2k",
+    "https://www.youtube.com/embed/8DZktowZo_k"
+  ],
+  11: [
+    "https://www.youtube.com/embed/MxNm6ynj_MU",
+    "https://www.youtube.com/embed/9r1GT-IpCAs"
   ]
 };

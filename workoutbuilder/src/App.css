@@ -530,4 +530,9 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
     height: auto !important;
     width: 55% !important;
   }
+
+  .logoSize {
+    width: 200% !important;
+    height: 200% !important;
+  }
 }

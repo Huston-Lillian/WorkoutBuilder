@@ -15,6 +15,10 @@ const styles = {
   opacity: 1
 };
 
+const styles2 = {
+  width: "100%"
+};
+
 function HomepageComponent() {
   return (
     <React.Fragment>
@@ -25,15 +29,16 @@ function HomepageComponent() {
             <div className="row  center">
               <h1 className="center header col s6 l4 teal-text text-lighten-2">
                 {/* uFit Workouts */}
-                <img src={ufitLogo} alt="uFit Workouts" />
+                <img className="logoSize" src={ufitLogo} alt="uFit Workouts" />
               </h1>
             </div>
             <div className="row center">
-              <div className="header col s6 l4 light">
+              <div className="header col s12 l4 light left-align">
                 <a
                   href="#/workouts"
                   id="download-button"
                   className="btn btn-large waves-effect waves-light teal lighten-1"
+                  styles={styles2}
                 >
                   Free Workouts
                   {/* <Link className="white-text" to="/workouts" replace>
