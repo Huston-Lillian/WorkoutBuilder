@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import background4 from "../../pics/background4.jpeg";
 import background5 from "../../pics/background5.jpeg";
 import background6 from "../../pics/background6.jpeg";
-import free from "../../pics/free.png";
+import free from "../../pics/free_withBackground.png";
 import custom from "../../pics/custom.png";
 import advice from "../../pics/advice.png";
-import build from "../../pics/build.png";
+import build from "../../pics/build_withMark.png";
 import experts from "../../pics/fitness_experts.png";
+import ufitLogo from "../../pics/ufitLogo5.png";
 
 const styles = {
   transform: `translate3d(-50%, 309.727px, 0px)`,
@@ -21,13 +22,14 @@ function HomepageComponent() {
         <div className="section no-pad-bot">
           <div className="container">
             <br></br>
-            <div className="row center">
+            <div className="row  center">
               <h1 className="center header col s6 l4 teal-text text-lighten-2">
-                uFit Workouts
+                {/* uFit Workouts */}
+                <img src={ufitLogo} alt="uFit Workouts" />
               </h1>
             </div>
             <div className="row center">
-              <div className="header col l4 light">
+              <div className="header col s6 l4 light">
                 <a
                   href="#/workouts"
                   id="download-button"

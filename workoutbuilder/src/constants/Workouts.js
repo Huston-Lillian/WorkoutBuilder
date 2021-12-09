@@ -347,7 +347,7 @@ export const exerciseObject = {
       },
       {
         timeInSeconds: 20,
-        displayText: "15 seconds",
+        displayText: "20 seconds",
         exerciseName: "Quad Strech Right Side"
       },
       {

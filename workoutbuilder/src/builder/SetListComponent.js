@@ -57,6 +57,7 @@ class SetListComponent extends Component {
       dropdwonList: [
         "Warm Up",
         "Warm Up 2",
+        "Low Impact Warm Up",
         "Stretches",
         "Rest",
         "HIIT Cardio 1",
@@ -68,7 +69,14 @@ class SetListComponent extends Component {
         "HIIT Cardio 6",
         "HIIT Cardio 7",
         "HIIT Cardio 8",
-        "Triceps"
+        "Low Impact Cardio 1",
+        "Low Impact Cardio 2",
+        "Low Impact Cardio 3",
+        "Low Impact Cardio 4",
+        "Triceps",
+        "Abs 1",
+        "Abs 2",
+        "Abs 3"
       ],
       workoutObj: {},
       totalWorkOutTime: ""

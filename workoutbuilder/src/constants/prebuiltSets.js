@@ -83,7 +83,7 @@ export const prebuiltSets = {
   },
   Stretches: {
     name: "Stretches",
-    totalTime: 380,
+    totalTime: 260,
     exerciseList: [
       {
         timeInSeconds: 20,
@@ -142,38 +142,8 @@ export const prebuiltSets = {
       },
       {
         timeInSeconds: 20,
-        displayText: "15 seconds",
+        displayText: "20 seconds",
         exerciseName: "Quad Strech Right Side"
-      },
-      {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "3 Deep Breaths"
-      },
-      {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "Tricep Stretch Left Side"
-      },
-      {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "Tricep Stretch Right Side"
-      },
-      {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "Shoulder Stretch Left Side"
-      },
-      {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "Shoulder Stretch Right Side"
-      },
-      {
-        timeInSeconds: 20,
-        displayText: "20 seconds",
-        exerciseName: "Neck circles"
       },
       {
         timeInSeconds: 20,
@@ -208,6 +178,32 @@ export const prebuiltSets = {
       }
     ]
   },
+  "Low Impact Warm Up": {
+    name: "Low Impact Warm Up",
+    totalTime: 120,
+    exerciseList: [
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Knee To Opposite Hands"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Hamstrings"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Side step with a clap"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat with arm circles"
+      }
+    ]
+  },
   "HIIT Cardio 2": {
     name: "HIIT Cardio 2",
     totalTime: 180,
@@ -239,6 +235,63 @@ export const prebuiltSets = {
       }
     ]
   },
+  "Low Impact Cardio 1": {
+    name: "Low Impact Cardio 1",
+    totalTime: 150,
+    exerciseList: [
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "4 High Knees 4 Hooks"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Side Step with a Push Front and Up"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Two Punches and a Kick left side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Two Punches and a Kick right side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat Holds"
+      }
+    ]
+  },
+  "Low Impact Cardio 2": {
+    name: "Low Impact Cardio 2",
+    totalTime: 120,
+    exerciseList: [
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Knee Repeaters"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squats"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Straight Punches"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Lateral and Front Raises"
+      }
+    ]
+  },
   "HIIT Cardio 3": {
     name: "HIIT Cardio 3",
     totalTime: 165,
@@ -265,6 +318,37 @@ export const prebuiltSets = {
       }
     ]
   },
+  "Low Impact Cardio 3": {
+    name: "Low Impact Cardio 3",
+    totalTime: 150,
+    exerciseList: [
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "2 Steps with a Squat"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "4 Knees 4 Hamstrings left side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "4 Hnees 4 Hamstrings right side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "2 Side Step Stars"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat Pulses"
+      }
+    ]
+  },
   "HIIT Cardio 4": {
     name: "HIIT Cardio 4",
     totalTime: 120,
@@ -288,6 +372,42 @@ export const prebuiltSets = {
         timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "V Push Ups"
+      }
+    ]
+  },
+  "Low Impact Cardio 4": {
+    name: "Low Impact Cardio 4",
+    totalTime: 180,
+    exerciseList: [
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Scotty Left Side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Scotty Right Side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Squat with a Punch and step"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "4 Straight Punches and 4 Uppercuts"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Alternating Lunges"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Box Squats"
       }
     ]
   },
@@ -455,6 +575,84 @@ export const prebuiltSets = {
         timeInSeconds: 30,
         displayText: "30 seconds",
         exerciseName: "Tricep Dips"
+      }
+    ]
+  },
+  "Abs 1": {
+    name: "Abs 1",
+    totalTime: 180,
+    exerciseList: [
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "3 Way V Ups"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Side Hip Raises Left Side"
+      },
+      {
+        timeInSeconds: 30,
+        displayText: "30 seconds",
+        exerciseName: "Side Hip Raises Right Side"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Hollow Hold"
+      }
+    ]
+  },
+  "Abs 2": {
+    name: "Abs 2",
+    totalTime: 180,
+    exerciseList: [
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Russian Twists"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Reverse Crunches"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Floor Thrusters"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Flutter Kicks"
+      }
+    ]
+  },
+  "Abs 3": {
+    name: "Abs 3",
+    totalTime: 180,
+    exerciseList: [
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Frog Push Ups"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Bicycle Abs"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "Plank"
+      },
+      {
+        timeInSeconds: 60,
+        displayText: "60 seconds",
+        exerciseName: "6 inch hold"
       }
     ]
   }
