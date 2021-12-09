@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.c958c619.chunk.css",
-    "main.js": "/static/js/main.508a68e7.chunk.js",
-    "main.js.map": "/static/js/main.508a68e7.chunk.js.map",
+    "main.js": "/static/js/main.57085ffd.chunk.js",
+    "main.js.map": "/static/js/main.57085ffd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a0248048.js",
     "runtime-main.js.map": "/static/js/runtime-main.a0248048.js.map",
     "static/css/2.291c0eba.chunk.css": "/static/css/2.291c0eba.chunk.css",
@@ -72,7 +72,7 @@
     "static/media/ricecake.ddf14679.png": "/static/media/ricecake.ddf14679.png",
     "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
     "static/media/snap_icon.9a2204c8.png": "/static/media/snap_icon.9a2204c8.png",
-    "static/media/ufitLogo5.14efbc9d.png": "/static/media/ufitLogo5.14efbc9d.png",
+    "static/media/ufitLogo5.4f561c0a.png": "/static/media/ufitLogo5.4f561c0a.png",
     "static/media/yogurt.844d7128.png": "/static/media/yogurt.844d7128.png",
     "static/media/youtubeLogo.854387f9.png": "/static/media/youtubeLogo.854387f9.png",
     "static/media/zonePerfect.aa112cd4.png": "/static/media/zonePerfect.aa112cd4.png"
@@ -82,6 +82,6 @@
     "static/css/2.291c0eba.chunk.css",
     "static/js/2.aa4a97ac.chunk.js",
     "static/css/main.c958c619.chunk.css",
-    "static/js/main.508a68e7.chunk.js"
+    "static/js/main.57085ffd.chunk.js"
   ]
 }
