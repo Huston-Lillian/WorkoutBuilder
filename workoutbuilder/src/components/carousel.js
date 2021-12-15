@@ -34,6 +34,7 @@ class DemoCarousel extends Component {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen={true}
               className="responsive-iframe"
+              loading="lazy"
             ></iframe>
           </div>
         ))}

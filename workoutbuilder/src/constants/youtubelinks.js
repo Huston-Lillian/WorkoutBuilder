@@ -78,5 +78,51 @@ export const youTubeLinks = {
   11: [
     "https://www.youtube.com/embed/MxNm6ynj_MU",
     "https://www.youtube.com/embed/9r1GT-IpCAs"
+  ],
+  12: [
+    "https://www.youtube.com/embed/tZNO8gTo6Ic",
+    "https://www.youtube.com/embed/gYhEjSkWdp4"
+  ],
+  13: [
+    "https://www.youtube.com/embed/BZPeh6JU9tc",
+    "https://www.youtube.com/embed/jr7wiGWz_xY"
+  ],
+  14: [
+    "https://www.youtube.com/embed/DWG-Jb3DNVA",
+    "https://www.youtube.com/embed/CirlwUzPYek"
+  ],
+  15: [
+    "https://www.youtube.com/embed/oWUNkZrlkho",
+    "https://www.youtube.com/embed/C6MyDJMddYE"
+  ],
+  16: [
+    "https://www.youtube.com/embed/pcKpmLhkgrw",
+    "https://www.youtube.com/embed/r_0zKhwLgyw"
+  ],
+  17: [
+    "https://www.youtube.com/embed/CscxGprl1yw",
+    "https://www.youtube.com/embed/XN3JB67-a_k"
+  ],
+  18: [
+    "https://www.youtube.com/embed/8tq6BIrIaio",
+    "https://www.youtube.com/embed/uiN48I_a4_c"
+  ],
+  19: [
+    "https://www.youtube.com/embed/nZaTZkI2I0c",
+    "https://www.youtube.com/embed/j5ZpcvtDp88"
+  ],
+  20: [
+    "https://www.youtube.com/embed/gQ3EM0BXEoE",
+    "https://www.youtube.com/embed/j5ZpcvtDp88"
   ]
 };
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/XRYs1th9kmw"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>;

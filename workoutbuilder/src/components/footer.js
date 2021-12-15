@@ -5,6 +5,11 @@ import linkedinIcon from "../pics/linkedin_icon.png";
 import snapIcon from "../pics/snap_icon.png";
 import githubIcon from "../pics/github_icon.png";
 
+const styles = {
+  "z-index": 1,
+  position: "relative"
+};
+
 function FooterComponent() {
   return (
     <footer className="page-footer teal">
@@ -20,17 +25,17 @@ function FooterComponent() {
           <div className="col l1 s12"></div>
           <div className="col l8 s12 left-align">
             <h5 className="white-text">Connect</h5>
-            <div className="row center">
+            <div className="row center" style={styles}>
               <div className="col s2 center">
                 <a
-                  href="https://www.instagram.com/dan_the_realest_man/"
+                  href="https://www.instagram.com/ufitworkouts/"
                   target="_blank"
                 >
                   <img className="socialMedia-icon" src={instaIcon} />
                 </a>
               </div>
               <div className="col s2 center">
-                <a href="https://www.facebook.com/Dgza88" target="_blank">
+                <a href="https://www.facebook.com/ufitworkouts" target="_blank">
                   <img className="socialMedia-icon" src={facebookIcon} />
                 </a>
               </div>
@@ -70,7 +75,7 @@ function FooterComponent() {
               </a>
             </div>
 
-            <div className="col s6 l2">
+            <div className="col s6 l2" style={styles}>
               <form
                 action="https://www.paypal.com/donate"
                 method="post"

@@ -138,10 +138,7 @@ function HomepageComponent() {
                   </a>
                 </h3>
                 <h5 className="black-text">
-                  <p>
-                    I developed a tool to help you design and create your own
-                    custom circuit workouts.
-                  </p>
+                  <p>Create your perfect workout anytime anywhere.</p>
                 </h5>
                 <div className="s12 m4 center">
                   <div className="light">
@@ -191,10 +188,7 @@ function HomepageComponent() {
                   </a>
                 </h3>
                 <h5 className="black-text">
-                  <p>
-                    I've created several workouts for you to try using my
-                    Workout Builder tool.
-                  </p>
+                  <p>Try several of my personal workouts.</p>
                 </h5>
                 <div className="s12 m4 center">
                   <div className="light">
