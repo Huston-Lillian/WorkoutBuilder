@@ -113,16 +113,6 @@ export const youTubeLinks = {
   ],
   20: [
     "https://www.youtube.com/embed/gQ3EM0BXEoE",
-    "https://www.youtube.com/embed/j5ZpcvtDp88"
+    "https://www.youtube.com/embed/XRYs1th9kmw"
   ]
 };
-
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/XRYs1th9kmw"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
