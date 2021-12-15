@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.c958c619.chunk.css",
-    "main.js": "/static/js/main.151aec8e.chunk.js",
-    "main.js.map": "/static/js/main.151aec8e.chunk.js.map",
+    "main.js": "/static/js/main.b12fb41a.chunk.js",
+    "main.js.map": "/static/js/main.b12fb41a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a0248048.js",
     "runtime-main.js.map": "/static/js/runtime-main.a0248048.js.map",
     "static/css/2.291c0eba.chunk.css": "/static/css/2.291c0eba.chunk.css",
@@ -24,6 +24,7 @@
     "static/media/background6.3221632e.jpeg": "/static/media/background6.3221632e.jpeg",
     "static/media/background7.5b65b654.jpeg": "/static/media/background7.5b65b654.jpeg",
     "static/media/background8.1ee55cda.jpeg": "/static/media/background8.1ee55cda.jpeg",
+    "static/media/bodyCoach.4f41931a.jpeg": "/static/media/bodyCoach.4f41931a.jpeg",
     "static/media/bodyProject.e73f4415.jpeg": "/static/media/bodyProject.e73f4415.jpeg",
     "static/media/bruceLeeStatus2.01154c49.png": "/static/media/bruceLeeStatus2.01154c49.png",
     "static/media/buffdude.bbf32913.jpeg": "/static/media/buffdude.bbf32913.jpeg",
@@ -47,6 +48,7 @@
     "static/media/instaLogo.616ba497.png": "/static/media/instaLogo.616ba497.png",
     "static/media/insta_icon.f8d5e69b.png": "/static/media/insta_icon.f8d5e69b.png",
     "static/media/jamesSmith2.cacb9777.png": "/static/media/jamesSmith2.cacb9777.png",
+    "static/media/kitRich.b9a69b7f.jpeg": "/static/media/kitRich.b9a69b7f.jpeg",
     "static/media/lastAboutMePic3.d3c6ea84.png": "/static/media/lastAboutMePic3.d3c6ea84.png",
     "static/media/lenny.0b628d11.png": "/static/media/lenny.0b628d11.png",
     "static/media/lightnfit.d64e48bc.png": "/static/media/lightnfit.d64e48bc.png",
@@ -82,6 +84,6 @@
     "static/css/2.291c0eba.chunk.css",
     "static/js/2.aa4a97ac.chunk.js",
     "static/css/main.c958c619.chunk.css",
-    "static/js/main.151aec8e.chunk.js"
+    "static/js/main.b12fb41a.chunk.js"
   ]
 }
