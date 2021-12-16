@@ -591,9 +591,9 @@ class WorkoutComponent extends Component<Props> {
           </div> center col s12 m12 */}
           {
             <React.Fragment>
-              <div className="center col s1 l4"></div>
+              <div className="center col s1 l4 m1"></div>
               <div
-                className="center col s4 l2 totalTimeMargin"
+                className="center col s4 l2 m4 totalTimeMargin"
                 style={
                   allowMirror
                     ? { color: "white", textShadow: "2px 2px black" }
@@ -604,7 +604,7 @@ class WorkoutComponent extends Component<Props> {
                 {/* <h3 className="center col s3 l4">{totalTime}</h3> */}
               </div>
               <div
-                className="left-align col s6 l3"
+                className="left-align col s7 l6 m7"
                 style={
                   allowMirror
                     ? { color: "white", textShadow: "2px 2px black" }
@@ -613,7 +613,7 @@ class WorkoutComponent extends Component<Props> {
               >
                 <h3>{totalTime ? totalTime : "0: 0: 0"}</h3>
               </div>
-              <div className="center col s1 l3"></div>
+              {/* <div className="center col s1 l3"></div> */}
             </React.Fragment>
           }
           {/* <div className="col s2 m3">

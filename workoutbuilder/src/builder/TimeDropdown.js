@@ -46,7 +46,7 @@ class TimeDropdown extends Component {
         getOptionLabel={option => timerOptions[option].text}
         onChange={this.handleChange}
         onBlur={this.handleOnBlur}
-        style={{ width: isMobile ? 120 : 180, height: 5 }}
+        // style={{ width: isMobile ? 120 : 180, height: 5 }}
         defaultValue={30}
         value={selectedTime ? selectedTime : 30}
         getOptionSelected={(option, value) => option == value}

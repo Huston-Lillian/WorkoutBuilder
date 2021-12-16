@@ -42,10 +42,10 @@ class TextInput extends Component {
           label="Exercise"
           variant="outlined"
           value={exerciseName ? exerciseName : ""}
-          style={{
-            width: isMobile ? 100 : 200,
-            height: isMobile ? 100 : 75
-          }}
+          // style={{
+          //   width: isMobile ? 100 : 200,
+          //   height: isMobile ? 100 : 75
+          // }}
         />
       </form>
     );

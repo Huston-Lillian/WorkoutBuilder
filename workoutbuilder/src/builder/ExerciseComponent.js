@@ -68,7 +68,32 @@ class ExerciseComponent extends Component {
     let { exerciseObj } = this.state;
     return (
       <div>
-        <Grid item xs={12} style={{ marginTop: 10 }}>
+        {/* <div className="container" style={{ marginTop: 10 }}> */}
+        <div className="section">
+          <div className="row">
+            <div className="col s5 m5">
+              <TextInput
+                exerciseName={exerciseObj.exerciseName}
+                handleInput={this.handleInput}
+              />
+            </div>
+            <div className="col s5 m5">
+              <TimeDropdown
+                selectedTime={exerciseObj.timeInSeconds}
+                handleInput={this.handleInput}
+              />
+            </div>
+            <div className="col s2 m2">
+              <CancelIcon
+                id="deletebutton"
+                onClick={this.removeExercise}
+                style={{ marginTop: 15, color: "red" }}
+              />
+            </div>
+          </div>
+        </div>
+        {/* </div> */}
+        {/* <Grid item xs={12} style={{ marginTop: 10 }}>
           <Grid
             container
             justifyContent="center"
@@ -95,7 +120,7 @@ class ExerciseComponent extends Component {
               />
             </Grid>
           </Grid>
-        </Grid>
+        </Grid> */}
       </div>
     );
   }

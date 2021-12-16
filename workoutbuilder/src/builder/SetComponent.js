@@ -213,7 +213,7 @@ class SetComponent extends Component {
                       label=""
                     />
                   </Grid>
-                  <Grid item xs={5} sm={5}>
+                  <Grid item xs={6} sm={5}>
                     <Typography
                       style={{
                         marginTop: 15,
