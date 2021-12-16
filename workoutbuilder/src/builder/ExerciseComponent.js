@@ -77,13 +77,13 @@ class ExerciseComponent extends Component {
                 handleInput={this.handleInput}
               />
             </div>
-            <div className="col s5 m5">
+            <div className="col s6 m6">
               <TimeDropdown
                 selectedTime={exerciseObj.timeInSeconds}
                 handleInput={this.handleInput}
               />
             </div>
-            <div className="col s2 m2">
+            <div className="col s1 m1">
               <CancelIcon
                 id="deletebutton"
                 onClick={this.removeExercise}
