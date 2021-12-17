@@ -3,6 +3,7 @@ import NoSleep from "nosleep.js";
 import Webcam from "react-webcam";
 import MusicPlayerComponent from "./musicPlayer";
 import $ from "jquery";
+import { timesToSpeak } from "./../constants/TimesToSpeak";
 
 type Props = {
   workoutObj: any
@@ -160,7 +161,8 @@ class CustomWorkoutComponent extends Component<Props> {
         var elmnt = document.getElementById("activeWorkout");
         elmnt.scrollIntoView();
         this.speakNow(exerciseObj[i].exerciseName);
-        this.speakNow(exerciseObj[i].displayText);
+        //this.speakNow(exerciseObj[i].displayText);
+        this.speakNow(timesToSpeak[exerciseObj[i].displayText].text);
         firstRun = false;
       }
       let { done, paused } = this.state;
@@ -187,7 +189,8 @@ class CustomWorkoutComponent extends Component<Props> {
             progress: 0.0
           });
           this.speakNow(exerciseObj[i].exerciseName);
-          this.speakNow(exerciseObj[i].displayText);
+          this.speakNow(timesToSpeak[exerciseObj[i].displayText].text);
+          //this.speakNow(exerciseObj[i].displayText);
         } else if (i === exerciseObj.length - 1 && y === 0) {
           this.speakNow("Excellent job, you're a true fitness champion!");
           this.setState({
@@ -213,7 +216,7 @@ class CustomWorkoutComponent extends Component<Props> {
           exerciseName: exerciseObj[i].exerciseName,
           timeRemaining: yMin + ":  " + ySec + " remaining"
         });
-        if (ySec <= 3 && ySec > 0) {
+        if (yMin === 0 && ySec <= 3 && ySec > 0) {
           this.speakNow(ySec);
         }
         y--;
