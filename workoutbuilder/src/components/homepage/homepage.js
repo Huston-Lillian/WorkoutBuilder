@@ -9,6 +9,7 @@ import advice from "../../pics/advice.png";
 import build from "../../pics/build_withMark.png";
 import experts from "../../pics/fitness_experts.png";
 import ufitLogo from "../../pics/ufitLogo5.png";
+import mentalHealth from "../../pics/mentalHealth.png";
 
 const styles = {
   transform: `translate3d(-50%, 309.727px, 0px)`,
@@ -234,9 +235,8 @@ function HomepageComponent() {
                   </a>
                 </h3>
                 <h5 className="black-text">
-                  Here you can find information on your TDEE, the importance of
-                  protein, calorie deficits, the effects of alcohol, the
-                  importance of rest and asleep, and more.
+                  Nutrition advice and tools to help you build your own
+                  sustainable diet and exercise plan.
                 </h5>
                 <div className="s12 m4 center">
                   <div className="light">
@@ -296,6 +296,58 @@ function HomepageComponent() {
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="section">
+          <div className="row">
+            <div className="col s12 m4 customWorkoutImg">
+              <div className="icon-block">
+                <h5 className="center"></h5>
+              </div>
+              <div className="s4 m3 center">
+                <div className="light">
+                  <img
+                    className="cheatMeal"
+                    src={mentalHealth}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col s12 m6">
+              <div className="row center">
+                <h3 className="black-text">
+                  <span className="teal-text text-lighten-2">
+                    Mental Health
+                  </span>
+                </h3>
+                <h5 className="black-text">
+                  Exercise is as great for your mental health as it is for your
+                  body... and it's free.
+                  <ol className="left-align">
+                    <li>Decreases stress.</li>
+                    <li>Improves your sleep patterns.</li>
+                    <li>Helps with depression and anxiety.</li>
+                    <li>Increases self-esteem and self-confidence.</li>
+                    <li>Improves cognitive function.</li>
+                  </ol>
+                </h5>
+                {/* <div className="s12 m4 center">
+                  <div className="light">
+                    <a
+                      href="#/fitnessGurus"
+                      id="download-button"
+                      className="btn btn-large waves-effect waves-light teal lighten-1"
+                    >
+                      Fitness Experts
+                    </a>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -160,6 +160,11 @@
   margin-top: 25px;
 }
 
+.calorieCycleIcon {
+  width: 73%;
+  height: auto;
+}
+
 #myVideo {
   position: fixed;
   right: 0;
@@ -534,5 +539,9 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
   .logoSize {
     width: 200% !important;
     height: 200% !important;
+  }
+  .calorieCycleIcon {
+    width: 55%;
+    height: auto;
   }
 }

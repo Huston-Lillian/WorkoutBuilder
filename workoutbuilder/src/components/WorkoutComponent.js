@@ -474,17 +474,17 @@ class WorkoutComponent extends Component<Props> {
               Mirror
             </a>
           </div>
-
-          <div className="center col s4 m3 mirrorBtn">
-            <a
-              onClick={this.scrollToMusic}
-              className="fitText blue waves-effect waves-light btn-large"
-            >
-              <i className="material-icons right ">music_note</i>
-              Music
-            </a>
-          </div>
-
+          {!isIos && (
+            <div className="center col s4 m3 mirrorBtn">
+              <a
+                onClick={this.scrollToMusic}
+                className="fitText blue waves-effect waves-light btn-large"
+              >
+                <i className="material-icons right ">music_note</i>
+                Music
+              </a>
+            </div>
+          )}
           {allowMirror && (
             <Webcam
               audio={false}

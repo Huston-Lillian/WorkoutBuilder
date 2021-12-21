@@ -13,6 +13,7 @@ import sleep from "../pics/sleep.jpeg";
 import food from "../pics/food.jpeg";
 import alcohol from "../pics/alcohol.png";
 import cheatMeal from "../pics/cheatMeal.jpeg";
+import calorieCycle from "../pics/calorieCycle.png";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
@@ -65,7 +66,7 @@ function MyAdviceComponent() {
               <div class="row center">
                 <h4 class="black-text">
                   "The key to a sustainable healthy lifestyle is understanding
-                  your body and doing what works best for you."{" "}
+                  your body and finding exercises you enjoy."{" "}
                   <h5 class="teal-text text-darken-2"> Daniel Garza</h5>
                 </h4>
                 <a
@@ -430,6 +431,42 @@ function MyAdviceComponent() {
                     Free Workouts
                   </Link> */}
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 m4 customWorkoutImg">
+              <div class="icon-block">
+                <h5 class="center"></h5>
+              </div>
+              <div class="s4 m3 center">
+                <div class="light">
+                  <img
+                    class="calorieCycleIcon circlePic"
+                    src={calorieCycle}
+                    alt="Unsplashed background img 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="row center">
+                <h3 class="black-text">Calorie Cycling</h3>
+                <h5 class="black-text">
+                  The practice of alternating days of low-calorie intake with
+                  days of no diet restrictions. I personally do calorie cycling
+                  Monday through Friday and enjoy weekends without restrictions.
+                  This does not mean overeating. I track these calories to
+                  ensure I get to a weekly deficit. This allows me to enjoy all
+                  the snacks and foods I love and crave. Make sure to track your
+                  intake and stick to your desired calorie range for optimal
+                  results.
+                </h5>
               </div>
             </div>
           </div>

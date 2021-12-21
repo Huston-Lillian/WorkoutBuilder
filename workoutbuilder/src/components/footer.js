@@ -16,10 +16,9 @@ function FooterComponent() {
       <div className="container">
         <div className="row">
           <div className="col l3 s12">
-            <h5 className="white-text">About Me</h5>
+            <h5 className="white-text">Mission</h5>
             <p className="grey-text text-lighten-4">
-              My name is Daniel Garza and I'm a software engineer with a passion
-              for fitness.
+              To promote fitness via free and easily accessible content.
             </p>
           </div>
           <div className="col l1 s12"></div>
