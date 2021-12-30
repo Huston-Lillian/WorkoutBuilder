@@ -63,6 +63,15 @@
   margin-bottom: 15px;
 }
 
+.appLogos {
+  width: 100%;
+  height: auto;
+}
+
+.appNames {
+  text-decoration: underline;
+}
+
 .fitting {
   overflow-y: auto;
 }
@@ -428,6 +437,14 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text {
     height: auto;
     margin-top: 55px;
     margin-bottom: 15px;
+  }
+  .appLogos {
+    width: 60%;
+    height: auto;
+  }
+
+  .paddingBottomApps {
+    padding-bottom: 10px;
   }
 
   .adviceImg {
