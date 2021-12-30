@@ -82,7 +82,6 @@ function WorkoutsComponent() {
             </div>
             <div className="col s12 m6 youtubeVid center">
               <DemoCarousel showArrows={true} id={12} />
-              {/* <div className="carousel"> */}
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import snapIcon from "../pics/snap_icon.png";
 import githubIcon from "../pics/github_icon.png";
 
 const styles = {
-  "z-index": 1,
+  "zIndex": 1,
   position: "relative"
 };
 

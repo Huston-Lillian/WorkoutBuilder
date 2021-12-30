@@ -13,11 +13,11 @@ import mentalHealth from "../../pics/mentalHealth.png";
 
 const styles = {
   transform: `translate3d(-50%, 309.727px, 0px)`,
-  opacity: 1
+  opacity: 1,
 };
 
 const styles2 = {
-  width: "100%"
+  width: "100%",
 };
 
 function HomepageComponent() {
@@ -90,19 +90,32 @@ function HomepageComponent() {
                 </h3>{" "}
                 <h5 className="black-text">
                   I've compiled the best, most effective and enjoyable free
-                  workouts to help you on your fitness journey. You'll be able
-                  to easily access a great catalog of free workouts on YouTube
-                  here at uFit.
+                  workouts to help you on your fitness journey. You can easily
+                  access a great catalog of free workouts and apps here at uFit.
                 </h5>
-                <div className="s12 m4 center">
-                  <div className="light">
-                    <a
-                      href="#/workouts"
-                      id="download-button"
-                      className="btn btn-large waves-effect waves-light teal lighten-1"
-                    >
-                      Free Workouts
-                    </a>
+                <br></br>
+                <div className="row center">
+                  <div className="col s12 m6 center">
+                    <div className="light paddingBottomApps">
+                      <a
+                        href="#/workouts"
+                        id="download-button"
+                        className="btn btn-large waves-effect waves-light teal lighten-1"
+                      >
+                        Free Workouts
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col s12 m6 center">
+                    <div className="light">
+                      <a
+                        href="#/freeApps"
+                        id="download-button"
+                        className="btn btn-large waves-effect waves-light teal lighten-1"
+                      >
+                        Free Mobile Apps
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

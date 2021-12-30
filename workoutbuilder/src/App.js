@@ -14,6 +14,7 @@ import CustomWorkoutScreenComponent from "./components/CustomWorkoutScreenCompon
 import FitnessGurusComponent from "./components/fitnessGurus";
 import ProteinProductsComponent from "./components/proteinProducts";
 import AboutMeComponent from "./components/aboutMe";
+import FreeMobileAppsComponent from "./components/freeMobileApps";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             element={<ProteinProductsComponent />}
           />
           <Route exact path="/aboutMe" element={<AboutMeComponent />} />
+          <Route exact path="/freeApps" element={<FreeMobileAppsComponent />} />
 
           <Route path="/*" element={<HomepageComponent />} />
         </Routes>
