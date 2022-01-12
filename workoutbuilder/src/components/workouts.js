@@ -25,14 +25,16 @@ import xhit from "../pics/xhit.jpeg";
 
 import jQuery from "jquery";
 import DemoCarousel from "./carousel";
+import { pageview } from "../constants/analytics";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
-  opacity: 1
+  opacity: 1,
 };
 
 function WorkoutsComponent() {
   window.scrollTo(0, 0);
+  pageview("Free Workouts", window.location.pathname + "#/workouts");
   return (
     <React.Fragment>
       <div id="index-banner" className="parallax-container">

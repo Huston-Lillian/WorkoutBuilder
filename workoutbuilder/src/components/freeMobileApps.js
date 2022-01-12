@@ -3,6 +3,7 @@ import { feeAppsArray } from "../constants/freeApps";
 import background17 from "../pics/background17.jpg";
 import Googleplay from "../pics/Googleplay.png";
 import AppleStore from "../pics/AppleStore.png";
+import { pageview } from "../constants/analytics";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
@@ -19,6 +20,7 @@ class FreeMobileAppsComponent extends Component<Props> {
   render() {
     let { freeApps } = this.state;
     window.scrollTo(0, 0);
+    pageview("Free Mobile Apps", window.location.pathname + "#/freeApps");
     return (
       <React.Fragment>
         <div id="index-banner" class="parallax-container">

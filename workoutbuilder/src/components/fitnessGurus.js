@@ -7,10 +7,11 @@ import youTube from "../pics/youtubeLogo.png";
 import instaLogo from "../pics/instaLogo.png";
 import james from "../pics/jamesSmith2.png";
 import background12 from "../pics/background14.jpeg";
+import { pageview } from "../constants/analytics";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
-  opacity: 1
+  opacity: 1,
 };
 
 let gurus = [
@@ -21,7 +22,7 @@ let gurus = [
     image: james,
     youTube: "https://www.youtube.com/c/JamesSmithPT/videos",
     fb: "https://www.facebook.com/JamesSmithPT",
-    insta: "https://www.instagram.com/jamessmithpt/?hl=en"
+    insta: "https://www.instagram.com/jamessmithpt/?hl=en",
   },
   {
     name: "Gravity Transformation",
@@ -30,7 +31,7 @@ let gurus = [
     image: gravity,
     youTube: "https://www.youtube.com/user/GravityTrainingSol/videos",
     fb: "https://www.facebook.com/gravitytransformation",
-    insta: "https://www.instagram.com/gravitytransformation/?hl=en"
+    insta: "https://www.instagram.com/gravitytransformation/?hl=en",
   },
   {
     name: "Pernilla Stryker",
@@ -38,7 +39,7 @@ let gurus = [
       "I learned how to make my favorite healthy high protein desserts and snacks on her YouTube channel. I've made several protein cakes and pizzas and they are great. I've also done protein cookies, pancakes, and ice cream.",
     image: pernilla,
     youTube: "https://www.youtube.com/c/Pernillaschannel/videos",
-    insta: "https://www.instagram.com/pernillastryker/?hl=en"
+    insta: "https://www.instagram.com/pernillastryker/?hl=en",
   },
   {
     name: "Kari Pearce",
@@ -48,20 +49,21 @@ let gurus = [
     youTube:
       "https://www.youtube.com/results?search_query=kari+pearce+power+abs",
     fb: "https://www.facebook.com/KariPearceCrossFitGamesAthlete",
-    insta: "https://www.instagram.com/karipearcecrossfit/?hl=en"
-  }
+    insta: "https://www.instagram.com/karipearcecrossfit/?hl=en",
+  },
 ];
 
 class FitnessGurusComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      gurus: gurus
+      gurus: gurus,
     };
   }
   render() {
     let { gurus } = this.state;
     window.scrollTo(0, 0);
+    pageview("Fitness Gurus", window.location.pathname + "#/fitnessGurus");
     return (
       <React.Fragment>
         <div id="index-banner" class="parallax-container">
@@ -89,7 +91,7 @@ class FitnessGurusComponent extends Component<Props> {
             <br></br>
           </div>
         </div>
-        {gurus.map(guru => (
+        {gurus.map((guru) => (
           <div class="container">
             <div class="section">
               <div class="row">

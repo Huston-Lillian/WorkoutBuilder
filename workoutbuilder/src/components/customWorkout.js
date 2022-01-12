@@ -5,16 +5,18 @@ import abs2 from "../pics/abs2.jpeg";
 import stretching from "../pics/stretching.jpeg";
 import upperBody from "../pics/upperBody.jpeg";
 import background8 from "../pics/background8.jpeg";
+import { pageview } from "../constants/analytics";
 
 import legs from "../pics/legs.jpeg";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
-  opacity: 1
+  opacity: 1,
 };
 
 function CustomWorkoutsComponent() {
   window.scrollTo(0, 0);
+  pageview("Custom Workouts", window.location.pathname + "#/customWorkouts");
   return (
     <React.Fragment>
       <div id="index-banner" className="parallax-container">

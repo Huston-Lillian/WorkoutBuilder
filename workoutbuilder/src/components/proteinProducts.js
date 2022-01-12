@@ -22,10 +22,11 @@ import lowCal2 from "../pics/drizz.png";
 import lowCal3 from "../pics/ricecake.png";
 import lowCal4 from "../pics/haloTop.png";
 import lowCal5 from "../pics/fruit.png";
+import { pageview } from "../constants/analytics";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
-  opacity: 1
+  opacity: 1,
 };
 
 let gurus = [
@@ -37,21 +38,18 @@ let gurus = [
     products: [
       {
         image: musclePharm,
-        link:
-          "https://www.amazon.com/gp/product/B003BVI5FW/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B003BVI5FW&linkCode=as2&tag=ufitworkouts-20&linkId=8f1fadf3570c5d61486e61983198187d"
+        link: "https://www.amazon.com/gp/product/B003BVI5FW/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B003BVI5FW&linkCode=as2&tag=ufitworkouts-20&linkId=8f1fadf3570c5d61486e61983198187d",
       },
       {
         image: muscleMilk,
-        link:
-          "https://www.amazon.com/gp/product/B0106ZJ4R8/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0106ZJ4R8&linkCode=as2&tag=ufitworkouts-20&linkId=30ff1e65f0e72665b857e6b0dd0765df"
+        link: "https://www.amazon.com/gp/product/B0106ZJ4R8/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0106ZJ4R8&linkCode=as2&tag=ufitworkouts-20&linkId=30ff1e65f0e72665b857e6b0dd0765df",
       },
       {
         image: pb2,
         imageClass: "pb2Icon2",
-        link:
-          "https://www.amazon.com/gp/product/B0098WV8F2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0098WV8F2&linkCode=as2&tag=ufitworkouts-20&linkId=b19d62430800e5cd37092d9606f0bb46"
-      }
-    ]
+        link: "https://www.amazon.com/gp/product/B0098WV8F2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0098WV8F2&linkCode=as2&tag=ufitworkouts-20&linkId=b19d62430800e5cd37092d9606f0bb46",
+      },
+    ],
   },
   {
     name: "Protein Bars",
@@ -61,22 +59,19 @@ let gurus = [
     products: [
       {
         image: powerCrunch,
-        link:
-          "https://www.amazon.com/gp/product/B01DYFVV1O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01DYFVV1O&linkCode=as2&tag=ufitworkouts-20&linkId=c7a7453989de3e112514708a60265880"
+        link: "https://www.amazon.com/gp/product/B01DYFVV1O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01DYFVV1O&linkCode=as2&tag=ufitworkouts-20&linkId=c7a7453989de3e112514708a60265880",
       },
       {
         image: lenny,
         imageClass: "proteinBarsIcon",
-        link:
-          "https://www.amazon.com/gp/product/B00VUK59YQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00VUK59YQ&linkCode=as2&tag=ufitworkouts-20&linkId=9924cc1c02d0e884fac6226ccda98d64"
+        link: "https://www.amazon.com/gp/product/B00VUK59YQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00VUK59YQ&linkCode=as2&tag=ufitworkouts-20&linkId=9924cc1c02d0e884fac6226ccda98d64",
       },
       {
         image: zonePerfect,
         imageClass: "proteinBarsZoneP",
-        link:
-          "https://www.amazon.com/gp/product/B07VDRN1XF/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07VDRN1XF&linkCode=as2&tag=ufitworkouts-20&linkId=2a7113f3ebb9e416409f52d9df3cf4c9"
-      }
-    ]
+        link: "https://www.amazon.com/gp/product/B07VDRN1XF/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07VDRN1XF&linkCode=as2&tag=ufitworkouts-20&linkId=2a7113f3ebb9e416409f52d9df3cf4c9",
+      },
+    ],
   },
   {
     name: "Protein Chips",
@@ -86,22 +81,19 @@ let gurus = [
     products: [
       {
         image: chicharrones,
-        link:
-          "https://www.amazon.com/gp/product/B07T76MN4L/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07T76MN4L&linkCode=as2&tag=ufitworkouts-20&linkId=b4991a32d542e19ca073de6402be091d"
+        link: "https://www.amazon.com/gp/product/B07T76MN4L/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07T76MN4L&linkCode=as2&tag=ufitworkouts-20&linkId=b4991a32d542e19ca073de6402be091d",
       },
 
       {
         image: questChips,
-        link:
-          "https://www.amazon.com/gp/product/B09FCT5DVD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B09FCT5DVD&linkCode=as2&tag=ufitworkouts-20&linkId=e8e15ba19c128d00bfa1435e81dea13d"
+        link: "https://www.amazon.com/gp/product/B09FCT5DVD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B09FCT5DVD&linkCode=as2&tag=ufitworkouts-20&linkId=e8e15ba19c128d00bfa1435e81dea13d",
       },
       {
         image: questChips2,
         imageClass: "proteinPuffs",
-        link:
-          "https://www.amazon.com/gp/product/B088WG6NHW/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B088WG6NHW&linkCode=as2&tag=ufitworkouts-20&linkId=db9f6ccb94875a6236aad8b3a2e5e321"
-      }
-    ]
+        link: "https://www.amazon.com/gp/product/B088WG6NHW/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B088WG6NHW&linkCode=as2&tag=ufitworkouts-20&linkId=db9f6ccb94875a6236aad8b3a2e5e321",
+      },
+    ],
   },
   {
     name: "Greek Yogurt",
@@ -111,19 +103,18 @@ let gurus = [
     products: [
       {
         image: yogurt1,
-        link:
-          "https://www.amazon.com/s?k=light+and+fit+greek+yogurt&ref=nb_sb_noss"
+        link: "https://www.amazon.com/s?k=light+and+fit+greek+yogurt&ref=nb_sb_noss",
       },
 
       {
         image: yogurt2,
-        link: "https://www.amazon.com/s?k=oikos+yogurt&ref=nb_sb_noss_2"
+        link: "https://www.amazon.com/s?k=oikos+yogurt&ref=nb_sb_noss_2",
       },
       {
         image: yogurt3,
-        link: "https://www.amazon.com/s?k=chobani+yogurt&ref=nb_sb_noss_1"
-      }
-    ]
+        link: "https://www.amazon.com/s?k=chobani+yogurt&ref=nb_sb_noss_1",
+      },
+    ],
   },
   {
     name: "Low Calorie Snacks",
@@ -133,35 +124,36 @@ let gurus = [
     products: [
       {
         image: lowCal1,
-        link:
-          "https://www.amazon.com/gp/product/B00PZ2DH6C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00PZ2DH6C&linkCode=as2&tag=ufitworkouts-20&linkId=b66687d9372df04358607471ce3d9ce5"
+        link: "https://www.amazon.com/gp/product/B00PZ2DH6C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00PZ2DH6C&linkCode=as2&tag=ufitworkouts-20&linkId=b66687d9372df04358607471ce3d9ce5",
       },
 
       {
         image: lowCal2,
-        link:
-          "https://www.amazon.com/gp/product/B076H9FY5M/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B076H9FY5M&linkCode=as2&tag=ufitworkouts-20&linkId=457867a52bd5ad1aad2288cbbc12c4ac"
+        link: "https://www.amazon.com/gp/product/B076H9FY5M/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B076H9FY5M&linkCode=as2&tag=ufitworkouts-20&linkId=457867a52bd5ad1aad2288cbbc12c4ac",
       },
       {
         image: lowCal3,
         imageClass: "riceCakesImg",
-        link:
-          "https://www.amazon.com/gp/product/B0102UOPEO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0102UOPEO&linkCode=as2&tag=ufitworkouts-20&linkId=ce520f8e30a83a4798936d672f087814"
-      }
-    ]
-  }
+        link: "https://www.amazon.com/gp/product/B0102UOPEO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0102UOPEO&linkCode=as2&tag=ufitworkouts-20&linkId=ce520f8e30a83a4798936d672f087814",
+      },
+    ],
+  },
 ];
 
 class ProteinProductsComponent extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      gurus: gurus
+      gurus: gurus,
     };
   }
   render() {
     let { gurus } = this.state;
     window.scrollTo(0, 0);
+    pageview(
+      "Protein Products",
+      window.location.pathname + "#/proteinProducts"
+    );
     return (
       <React.Fragment>
         <div id="index-banner" class="parallax-container">
@@ -189,7 +181,7 @@ class ProteinProductsComponent extends Component<Props> {
             <br></br>
           </div>
         </div>
-        {gurus.map(guru => (
+        {gurus.map((guru) => (
           <div class="container">
             <div class="section">
               <div class="row">

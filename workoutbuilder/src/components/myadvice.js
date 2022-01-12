@@ -14,14 +14,16 @@ import food from "../pics/food.jpeg";
 import alcohol from "../pics/alcohol.png";
 import cheatMeal from "../pics/cheatMeal.jpeg";
 import calorieCycle from "../pics/calorieCycle.png";
+import { pageview } from "../constants/analytics";
 
 const styles = {
   transform: `translate3d(-50%, 298.213px, 0px)`,
-  opacity: 1
+  opacity: 1,
 };
 
 function MyAdviceComponent() {
   window.scrollTo(0, 0);
+  pageview("My Advice", window.location.pathname + "#/myadvice");
   return (
     <React.Fragment>
       <div id="index-banner" class="parallax-container">
