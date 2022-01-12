@@ -50,7 +50,16 @@ function WorkoutsComponent() {
           />
         </div>
       </div>
-
+      <div className="container">
+        <br></br>
+        <div className="row center paddingBottom">
+          <h1 className="center header teal-text text-lighten-2">
+            Free Fitness Channels
+          </h1>
+          <br></br>
+          <br></br>
+        </div>
+      </div>
       <div className="container">
         <div className="section">
           <div className="row s12 l12">
@@ -261,7 +270,7 @@ function WorkoutsComponent() {
                     href="https://www.youtube.com/thedailyhiit/videos"
                   >
                     <img
-                      className="workoutImgs circlePic workoutMarginUpImgs"
+                      className="workoutImgs circlePic"
                       src={bodyRock}
                       alt="Unsplashed background img 1"
                     />
@@ -299,7 +308,7 @@ function WorkoutsComponent() {
                     href="https://www.youtube.com/c/livestrongcom/videos"
                   >
                     <img
-                      className="workoutImgs circlePic workoutMarginUpImgs"
+                      className="workoutImgs circlePic"
                       src={liveStrong}
                       alt="Unsplashed background img 1"
                     />
@@ -337,7 +346,7 @@ function WorkoutsComponent() {
                     href="https://www.youtube.com/c/xhit/videos"
                   >
                     <img
-                      className="workoutImgs circlePic workoutMarginUpImgs"
+                      className="workoutImgs circlePic"
                       src={xhit}
                       alt="Unsplashed background img 1"
                     />

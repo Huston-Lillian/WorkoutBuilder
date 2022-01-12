@@ -8,6 +8,9 @@ function NavbarComponent() {
           <a href="#/workouts">Free Workouts</a>
         </li>
         <li>
+          <a href="#/freeApps">Free Mobile Apps</a>
+        </li>
+        <li>
           <a href="#/builder">Workout Builder</a>
         </li>
         <li>
@@ -47,7 +50,10 @@ function NavbarComponent() {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="#/workouts">Workouts</a>
+                <a href="#/workouts">Free Workouts</a>
+              </li>
+              <li>
+                <a href="#/freeApps">Free Mobile Apps</a>
               </li>
               <li>
                 <a href="#/builder">Workout Builder</a>
